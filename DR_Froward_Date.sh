@@ -120,7 +120,6 @@ do
 	echo "Hostname: " $(chk host)
 	echo "Current Date: " $(chk date)
 	echo "New Date: " $(processDate)
-	echo "New Date: " $newDate
 	#ssh $usr@$srv_ip $(processDate)
 
 	echo "==========END============"
