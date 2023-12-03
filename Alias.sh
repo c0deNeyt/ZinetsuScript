@@ -12,3 +12,6 @@ alias vB="vim ~/.bashrc"
 #vim 
 alias vs="vim $HOME/Script/DR_Forward_Date.sh"
 
+#Script Shortcut
+alias rs="/home/zinetsu/Script/DR_Forward_Date.sh"
+

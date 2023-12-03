@@ -5,28 +5,28 @@ echo " "
 srv_ip="192.168.168.99"
 usr="chan"
 
-#Associative IP's
+#Associative array for IP
 declare -A pdsIPs
 #TIS
-#pdsIPs[TIS]="172.16.106.10"
+pdsIPs[TIS]="172.16.106.10"
 
 #Market Page
-#pdsIPs[MarketPage_1]="172.16.131.15"
-#pdsIPs[MarketPage_2]="172.16.108.25"
-#pdsIPs[MarketPage_3]="172.16.132.15"
+pdsIPs[MarketPage_1]="172.16.131.15"
+pdsIPs[MarketPage_2]="172.16.108.25"
+pdsIPs[MarketPage_3]="172.16.132.15"
 
 #PDS Website
-#pdsIPs[PDSWebsite_1]="172.16.108.10"
-#pdsIPs[PDSWebsite_2]="172.16.131.12"
-#pdsIPs[PDSWebsite_3]="172.16.132.12"
+pdsIPs[PDSWebsite_1]="172.16.108.10"
+pdsIPs[PDSWebsite_2]="172.16.131.12"
+pdsIPs[PDSWebsite_3]="172.16.132.12"
 
 #PDS Clear 
-#pdsIPs[PDSClear_1]="172.16.108.20"
-#pdsIPs[PDSClear_2]="172.16.107.10"
-#pdsIPs[PDSClear_3]="172.16.110.4"
+pdsIPs[PDSClear_1]="172.16.108.20"
+pdsIPs[PDSClear_2]="172.16.107.10"
+pdsIPs[PDSClear_3]="172.16.110.4"
 
 #API Gateway
-#pdsIPs[PDSApigateway_1]="172.16.108.30"
+pdsIPs[PDSApigateway_1]="172.16.108.30"
 pdsIPs[PDSApigateway_2]="172.16.15.4"
 
 #SSI 
@@ -38,12 +38,12 @@ function chk(){
 	#check Date 
 	if [[ "date" = $1 ]]
 	then
-		ssh $usr@$srv_ip 'sudo date'
+		ssh $usr@$srv_ip "sudo date"
 	#check status
 	elif [[ "st" = $1 ]]
 	then
 		ssh $usr@$srv_ip 'systemctl status crond' | awk 'FNR == 3'
-	#stop service
+	#stop crond service
 	elif [[ "stp" = $1 ]]
 	then
 		ssh $usr@$srv_ip 'sudo systemctl stop crond' | awk 'FNR == 3'
@@ -51,7 +51,7 @@ function chk(){
 	elif [[ "host" = $1 ]]
 	then
 		ssh $usr@$srv_ip "hostname"
-	#restart service
+	#restart crond service
 	elif [[ "rt" = $1 ]]
 	then
 		ssh $usr@$srv_ip 'sudo systemctl restart crond' | awk 'FNR == 3'
@@ -75,59 +75,38 @@ function date(){
 		ssh $usr@$srv_ip 'date --rfc-3339=seconds' | awk -F'+' '{print $1}' | awk '{print $2}'
 	fi
 }
-
-#Forward Date
-function processDate(){
-	#${ bc -l } means standard math operation
-	#${ scale=2 } mean scale limit with 2 decimal point
-	newDay=$(bc -l <<< "scale=2; $(date day) + 2")
-	newDate="$(date ym)${newDay}"
-	newTime="$(date tm)"
-	newDateTime="${newDate} ${newTime}"
-	setDate="sudo date -s '${newDateTime}'"
-	echo $setDate
-}
-function processDateSsi(){
-		#newDay=$(bc -l <<< "scale=2; $(ssh -p 222 $usr@$srv_ip 'date --rfc-3339=date' | awk -F'-' '{print $3}') + 2")
-		#newDate="$(ssh -p 222 $usr@$srv_ip  'date --rfc-3339=date' | awk -F'-' '{print $1"-"$2"-"}')${newDay}"
-		#newTime="$(ssh -p 222 $usr@$srv_ip 'date --rfc-3339=seconds' | awk -F'+' '{print $1}' | awk '{print $2}')"
-		#newDateTime="${newDate} ${newTime}"
-		#testDate="2023-11-28 08:58:10"
-		#setDate="sudo date -s '${newDateTime}'"
-		setDate="sudo date -s '+2 days'"
-		echo $setDate
-}
-
 #LOOP through the Ip address
 for key in ${!pdsIPs[@]}
 do 
 	#Overiding Variable
-	#srv_ip=${pdsIPs[$key]}
-	#usr="carana"
-
-	echo "=========START==========="
-
+	srv_ip=${pdsIPs[$key]}
+	usr="carana"
+	echo "=================START====================="
 	echo "Alias: " $key
 	echo "Server IP: "${pdsIPs[$key]}
-	#ssh $usr@$srv_ip $(processDate)
 	if [[ $key = "SSI" ]]
 	then 
-		#jecho "Hostname: " $(ssh -p 222 $usr@$srv_ip 'hostname')
-		#echo "Current Date: " $(ssh -p 222 $usr@$srv_ip 'sudo date')
-		#ssh -p 222 $usr@$srv_ip $setDate 
-		echo "Date From Test Server: " $(ssh chan@192.168.168.99 'sudo date')
-		ssh chan@192.168.168.99 "sudo date -s '+2 days'"
-		echo "New Date From  Test Server: " $(ssh chan@192.168.168.99 'sudo date')
-		#echo "New Date: " $(processDateSsi)
+		echo "Hostname: " $(ssh -p 222 $usr@$srv_ip 'hostname')
+		echo "Current Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
+		echo "Setting Date For $(ssh -p 222 $usr@$srv_ip 'hostname')..."
+		#Uncomment to Set date 2 days ahead  
+		#ssh -p 222 $usr@$srv_ip "sudo date -s '+2 days'"
+
+		#Uncomment to Sync date in realtime
+		ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		echo "New Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
 	else
 		echo "Hostname: " $(chk host)
 		echo "Current Date: " $(chk date)
-		echo "New Date: " $(processDate)
+		echo "Setting Date For $(chk host)..."
+		sleep 1
+		#Uncomment Set date 2 days ahead  
+		#ssh $usr@$srv_ip "sudo date -s '+2 days'"
+
+		#Uncomment to Sync date in realtime
+		ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		echo "New Date: " $(chk date)
 	fi
-	# Date Calibration
-	# ssh $usr@$srv_ip 'ntpdate -u 172.16.48.2' 
-	echo "==========END============"
+	echo "==================END======================"
 	echo " "
 done 
-
-

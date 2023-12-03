@@ -1,0 +1,9 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain
+#192.168.168.175 pdsapigateway.pds.com.ph  pdsapigateway
+#192.168.168.179 carbondb.mysql-wso2.com
+
+172.16.110.4 carbondb.mysql-wso2.com
+
+54.199.58.200   apne1-1001.sentinelone.net
+

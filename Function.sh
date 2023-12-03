@@ -15,8 +15,9 @@ function trans(){
 		#read -e -p "Source: " src
 
 		#windows machine workstation local path
-		des="christian.arana@172.31.11.109:/D:/chan/Linux/Script"
-		scp -T $HOME/Script/* $des 
+		#des="christian.arana@172.31.11.109:/D:/chan/Linux/Script"
+		des="christian.arana@192.168.20.23:/D:/chan/Linux/Script"
+		scp -r -T $HOME/Script/* $des 
 	fi
 }
 
@@ -42,4 +43,12 @@ function node(){
 function sad(){
 	ssh-copy-id carana@$1
 }
-
+function go(){
+	if [[ $1 = "108.25" ]]
+	then
+		ssh carana@172.16.108.25
+	elif [[ $1 = "132.15" ]]
+	then
+		ssh carana@172.16.132.15
+	fi
+}
