@@ -8,10 +8,16 @@ alias rld="source ~/.bashrc"
 #vim Bassh
 alias vBf="vim $HOME/Script/Function.sh"
 alias vBa="vim $HOME/Script/Alias.sh"
+alias vBs="vim $HOME/Script/ssh.sh"
 alias vB="vim ~/.bashrc"
 #vim 
 alias vs="vim $HOME/Script/DR_Forward_Date.sh"
 
 #Script Shortcut
 alias rs="/home/zinetsu/Script/DR_Forward_Date.sh"
+
+#Change Direcory
+alias gS="cd ~/Script; l ; pwd"
+alias gSend="cd ~/trans/send; l ; pwd"
+alias gGet="cd ~/trans/recieved; l ; pwd"
 
