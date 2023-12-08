@@ -39,4 +39,7 @@ function node(){
 		ssh carana@172.16.88.9
 	fi
 }
+function sad(){
+	ssh-copy-id carana@$1
+}
 
