@@ -29,7 +29,7 @@ pdsIPs[PDSClear_3]="172.16.110.4"
 pdsIPs[PDSApigateway_1]="172.16.108.30"
 pdsIPs[PDSApigateway_2]="172.16.15.4"
 
-#SSI 
+#SIS
 pdsIPs[SSI]="172.16.106.7"
 
 #Function for Cheking and systemd commands 
@@ -90,21 +90,22 @@ do
 		echo "Current Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
 		echo "Setting Date For $(ssh -p 222 $usr@$srv_ip 'hostname')..."
 		#Uncomment to Set date 2 days ahead  
-		#ssh -p 222 $usr@$srv_ip "sudo date -s '+2 days'"
+		ssh -p 222 $usr@$srv_ip "sudo date -s '+1 days'"
 
 		#Uncomment to Sync date in realtime
-		ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		#ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		#ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
 		echo "New Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
 	else
 		echo "Hostname: " $(chk host)
 		echo "Current Date: " $(chk date)
 		echo "Setting Date For $(chk host)..."
-		sleep 1
 		#Uncomment Set date 2 days ahead  
-		#ssh $usr@$srv_ip "sudo date -s '+2 days'"
+		ssh $usr@$srv_ip "sudo date -s '+1 days'"
 
 		#Uncomment to Sync date in realtime
-		ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		#ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+		#ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
 		echo "New Date: " $(chk date)
 	fi
 	echo "==================END======================"

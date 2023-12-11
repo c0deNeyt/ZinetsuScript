@@ -1,0 +1,7 @@
+./senT1.sh
+./testHosts
+./.git/hooks/pre-rebase.sample
+./.git/logs/HEAD
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes/origin/main
+./isalangMoAko

@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
+#Get the UUID 
 function uuid(){
         sudo blkid|grep /dev/|awk -F" " \
                 '{str="";
@@ -48,7 +49,6 @@ function fnd(){
 	find $src -type f -name $file
 	
 }
-#scp -T /home/zinetsu/Script/* christian.arana@172.31.11.109:'/D:/chan/Linux/Script'
 
 #SSH to Database Nodes
 function node(){
@@ -60,19 +60,27 @@ function node(){
 		ssh carana@172.16.88.9
 	fi
 }
+#SSH key Pairing
 function sad(){
 	ssh-copy-id carana@$1
+}
+#SentinelOne change hostsfile
+function s1(){
+	ssh carana@$1 'bash -s' < $HOME/Script/senT1.sh
+}
+function s2(){
+	ssh root@$1 'bash -s' < $HOME/Script/senT1.sh
 }
 function go(){
 	for key in  ${!srvIP[@]}
 	do 
-		echo $key
+		if [[ -n $2 ]]
+		then
+			ssh chan@${srvIP[$key]}
+			break
+		elif [[ $1 = $key ]]
+		then
+			ssh carana@${srvIP[$key]}
+		fi
 	done
-#	if [[ $1 = "108.25" ]]
-#	then
-#		ssh carana@172.16.108.25
-#	elif [[ $1 = "132.15" ]]
-#	then
-#		ssh carana@172.16.132.15
-	#fi
 }

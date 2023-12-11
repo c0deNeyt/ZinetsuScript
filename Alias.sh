@@ -16,6 +16,9 @@ alias vs="vim $HOME/Script/DR_Forward_Date.sh"
 #Script Shortcut
 alias rs="/home/zinetsu/Script/DR_Forward_Date.sh"
 
+#ssh 
+alias s99="go 168.99 chan"
+
 #Change Direcory
 alias gS="cd ~/Script; l ; pwd"
 alias gSend="cd ~/trans/send; l ; pwd"

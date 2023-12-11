@@ -8,10 +8,11 @@ if [[ -z "$1" ]]; then
 	echo " "  
 	exit 1
 fi
+
 #Patter to find
-read -e -p "Change this: " changeThis
+read -e -p "Find: " changeThis
 #Pattern to change
-read -e -p "Change to: " changeTo
+#read -e -p "Replace: " changeTo
 
 #look for the relateed diretories
 # Commands:
@@ -19,13 +20,14 @@ read -e -p "Change to: " changeTo
 # awk -> to select a row/columns 
 # uniq -> filter out duplicate results
 # Params:
-# -rI -> recursive and down't search for binary file e.g ".swp"
+# -rI -> recursive and don't search for binary file e.g ".swp"
 # -F':' -> set ':' as delimeter
 # '{print $1}' -> first column(defult delimiter is space) in a row(line)
 echo "Searching for Files..."
 sudo grep -rI --exclude=".bash_history" $changeThis $1 | awk -F':' '{print $1}' | uniq > searchDirectory.txt
+#sudo grep -rI --exclude=".bash_history" "8.8.8.8" /etc | awk -F':' '{print $1}' | uniq > searchDirectory.txt
 #Function to edit all the results from the serarchDirectory.txt
-function iditDir(){
+function iditFile(){
 	varFile="searchDirectory.txt"
 	varLines=$(cat $varFile)
 	#loop to each list of directories
@@ -35,7 +37,7 @@ function iditDir(){
 		sed -i "s/$changeThis/$changeTo/" $File	
 	done
 }
-echo $(iditDir)
+#echo $(iditFile)
 echo "Affected Files:"
 cat ./searchDirectory.txt
-rm ./searchDirectory.txt
+#rm ./searchDirectory.txt
