@@ -74,7 +74,7 @@ function s2(){
 function go(){
 	for key in  ${!srvIP[@]}
 	do 
-		if [[ -n $2 ]]
+		if [[ -n $2 ]] && [[ $1 = $key ]]
 		then
 			ssh chan@${srvIP[$key]}
 			break
