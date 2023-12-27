@@ -1,0 +1,13 @@
+{
+  "TTS_CAAC": [
+    {
+      "Server Name": "DB Server",
+      "Server IP": 172.32.1.127,
+    },
+    {
+      "Server Name": "Web / App Server",
+      "Server IP": 172.16.9.7,
+    },
+  ]
+}
+
