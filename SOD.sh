@@ -1,54 +1,67 @@
 #!/usr/bin/sh
 
+echo "Generating Report..."
 #varFilePath=$HOME/trans/send/sampleFile.csv
-varFilePath=$HOME/Script/isalangMoAko
-srvJSON=$HOME/Script/critical.json
-#Associative array for IP
-declare -A pdsCAAC
-#CAAC
-ppdsServerIP[cca_db]="172.32.1.127"
-ppdsServerIP[cca_web]="172.32.1.127"
-
+varData=$HOME/Script/data.json
+varStatus="NO ISSUE FOUND!"
+#jq command is for handling json data 
+varSrvCount=$(jq -r '.servers | keys | length' $varData)
 #Function for Date
-function date(){
-	#Get Day
-	if [[ $1 = "day" ]]
+function gdate(){
+	#Get Date time 
+	if [[ $1 = "long" ]]
 	then
-		ssh $usr@$srv_ip 'date --rfc-3339=date' | awk -F'-' '{print $3}'
-	#Get Year Month
-	elif [[ $1 = "ym" ]]
+		ssh carana@172.16.131.15 'date +"%B %d, %Y %A, %r"' 
+	elif [[ $1 = "short" ]]
 	then
-		ssh $usr@$srv_ip  'date --rfc-3339=date' | awk -F'-' '{print $1"-"$2"-"}'
-		#{ -F'-' } means set/read as field separator
-	#Get Current time  
-	elif [[ $1 = "tm" ]]
-	then
-		ssh carana@172.16.131.15 'date --rfc-3339=seconds' | awk -F'+' '{print $1}' | awk '{print $2}'
+		if [[ $(date +"%r" | awk '{print $2}') = "PM" ]]
+		then 
+			ssh carana@172.16.131.15 'date +"EOD_%m%d%Y_%H%M"' 
+		elif [[	$(date +"%r" | awk '{print $2}') = "AM" ]]
+		then
+			ssh carana@172.16.131.15 'date +"SOD_%m%d%Y_%H%M"' 
+		fi
 	fi
 }
-#
-date tm
-sleep 2
-date tm
 
-# Check if the file exists
-if [ -f $varFilePath ]; then
-    # Read each line of the file
-    while IFS= read -r line; do
-        echo "IP: $line"
-	# Create a temporaryFile to store each result
-	touch tmpPingRes
-	touch eodsod.txt 
-	# -4 => ping tcp only
-	# -c3 => give 3 packet test
-	# -W1.5 => wait interval to consiter timeout in seconds
-	ping -4 -c2 -W1.5 $line > ./tmpPingRes
-       	cat tmpPingRes >> eodsod.txt 
-       	cat tmpPingRes | grep "packet loss" | awk -F',' '{print $3}' | awk '{print $1}'
-	rm ./tmpPingRes
-	echo "===================================="
-	#echo $line | awk -F',' '{print $3}'
-    done < "$varFilePath"
-else
-    echo "File does not exist."
-fi
+#creating a file to store results
+varDataStorage="$(gdate short).txt" #filename
+touch $varDataStorage #create 
+# this will iterate to the server groups e.g CAAC 
+for (( i = 0; i < ${varSrvCount}; i++ )); do
+	#variable that store each server group per iteration
+	srvGroup=$(jq -r ".servers[$i] | keys[0]" $varData)
+	echo "=====================================================" >> $varDataStorage 
+	echo "$srvGroup $name" $(gdate long) >> $varDataStorage
+	echo "=====================================================" >> $varDataStorage
+	#this will store the count of all server's within current group 
+	srvGrpCount=$(jq -r ".servers[$i].$srvGroup | keys | length" $varData)
+	#Loop to each server's
+	for (( j = 0; j < ${srvGrpCount}; j++ )); do
+		#thi will get the ip address of each server
+		varSrvIp=$(jq -r ".servers[$i].$srvGroup[$j].serverip" $varData)
+		varSrvAlias=$(jq -r ".servers[$i].$srvGroup[$j].alias" $varData)
+		echo "*** $varSrvAlias ***" >> $varDataStorage
+		# -4 => ping tcp only
+		# -c3 => give 3 packet test
+		# -W1.5 => wait interval to consiter timeout in seconds
+		# > => to stdout the ouput into a file tmpPingRes
+		ping -4 -c3 -W1.5 $varSrvIp > ./tmpPingRes
+		echo " " >> ./tmpPingRes
+		cat tmpPingRes >> $varDataStorage 
+		#Cheking if there is packet loss or ping discrepancy
+		varCurStat=$(cat tmpPingRes | grep "packet loss" | awk -F',' '{print $3}' | awk '{print $1}')
+		if [[ $varCurStat != "0%" ]]
+		then
+			varStatus="ISSUE(S) FOUND!"
+			echo " "
+			echo "Server Alias: $varSrvAlias"
+			echo "Server IP: $varSrvIp"
+			echo " "
+		fi
+		rm  tmpPingRes
+	done
+	echo " " >> $varDataStorage
+done
+
+echo $varStatus
