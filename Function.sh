@@ -76,7 +76,7 @@ function go(){
 	do 
 		if [[ -n $2 ]] && [[ $1 = $key ]]
 		then
-			ssh chan@${srvIP[$key]}
+			ssh $2@${srvIP[$key]}
 			break
 		elif [[ $1 = $key ]]
 		then
