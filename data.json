@@ -1,0 +1,64 @@
+{
+  "servers": [
+    {
+      "CAAC": [
+	      {
+		      "alias": "DBServer",
+		      "serverip": "172.32.1.127"
+	      },
+	      {
+		      "alias": "WebAppServer",
+		      "serverip": "172.16.9.7"
+	      }
+      ] 
+    },
+    {
+      "API_BSP_ISO": [
+	      {
+		      "alias": "DBProd1Server",
+		      "serverip": "172.16.100.2"
+	      },
+	      {
+		      "alias": "ProxyLoadBalancesProd1Server",
+		      "serverip": "172.16.7.252"
+	      },
+	      {
+		      "alias": "GatewayPlatformProd1Server",
+		      "serverip": "172.16.9.68"
+	      },
+	      {
+		      "alias": "DBProd2Server",
+		      "serverip": "172.16.100.3"
+	      },
+	      {
+		      "alias": "ProxyLoadBalancesProd2Server",
+		      "serverip": "172.16.7.251"
+	      },
+	      {
+		      "alias": "GatewayPlatformProd2Server",
+		      "serverip": "172.16.9.69"
+	      }
+      ] 
+    },
+    {
+      "NEW_SCCP_INTERFACE": [
+	      {
+		      "alias": "NewSccpEcsInterfaceServer",
+		      "serverip": "172.16.123.21"
+	      }
+      ] 
+    },
+    {
+      "NEW_MARKETPAGE_MP3": [
+	      {
+		      "alias": "DbServer",
+		      "serverip": "172.16.2.122"
+	      },
+	      {
+		      "alias": "Nross1",
+		      "serverip": "172.16.195.11"
+	      }
+      ] 
+    }
+  ]
+}
