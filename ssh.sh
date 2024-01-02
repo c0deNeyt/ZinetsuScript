@@ -24,8 +24,12 @@ srvIP["108.25"]="172.16.108.25"
 srvIP["106.10"]="172.16.106.10"
 #DR Server
 srvIP["97.2"]="172.16.97.2" #BANCSCARTC1D
+srvIP["98.13"]="172.16.98.13" #pdsbancsv6db1d
 #TEST Sever
 srvIP["168.99"]="192.168.168.99"
+srvIP["168.94"]="192.168.168.94" #PeejayTestServer
 srvIP["168.2"]="192.168.168.2" #BANCSWACNG1U
 srvIP["168.166"]="192.168.168.166" #station1
+srvIP["cloud"]="172.104.184.163" #personal Cloud
+
 
