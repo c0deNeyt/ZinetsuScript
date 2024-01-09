@@ -55,10 +55,210 @@
 		      "serverip": "172.16.2.122"
 	      },
 	      {
-		      "alias": "Nross1",
-		      "serverip": "172.16.195.11"
+		      "alias": "DbServer0",
+		      "serverip": "172.16.2.71"
+	      },
+	      {
+		      "alias": "RedisHarvesterVM",
+		      "serverip": "172.16.2.123"
+	      },
+	      {
+		      "alias": "NewWebAppServer1VM",
+		      "serverip": "172.16.7.246"
+	      },
+	      {
+		      "alias": "NewWebAppServer2VM",
+		      "serverip": "172.16.7.247"
 	      }
       ] 
-    }
+    },
+    {
+      "New_PDS_CLEAR": [
+	      {
+		      "alias": "NewPdsClearDatabase1Prod",
+		      "serverip": "172.16.100.2"
+	      },
+	      {
+		      "alias": "NewPdsClearDatabase2Prod",
+		      "serverip": "172.16.100.3"
+	      },
+	      {
+		      "alias": "NewPdsClearWeb1VM",
+		      "serverip": "172.16.7.231"
+	      },
+	      {
+		      "alias": "NewPdsClearWeb2VM",
+		      "serverip": "172.16.7.232"
+	      },
+	      {
+		      "alias": "NewPdsClearApp1VM",
+		      "serverip": "172.16.105.10"
+	      },
+	      {
+		      "alias": "NewPdsClearApp2VM",
+		      "serverip": "172.16.105.11"
+	      }
+      ] 
+    },
+    {
+      "PDS_WEBSITE": [
+	      {
+		      "alias": "PdsWebsiteDbProd1VM",
+		      "serverip": "172.16.122.21"
+	      },
+	      {
+		      "alias": "PdsWebsiteDbProd2VM",
+		      "serverip": "172.16.122.22"
+	      },
+	      {
+		      "alias": "PdsWebsiteProd1VM",
+		      "serverip": "172.16.7.241"
+	      },
+	      {
+		      "alias": "PdsWebsiteProd2VM",
+		      "serverip": "172.16.7.242"
+	      },
+	      {
+		      "alias": "PdsWebsiteAppProd1VM",
+		      "serverip": "172.16.121.11"
+	      },
+	      {
+		      "alias": "PdsWebsiteAppProd2VM",
+		      "serverip": "172.16.121.12"
+	      },
+	      {
+		      "alias": "TradingIntegrationSystemProd1",
+		      "serverip": "172.16.7.214"
+	      },
+	      {
+		      "alias": "TradingIntegrationSystemProd2",
+		      "serverip": "172.16.7.215"
+	      }
+      ] 
+    },
+    {
+      "BANCS_V6": [
+	      {
+		      "alias": "BancsDatabase1",
+		      "serverip": "172.16.88.2"
+	      },
+	      {
+		      "alias": "BancsDatabase2",
+		      "serverip": "172.16.88.3"
+	      },
+	      {
+		      "alias": "BancsWeb1",
+		      "serverip": "172.16.9.4"
+	      },
+	      {
+		      "alias": "BancsWeb2",
+		      "serverip": "172.16.9.5"
+	      },
+	      {
+		      "alias": "BancsApp1",
+		      "serverip": "172.16.86.2"
+	      },
+	      {
+		      "alias": "BancsApp2",
+		      "serverip": "172.16.86.3"
+	      },
+	      {
+		      "alias": "BancsComsAndReport1",
+		      "serverip": "172.16.87.4"
+	      },
+	      {
+		      "alias": "BancsComsAndReport2",
+		      "serverip": "172.16.87.5"
+	      },
+	      {
+		      "alias": "SettlementIntegrationSystemProd1",
+		      "serverip": "172.16.7.211"
+	      },
+	      {
+		      "alias": "SettlementIntegrationSystemProd2",
+		      "serverip": "172.16.7.212"
+	      },
+	      {
+		      "alias": "NewReportsServer1",
+		      "serverip": "172.16.87.11"
+	      },
+	      {
+		      "alias": "NewReportsServer2",
+		      "serverip": "172.16.87.12"
+	      }
+      ] 
+    },
+    {
+      "NTP_SERVER": [
+	      {
+		      "alias": "NtpServer",
+		      "serverip": "172.16.48.2"
+	      }
+      ] 
+    },
+    {
+      "DATA_ACCESS_POINT": [
+	      {
+		      "alias": "DataAccessPointProd1",
+		      "serverip": "172.16.186.10"
+	      },
+	      {
+		      "alias": "DataAccessPointProd2",
+		      "serverip": "172.16.186.20"
+	      }
+      ] 
+    },
+    {
+      "BSP_DATASCOPE_SELECT_PROXY": [
+	      {
+		      "alias": "BspDatascopeSelectProxyProd1",
+		      "serverip": "172.16.89.2"
+	      },
+	      {
+		      "alias": "DataAccessPointProd2",
+		      "serverip": "172.16.89.3"
+	      }
+      ] 
+    },
+    {
+      "REPORTS_PORTAL": [
+	      {
+		      "alias": "ReportsPortalWebAppProd",
+		      "serverip": "172.16.12.122"
+	      },
+	      {
+		      "alias": "ReportsPortalDbProd",
+		      "serverip": "172.16.12.123"
+	      }
+      ] 
+    },
+    {
+      "ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS": [
+	      {
+		      "alias": "AdProd1",
+		      "serverip": "172.16.82.150"
+	      },
+	      {
+		      "alias": "AdProd2",
+		      "serverip": "172.16.151"
+	      },
+	      {
+		      "alias": "AzureADConnectProd1",
+		      "serverip": "172.16.17.2"
+	      }
+      ] 
+    },
+    {
+      "NEW_SFTP_SERVER": [
+	      {
+		      "alias": "NewSftpServer",
+		      "serverip": "172.16.12.122"
+	      },
+	      {
+		      "alias": "ReportsPortalDbProd",
+		      "serverip": "172.16.12.123"
+	      }
+      ] 
+    },
   ]
 }
