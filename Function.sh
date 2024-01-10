@@ -27,16 +27,16 @@ function trans(){
 	des1="christian.arana@192.168.20.23:/D:/chan/Linux/Recieved"
 	if [[ $1 = "sh" ]]
 	then
-		#read -e -p "Source: " src
+		#read  -p "Source: " src
 		scp -r -T $HOME/Script/* $des 
 	elif [[ $1 = "get" ]]
 	then
-		#read -e -p "Source: " src
+		#read  -p "Source: " src
 		echo "Importing Files..."
 		scp -r -T $des0 $HOME/trans/recieved/
 	elif [[ $1 = "send" ]]
 	then
-		#read -e -p "Source: " src
+		#read  -p "Source: " src
 		echo "Exporting Files..."
 		scp -r -T $HOME/trans/send/* $des1
 	fi
@@ -44,8 +44,8 @@ function trans(){
 
 #Find files
 function fnd(){
-	read -e -p "In what directory? " src
-	read -e -p "What file? " file
+	read  -p "In what directory? " src
+	read  -p "What file? " file
 	find $src -type f -name $file
 	
 }
@@ -72,15 +72,31 @@ function s2(){
 	ssh root@$1 'bash -s' < $HOME/Script/senT1.sh
 }
 function go(){
+#	array_length=${#srvIP[@]}
+
+	# Loop through the array elements
+#	for ((i = 0; i < array_length; i++)); do
+#	    if [ $i -eq $((array_length - 1)) ]; then
+#		echo "${srvIP[i]} is the last item in the array."
+#	    else
+#		echo "${srvIP[i]}"
+#	    fi
+#	done
+
 	for key in  ${!srvIP[@]}
 	do 
-		if [[ -n $2 ]] && [[ $1 = $key ]]
+		if  [[ -n $2 ]] && [[ -n $3 ]]&& [[ $1 = $key ]] 
+		then
+			ssh -p$3 $2@${srvIP[$key]}
+			break
+		elif [[ -n $2 ]] && [[ $1 = $key ]] 
 		then
 			ssh $2@${srvIP[$key]}
 			break
 		elif [[ $1 = $key ]]
 		then
 			ssh carana@${srvIP[$key]}
+			break
 		fi
 	done
 }
