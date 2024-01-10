@@ -3,6 +3,8 @@
 echo "Generating Report..."
 #varFilePath=$HOME/trans/send/sampleFile.csv
 varData=$HOME/Script/data.json
+varData0=$(<$HOME/Script/data.json)
+varData1=
 varStatus="NO ISSUE FOUND!"
 #jq command is for handling json data 
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
@@ -41,6 +43,19 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		#thi will get the ip address of each server
 		varSrvIp=$(jq -r ".servers[$i].$srvGroup[$j].serverip" $varData)
 		varSrvAlias=$(jq -r ".servers[$i].$srvGroup[$j].alias" $varData)
+
+		#altering json file
+		one=".servers["
+		two="]."
+		three="$srvGroup"
+		four="["
+		five="] |= . + { "
+		six='"Classification": "Critical"'
+		seven="}"
+		param="$one$i$two$three$four$j$five$six$seven"
+		new_json=$(echo "$varData0" | jq "$param") 
+		echo "$new_json" > ./data.json
+		
 		echo "*** $varSrvAlias ***" >> $varDataStorage
 		# -4 => ping tcp only
 		# -c3 => give 3 packet test
@@ -63,5 +78,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	done
 	echo " " >> $varDataStorage
 done
-
+# This will echo aout the final status of the file 
 echo $varStatus
+# new data.json
+
+
