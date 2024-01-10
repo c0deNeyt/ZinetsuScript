@@ -8,6 +8,8 @@ srvIP["123.28"]="172.16.123.28" #PDSDOCKISO1P
 srvIP["7.247"]="172.16.7.247" #FXINTEGBLOT02
 srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
+#BANCS PROD 
+srvIP["96.2"]="172.16.96.2" #BANCSAPPTC1D
 #PDS Clear
 srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
@@ -43,3 +45,4 @@ srvIP["168.177"]="192.168.168.177" #pdsclgwyapp1t
 srvIP["168.179"]="192.168.168.179" #pdsclgwydb1t
 srvIP["168.116"]="192.168.168.116" #pdsfxbnmpws01
 srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
+
