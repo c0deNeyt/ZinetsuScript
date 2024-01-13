@@ -19,7 +19,9 @@ srvIP["9.69"]="172.16.9.69" #pdsapiwebapp2p
 srvIP["15.4"]="172.16.15.4" #pdsapiwebapp1d
 #Gateway
 srvIP["108.20"]="172.16.108.20" #pdsclgwyweb1d
-srvIP["105.10"]="172.16.95.11" #pdsclgwyapp1p
+srvIP["105.10"]="172.16.105.10" #
+srvIP["105.11"]="172.16.105.11" #
+srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
 #pdsfxbnmptc01d(New Market Page)
 srvIP["108.25"]="172.16.108.25"
 #TIS
