@@ -53,13 +53,21 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		six='"Classification": "Critical"'
 		seven="}"
 		param="$one$i$two$three$four$j$five$six$seven"
-		new_json=$(echo "$varData0" | jq "$param") 
-		echo "$new_json" > ./data.json
+		newData=$HOME/Script/newData.json
+		if [[ -e "$newData" ]]
+		then
+			#new_json=$(echo "$newData" | jq "$param") 
+			echo $param
+		else
+			#new_json=$(echo "$varData0" | jq "$param") 
+			echo "New data Doesn't exist!"
+			#echo "$new_json" > $newData
+		fi
 		
 		echo "*** $varSrvAlias ***" >> $varDataStorage
 		# -4 => ping tcp only
 		# -c3 => give 3 packet test
-		# -W1.5 => wait interval to consiter timeout in seconds
+		# -W1.5 => wait interval to consider timeout in seconds
 		# > => to stdout the ouput into a file tmpPingRes
 		ping -4 -c3 -W1.5 $varSrvIp > ./tmpPingRes
 		echo " " >> ./tmpPingRes

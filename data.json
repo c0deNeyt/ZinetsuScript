@@ -2,263 +2,338 @@
   "servers": [
     {
       "CAAC": [
-	      {
-		      "alias": "DBServer",
-		      "serverip": "172.32.1.127"
-	      },
-	      {
-		      "alias": "WebAppServer",
-		      "serverip": "172.16.9.7"
-	      }
-      ] 
+        {
+          "alias": "DBServer",
+          "serverip": "172.32.1.127",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "WebAppServer",
+          "serverip": "172.16.9.7",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "API_BSP_ISO": [
-	      {
-		      "alias": "DBProd1Server",
-		      "serverip": "172.16.100.2"
-	      },
-	      {
-		      "alias": "ProxyLoadBalancesProd1Server",
-		      "serverip": "172.16.7.252"
-	      },
-	      {
-		      "alias": "GatewayPlatformProd1Server",
-		      "serverip": "172.16.9.68"
-	      },
-	      {
-		      "alias": "DBProd2Server",
-		      "serverip": "172.16.100.3"
-	      },
-	      {
-		      "alias": "ProxyLoadBalancesProd2Server",
-		      "serverip": "172.16.7.251"
-	      },
-	      {
-		      "alias": "GatewayPlatformProd2Server",
-		      "serverip": "172.16.9.69"
-	      }
-      ] 
+        {
+          "alias": "DBProd1Server",
+          "serverip": "172.16.100.2",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "ProxyLoadBalancesProd1Server",
+          "serverip": "172.16.7.252",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "GatewayPlatformProd1Server",
+          "serverip": "172.16.9.68",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "DBProd2Server",
+          "serverip": "172.16.100.3",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "ProxyLoadBalancesProd2Server",
+          "serverip": "172.16.7.251",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "GatewayPlatformProd2Server",
+          "serverip": "172.16.9.69",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "NEW_SCCP_INTERFACE": [
-	      {
-		      "alias": "NewSccpEcsInterfaceServer",
-		      "serverip": "172.16.123.21"
-	      }
-      ] 
+        {
+          "alias": "NewSccpEcsInterfaceServer",
+          "serverip": "172.16.123.21",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "NEW_MARKETPAGE_MP3": [
-	      {
-		      "alias": "DbServer",
-		      "serverip": "172.16.2.122"
-	      },
-	      {
-		      "alias": "DbServer0",
-		      "serverip": "172.16.2.71"
-	      },
-	      {
-		      "alias": "RedisHarvesterVM",
-		      "serverip": "172.16.2.123"
-	      },
-	      {
-		      "alias": "NewWebAppServer1VM",
-		      "serverip": "172.16.7.246"
-	      },
-	      {
-		      "alias": "NewWebAppServer2VM",
-		      "serverip": "172.16.7.247"
-	      }
-      ] 
+        {
+          "alias": "DbServer",
+          "serverip": "172.16.2.122",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "DbServer0",
+          "serverip": "172.16.2.71",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "RedisHarvesterVM",
+          "serverip": "172.16.2.123",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewWebAppServer1VM",
+          "serverip": "172.16.7.246",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewWebAppServer2VM",
+          "serverip": "172.16.7.247",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "New_PDS_CLEAR": [
-	      {
-		      "alias": "NewPdsClearDatabase1Prod",
-		      "serverip": "172.16.100.2"
-	      },
-	      {
-		      "alias": "NewPdsClearDatabase2Prod",
-		      "serverip": "172.16.100.3"
-	      },
-	      {
-		      "alias": "NewPdsClearWeb1VM",
-		      "serverip": "172.16.7.231"
-	      },
-	      {
-		      "alias": "NewPdsClearWeb2VM",
-		      "serverip": "172.16.7.232"
-	      },
-	      {
-		      "alias": "NewPdsClearApp1VM",
-		      "serverip": "172.16.105.10"
-	      },
-	      {
-		      "alias": "NewPdsClearApp2VM",
-		      "serverip": "172.16.105.11"
-	      }
-      ] 
+        {
+          "alias": "NewPdsClearDatabase1Prod",
+          "serverip": "172.16.100.2",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewPdsClearDatabase2Prod",
+          "serverip": "172.16.100.3",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewPdsClearWeb1VM",
+          "serverip": "172.16.7.231",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewPdsClearWeb2VM",
+          "serverip": "172.16.7.232",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewPdsClearApp1VM",
+          "serverip": "172.16.105.10",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewPdsClearApp2VM",
+          "serverip": "172.16.105.11",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "PDS_WEBSITE": [
-	      {
-		      "alias": "PdsWebsiteDbProd1VM",
-		      "serverip": "172.16.122.21"
-	      },
-	      {
-		      "alias": "PdsWebsiteDbProd2VM",
-		      "serverip": "172.16.122.22"
-	      },
-	      {
-		      "alias": "PdsWebsiteProd1VM",
-		      "serverip": "172.16.7.241"
-	      },
-	      {
-		      "alias": "PdsWebsiteProd2VM",
-		      "serverip": "172.16.7.242"
-	      },
-	      {
-		      "alias": "PdsWebsiteAppProd1VM",
-		      "serverip": "172.16.121.11"
-	      },
-	      {
-		      "alias": "PdsWebsiteAppProd2VM",
-		      "serverip": "172.16.121.12"
-	      },
-	      {
-		      "alias": "TradingIntegrationSystemProd1",
-		      "serverip": "172.16.7.214"
-	      },
-	      {
-		      "alias": "TradingIntegrationSystemProd2",
-		      "serverip": "172.16.7.215"
-	      }
-      ] 
+        {
+          "alias": "PdsWebsiteDbProd1VM",
+          "serverip": "172.16.122.21",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "PdsWebsiteDbProd2VM",
+          "serverip": "172.16.122.22",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "PdsWebsiteProd1VM",
+          "serverip": "172.16.7.241",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "PdsWebsiteProd2VM",
+          "serverip": "172.16.7.242",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "PdsWebsiteAppProd1VM",
+          "serverip": "172.16.121.11",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "PdsWebsiteAppProd2VM",
+          "serverip": "172.16.121.12",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "TradingIntegrationSystemProd1",
+          "serverip": "172.16.7.214",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "TradingIntegrationSystemProd2",
+          "serverip": "172.16.7.215",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "BANCS_V6": [
-	      {
-		      "alias": "BancsDatabase1",
-		      "serverip": "172.16.88.2"
-	      },
-	      {
-		      "alias": "BancsDatabase2",
-		      "serverip": "172.16.88.3"
-	      },
-	      {
-		      "alias": "BancsWeb1",
-		      "serverip": "172.16.9.4"
-	      },
-	      {
-		      "alias": "BancsWeb2",
-		      "serverip": "172.16.9.5"
-	      },
-	      {
-		      "alias": "BancsApp1",
-		      "serverip": "172.16.86.2"
-	      },
-	      {
-		      "alias": "BancsApp2",
-		      "serverip": "172.16.86.3"
-	      },
-	      {
-		      "alias": "BancsComsAndReport1",
-		      "serverip": "172.16.87.4"
-	      },
-	      {
-		      "alias": "BancsComsAndReport2",
-		      "serverip": "172.16.87.5"
-	      },
-	      {
-		      "alias": "SettlementIntegrationSystemProd1",
-		      "serverip": "172.16.7.211"
-	      },
-	      {
-		      "alias": "SettlementIntegrationSystemProd2",
-		      "serverip": "172.16.7.212"
-	      },
-	      {
-		      "alias": "NewReportsServer1",
-		      "serverip": "172.16.87.11"
-	      },
-	      {
-		      "alias": "NewReportsServer2",
-		      "serverip": "172.16.87.12"
-	      }
-      ] 
+        {
+          "alias": "BancsDatabase1",
+          "serverip": "172.16.88.2",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsDatabase2",
+          "serverip": "172.16.88.3",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsWeb1",
+          "serverip": "172.16.9.4",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsWeb2",
+          "serverip": "172.16.9.5",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsApp1",
+          "serverip": "172.16.86.2",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsApp2",
+          "serverip": "172.16.86.3",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsComsAndReport1",
+          "serverip": "172.16.87.4",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "BancsComsAndReport2",
+          "serverip": "172.16.87.5",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "SettlementIntegrationSystemProd1",
+          "serverip": "172.16.7.211",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "SettlementIntegrationSystemProd2",
+          "serverip": "172.16.7.212",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewReportsServer1",
+          "serverip": "172.16.87.11",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NewReportsServer2",
+          "serverip": "172.16.87.12",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "NTP_SERVER": [
-	      {
-		      "alias": "NtpServer",
-		      "serverip": "172.16.48.2"
-	      }
-      ] 
+        {
+          "alias": "NtpServer",
+          "serverip": "172.16.48.2",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "DATA_ACCESS_POINT": [
-	      {
-		      "alias": "DataAccessPointProd1",
-		      "serverip": "172.16.186.10"
-	      },
-	      {
-		      "alias": "DataAccessPointProd2",
-		      "serverip": "172.16.186.20"
-	      }
-      ] 
+        {
+          "alias": "DataAccessPointProd1",
+          "serverip": "172.16.186.10",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "DataAccessPointProd2",
+          "serverip": "172.16.186.20",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "BSP_DATASCOPE_SELECT_PROXY": [
-	      {
-		      "alias": "BspDatascopeSelectProxyProd1",
-		      "serverip": "172.16.89.2"
-	      },
-	      {
-		      "alias": "DataAccessPointProd2",
-		      "serverip": "172.16.89.3"
-	      }
-      ] 
+        {
+          "alias": "BspDatascopeSelectProxyProd1",
+          "serverip": "172.16.89.2",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "DataAccessPointProd2",
+          "serverip": "172.16.89.3",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "REPORTS_PORTAL": [
-	      {
-		      "alias": "ReportsPortalWebAppProd",
-		      "serverip": "172.16.12.122"
-	      },
-	      {
-		      "alias": "ReportsPortalDbProd",
-		      "serverip": "172.16.12.123"
-	      }
-      ] 
+        {
+          "alias": "ReportsPortalWebAppProd",
+          "serverip": "172.16.12.122",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "ReportsPortalDbProd",
+          "serverip": "172.16.12.123",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS": [
-	      {
-		      "alias": "AdProd1",
-		      "serverip": "172.16.82.150"
-	      },
-	      {
-		      "alias": "AdProd2",
-		      "serverip": "172.16.151"
-	      },
-	      {
-		      "alias": "AzureADConnectProd1",
-		      "serverip": "172.16.17.2"
-	      }
-      ] 
+        {
+          "alias": "AdProd1",
+          "serverip": "172.16.82.150",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "AdProd2",
+          "serverip": "172.16.82.151",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "AzureADConnectProd1",
+          "serverip": "172.16.17.2",
+          "Classification": "Critical"
+        }
+      ]
     },
     {
       "NEW_SFTP_SERVER": [
-	      {
-		      "alias": "NewSftpServer",
-		      "serverip": "172.16.12.122"
-	      },
-	      {
-		      "alias": "ReportsPortalDbProd",
-		      "serverip": "172.16.12.123"
-	      }
-      ] 
+        {
+          "alias": "NewSftpServer",
+          "serverip": "172.16.9.8",
+          "Classification": "Critical"
+        }
+      ]
     },
+    {
+      "NROSS_PROD": [
+        {
+          "alias": "NrossProd1",
+          "serverip": "172.16.195.11",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "NrossProd2",
+          "serverip": "172.16.195.12",
+          "Classification": "Critical"
+        }
+      ]
+    },
+    {
+      "VM_HOST_PROD": [
+        {
+          "alias": "VmHostProd1",
+          "serverip": "192.168.167.101",
+          "Classification": "Critical"
+        },
+        {
+          "alias": "VmHostProd2",
+          "serverip": "192.168.167.102",
+          "Classification": "Critical"
+        }
+      ]
+    }
   ]
 }
