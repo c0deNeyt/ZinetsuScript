@@ -30,7 +30,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		three="$srvGroup"
 		four="["
 		five="] |= . + { "
-		six='"Classification": "Critical"'
+		six='"classification": "Critical"'
 		seven="}"
 		#contatinating the command parameter
 		param="$one$i$two$three$four$j$five$six$seven"

@@ -40,30 +40,11 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	srvGrpCount=$(jq -r ".servers[$i].$srvGroup | keys | length" $varData)
 	#Loop to each server's
 	for (( j = 0; j < ${srvGrpCount}; j++ )); do
-		#thi will get the ip address of each server
+		#this will get the ip address of each server
 		varSrvIp=$(jq -r ".servers[$i].$srvGroup[$j].serverip" $varData)
 		varSrvAlias=$(jq -r ".servers[$i].$srvGroup[$j].alias" $varData)
-
-		#altering json file
-		one=".servers["
-		two="]."
-		three="$srvGroup"
-		four="["
-		five="] |= . + { "
-		six='"Classification": "Critical"'
-		seven="}"
-		param="$one$i$two$three$four$j$five$six$seven"
-		newData=$HOME/Script/newData.json
-		if [[ -e "$newData" ]]
-		then
-			#new_json=$(echo "$newData" | jq "$param") 
-			echo $param
-		else
-			#new_json=$(echo "$varData0" | jq "$param") 
-			echo "New data Doesn't exist!"
-			#echo "$new_json" > $newData
-		fi
 		
+		#server header	
 		echo "*** $varSrvAlias ***" >> $varDataStorage
 		# -4 => ping tcp only
 		# -c3 => give 3 packet test
@@ -86,8 +67,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	done
 	echo " " >> $varDataStorage
 done
-# This will echo aout the final status of the file 
+# This will echo out the final status of the file 
 echo $varStatus
-# new data.json
 
 
