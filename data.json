@@ -486,7 +486,101 @@
       ]
     },
     {
-      "TTS_DR": [
+      "SAP_SERVER": [
+        {
+          "alias": "SapDb",
+          "serverip": "172.16.82.101",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "SapLicMan",
+          "serverip": "172.16.82.100",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "",
+          "serverip": "172.16.92.101",
+          "classification": "Non_Critical"
+        }
+      ]
+    },
+    {
+      "UTILITIES_SERVER": [
+        {
+          "alias": "BiometricSystem",
+          "serverip": "192.168.167.220",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "CctvServerNg",
+          "serverip": "172.16.1.2",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "ElidServerNg",
+          "serverip": "172.16.0.25",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "DmsServer",
+          "serverip": "172.16.0.8",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "WiseSqlServer",
+          "serverip": "172.16.82.50",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "WiseServer",
+          "serverip": "172.16.82.51",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "HrProServer",
+          "serverip": "172.16.82.52",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "GfiServer",
+          "serverip": "172.16.12.16",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "NgDomainController01",
+          "serverip": "172.16.82.10",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "NgDomainController02",
+          "serverip": "172.16.82.11",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "TecDomainController01",
+          "serverip": "172.16.92.10",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "NewNgFileAndBackupServer",
+          "serverip": "172.16.82.12",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "VirtualServerManagementProd",
+          "serverip": "192.168.167.100",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "VirtualServerManagementDr",
+          "serverip": "192.168.67.100",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "NewPdsSmtp",
+          "serverip": "172.16.17.3",
+          "classification": "Non_Critical"
+        }
       ]
     }
   ]
