@@ -48,5 +48,3 @@ srvIP["168.177"]="192.168.168.177" #pdsclgwyapp1t
 srvIP["168.179"]="192.168.168.179" #pdsclgwydb1t
 srvIP["168.116"]="192.168.168.116" #pdsfxbnmpws01
 srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
-
-
