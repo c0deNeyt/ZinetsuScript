@@ -70,4 +70,6 @@ done
 # This will echo out the final status of the file 
 echo $varStatus
 
-
+#PENDING
+# Access the csv File
+# write to a csv file

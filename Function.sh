@@ -21,10 +21,12 @@ function test(){
 #SCP Transfer to Windows volume
 function trans(){
 	#windows machine workstation local path
-	#des="christian.arana@172.31.11.109:/D:/chan/Linux/Script"
 	des="christian.arana@192.168.20.23:/D:/chan/Linux/Script"
-	des0="christian.arana@192.168.20.23:/D:/chan/Linux/Send/*"
+	src0="christian.arana@192.168.20.23:/D:/chan/Linux/Send/*"
 	des1="christian.arana@192.168.20.23:/D:/chan/Linux/Recieved"
+	details="christian.arana@192.168.20.23"
+	oneD="OneDrive - Philippine Dealing System Holdings Corp. & Subsidiaries"
+	src1="christian.arana@192.168.20.23:/D:/chan/Linux/SOD_EOD/*"
 	if [[ $1 = "sh" ]]
 	then
 		#read  -p "Source: " src
@@ -33,13 +35,16 @@ function trans(){
 	then
 		#read  -p "Source: " src
 		echo "Importing Files..."
-		scp -r -T $des0 $HOME/trans/recieved/
+		scp -r -T $src0 $HOME/trans/recieved/
 	elif [[ $1 = "send" ]]
 	then
 		#read  -p "Source: " src
 		echo "Exporting Files..."
 		scp -r -T $HOME/trans/send/* $des1
-	fi
+	elif [[ $1 = "sm" ]]
+	then
+		scp -r -T $src1 $HOME/Documents/SOD_EOD/
+	fi	
 }
 
 #Find files

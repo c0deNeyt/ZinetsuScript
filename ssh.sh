@@ -32,6 +32,8 @@ srvIP["106.7"]="172.16.106.7"
 #DR Server
 srvIP["97.2"]="172.16.97.2" #BANCSCARTC1D
 srvIP["98.13"]="172.16.98.13" #pdsbancsv6db1d
+srvIP["86.3"]="172.16.86.3" #BANCSAPPNG2P
+srvIP["97.3"]="172.16.97.3" #BANCSREPVT01D
 #TEST Sever
 srvIP["168.99"]="192.168.168.99"
 srvIP["168.94"]="192.168.168.94" #PeejayTestServer
