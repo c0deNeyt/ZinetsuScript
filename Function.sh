@@ -90,7 +90,11 @@ function go(){
 
 	for key in  ${!srvIP[@]}
 	do 
-		if  [[ -n $2 ]] && [[ -n $3 ]]&& [[ $1 = $key ]] 
+		if [[ $1 = "win" ]]
+		then	
+			ssh christian.arana@192.168.20.23
+			break
+	 	elif [[ -n $2 ]] && [[ -n $3 ]]&& [[ $1 = $key ]] 
 		then
 			ssh -p$3 $2@${srvIP[$key]}
 			break
