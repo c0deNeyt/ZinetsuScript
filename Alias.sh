@@ -12,6 +12,9 @@ alias vBs="vim $HOME/Script/ssh.sh"
 alias vB="vim ~/.bashrc"
 #vim 
 alias vs="vim $HOME/Script/DR_Forward_Date.sh"
+alias vt="vim $HOME/Script/edit_Csv_File.sh"
+alias vS="vim ~/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+alias vse="vim $HOME/Script/SOD.sh"
 
 #Script Shortcut
 alias rs="/home/zinetsu/Script/DR_Forward_Date.sh"
@@ -24,3 +27,6 @@ alias gS="cd ~/Script; l ; pwd"
 alias gSend="cd ~/trans/send; l ; pwd"
 alias gGet="cd ~/trans/recieved; l ; pwd"
 
+#Git
+alias gl="git log --oneline"
+alias gs="git status"
