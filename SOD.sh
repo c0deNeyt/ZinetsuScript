@@ -1,10 +1,9 @@
 #!/usr/bin/sh
 
 echo "Generating Report..."
-#varFilePath=$HOME/trans/send/sampleFile.csv
+source $HOME/Script/Alias.sh
 varData=$HOME/Script/data.json
 varData0=$(<$HOME/Script/data.json)
-varData1=
 varStatus="NO ISSUE FOUND!"
 #jq command is for handling json data 
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
@@ -23,6 +22,9 @@ function gdate(){
 		then
 			ssh carana@172.16.131.15 'date +"SOD_%m%d%Y_%H%M"' 
 		fi
+	elif [[ $1 = "tme" ]]
+	then
+		ssh carana@172.16.131.15 'date +"%H:%M"' 
 	fi
 }
 
@@ -34,12 +36,18 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#variable that store each server group per iteration
 	srvGroup=$(jq -r ".servers[$i] | keys[0]" $varData)
 	echo "=====================================================" >> $varDataStorage 
-	echo "$srvGroup $name" $(gdate long) >> $varDataStorage
+	echo "$srvGroup" $(gdate long) >> $varDataStorage
 	echo "=====================================================" >> $varDataStorage
+	varIndex=$(jq -r ".servers[$i].$srvGroup[0].index" $varData)
+	echo "$srvGroup..."
+
+	#this will edit the csv file
+	./edit_Csv_File.sh $varIndex $(gdate tme)
+
 	#this will store the count of all server's within current group 
 	srvGrpCount=$(jq -r ".servers[$i].$srvGroup | keys | length" $varData)
 	#Loop to each server's
-	for (( j = 0; j < ${srvGrpCount}; j++ )); do
+	for (( j = 1; j <= ${srvGrpCount}; j++ )); do
 		#this will get the ip address of each server
 		varSrvIp=$(jq -r ".servers[$i].$srvGroup[$j].serverip" $varData)
 		varSrvAlias=$(jq -r ".servers[$i].$srvGroup[$j].alias" $varData)
@@ -65,11 +73,14 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		fi
 		rm  tmpPingRes
 	done
+	#add space on each group
 	echo " " >> $varDataStorage
 done
 # This will echo out the final status of the file 
 echo $varStatus
 
+#this will update the file from windows
+trans smu
 #PENDING
 # Access the csv File
 # write to a csv file
