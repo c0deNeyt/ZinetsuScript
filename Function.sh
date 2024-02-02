@@ -24,9 +24,8 @@ function trans(){
 	des="christian.arana@192.168.20.23:/D:/chan/Linux/Script"
 	src0="christian.arana@192.168.20.23:/D:/chan/Linux/Send/*"
 	des1="christian.arana@192.168.20.23:/D:/chan/Linux/Recieved"
-	details="christian.arana@192.168.20.23"
-	oneD="OneDrive - Philippine Dealing System Holdings Corp. & Subsidiaries"
 	src1="christian.arana@192.168.20.23:/D:/chan/Linux/SOD_EOD/*"
+	src2="christian.arana@192.168.20.23:/D:/chan/Linux/SOD_EOD"
 	if [[ $1 = "sh" ]]
 	then
 		#read  -p "Source: " src
@@ -44,9 +43,11 @@ function trans(){
 	elif [[ $1 = "sm" ]]
 	then
 		scp -r -T $src1 $HOME/Documents/SOD_EOD/
+	elif [[ $1 = "smu" ]]
+	then
+		scp -r -T $HOME/Documents/SOD_EOD/* $src2 
 	fi	
 }
-
 #Find files
 function fnd(){
 	read  -p "In what directory? " src
@@ -76,18 +77,8 @@ function s1(){
 function s2(){
 	ssh root@$1 'bash -s' < $HOME/Script/senT1.sh
 }
+#this function if for hopping into a different server
 function go(){
-#	array_length=${#srvIP[@]}
-
-	# Loop through the array elements
-#	for ((i = 0; i < array_length; i++)); do
-#	    if [ $i -eq $((array_length - 1)) ]; then
-#		echo "${srvIP[i]} is the last item in the array."
-#	    else
-#		echo "${srvIP[i]}"
-#	    fi
-#	done
-
 	for key in  ${!srvIP[@]}
 	do 
 		if [[ $1 = "win" ]]
