@@ -12,7 +12,7 @@ cat ./tmpDirStructure | awk \
 	'{ for (i = 1; i <= NF; i++) { 
 		p1 = "sudo mkdir -p ";
 		p2 = p1 $i;
-		p3= "ssh carana@172.16.96.2 ";
+		p3 = "ssh carana@172.16.96.2 ";
 		cmd = p3  p2; 
 		system(cmd); 
 	    }
