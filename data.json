@@ -3,6 +3,9 @@
     {
       "CAAC": [
         {
+          "index": 58
+        },
+        {
           "alias": "DBServer",
           "serverip": "172.32.1.127",
           "classification": "Critical"
@@ -26,6 +29,9 @@
     },
     {
       "API_BSP_ISO": [
+        {
+          "index": 59
+        },
         {
           "alias": "DBProd1Server",
           "serverip": "172.16.100.2",
@@ -76,6 +82,9 @@
     {
       "NEW_SCCP_INTERFACE": [
         {
+          "index": 60
+        },
+        {
           "alias": "NewSccpEcsInterfaceServer",
           "serverip": "172.16.123.21",
           "classification": "Critical"
@@ -99,6 +108,9 @@
     },
     {
       "NEW_MARKETPAGE_MP3": [
+        {
+          "index": 61
+        },
         {
           "alias": "DbServer",
           "serverip": "172.16.2.122",
@@ -144,6 +156,9 @@
     {
       "New_PDS_CLEAR": [
         {
+          "index": 62
+        },
+        {
           "alias": "NewPdsClearDatabase1Prod",
           "serverip": "172.16.100.2",
           "classification": "Critical"
@@ -187,6 +202,9 @@
     },
     {
       "PDS_WEBSITE": [
+        {
+          "index": 63
+        },
         {
           "alias": "PdsWebsiteDbProd1VM",
           "serverip": "172.16.122.21",
@@ -251,6 +269,9 @@
     },
     {
       "BANCS_V6": [
+        {
+          "index": 64
+        },
         {
           "alias": "BancsDatabase1",
           "serverip": "172.16.88.2",
@@ -361,6 +382,9 @@
     {
       "NTP_SERVER": [
         {
+          "index": 65
+        },
+        {
           "alias": "NtpServer",
           "serverip": "172.16.48.2",
           "classification": "Critical"
@@ -369,6 +393,9 @@
     },
     {
       "DATA_ACCESS_POINT": [
+        {
+          "index": 66
+        },
         {
           "alias": "DataAccessPointProd1",
           "serverip": "172.16.186.10",
@@ -389,6 +416,9 @@
     {
       "BSP_DATASCOPE_SELECT_PROXY": [
         {
+          "index": 67
+        },
+        {
           "alias": "BspDatascopeSelectProxyProd1",
           "serverip": "172.16.89.2",
           "classification": "Critical"
@@ -408,6 +438,9 @@
     {
       "REPORTS_PORTAL": [
         {
+          "index": 68
+        },
+        {
           "alias": "ReportsPortalWebAppProd",
           "serverip": "172.16.12.122",
           "classification": "Critical"
@@ -421,6 +454,9 @@
     },
     {
       "ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS": [
+        {
+          "index": 69
+        },
         {
           "alias": "AdProd1",
           "serverip": "172.16.82.150",
@@ -446,6 +482,9 @@
     {
       "NEW_SFTP_SERVER": [
         {
+          "index": 70
+        },
+        {
           "alias": "NewSftpServer",
           "serverip": "172.16.9.8",
           "classification": "Critical"
@@ -459,6 +498,9 @@
     },
     {
       "NROSS_PROD": [
+        {
+          "index": 71
+        },
         {
           "alias": "NrossProd1",
           "serverip": "172.16.195.11",
@@ -474,6 +516,9 @@
     {
       "VM_HOST_PROD": [
         {
+          "index": 0
+        },
+        {
           "alias": "VmHostProd1",
           "serverip": "192.168.167.101",
           "classification": "Critical"
@@ -487,6 +532,9 @@
     },
     {
       "SAP_SERVER": [
+        {
+          "index": 0
+        },
         {
           "alias": "SapDb",
           "serverip": "172.16.82.101",
@@ -506,6 +554,9 @@
     },
     {
       "UTILITIES_SERVER": [
+        {
+          "index": 0
+        },
         {
           "alias": "BiometricSystem",
           "serverip": "192.168.167.220",
@@ -564,6 +615,21 @@
         {
           "alias": "NewNgFileAndBackupServer",
           "serverip": "172.16.82.12",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "NgAntiVirusAndWindosUpdateServer",
+          "serverip": "172.16.82.14",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "FileServer",
+          "serverip": "172.16.6.190",
+          "classification": "Non_Critical"
+        },
+        {
+          "alias": "BancsManagementServer",
+          "serverip": "192.168.167.15",
           "classification": "Non_Critical"
         },
         {
