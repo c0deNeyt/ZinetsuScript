@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-echo "Running Test..."
+echo "Writing to csv file..."
 # import customize function 
 source $HOME/Script/Function.sh
 
@@ -31,6 +31,7 @@ for ((i = 1; i <= $varLineCount; i++)); do
 	fi
 done
 
+echo "Trasfering to windows machine..."
 trans smu
 : '
 TO DO:
