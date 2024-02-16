@@ -12,6 +12,7 @@ alias vBs="vim $HOME/Script/ssh.sh"
 alias vB="vim ~/.bashrc"
 #vim 
 alias vs="vim $HOME/Script/DR_Forward_Date.sh"
+alias vV="vim $HOME/.vimrc"
 alias vt="vim $HOME/Script/edit_Csv_File.sh"
 alias vS="vim ~/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
 alias vse="vim $HOME/Script/SOD.sh"
