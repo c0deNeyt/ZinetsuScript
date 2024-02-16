@@ -3,6 +3,9 @@
 alias pds="ssh -L localhsot:5910:markinck.inf.uk:5910"
 alias l="ls -alh"
 alias rld="source ~/.bashrc"
+alias usg="du -hac --time -d1"
+# -n 1 refresh interval equals to 1 
+alias idate="watch -n 1 date"
 
 #Editing
 #vim Bassh
