@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 echo "Generating Report..."
-source $HOME/Script/Alias.sh
+source $HOME/Script/Function.sh
 varData=$HOME/Script/data.json
 varData0=$(<$HOME/Script/data.json)
 varStatus="NO ISSUE FOUND!"
@@ -15,13 +15,16 @@ function gdate(){
 		ssh carana@172.16.131.15 'date +"%B %d, %Y %A, %r"' 
 	elif [[ $1 = "short" ]]
 	then
+		#condition for EOD
 		if [[ $(date +"%r" | awk '{print $2}') = "PM" ]]
 		then 
 			ssh carana@172.16.131.15 'date +"EOD_%m%d%Y_%H%M"' 
+		#condition for SOD 
 		elif [[	$(date +"%r" | awk '{print $2}') = "AM" ]]
 		then
 			ssh carana@172.16.131.15 'date +"SOD_%m%d%Y_%H%M"' 
 		fi
+	#get time e.g. 13:00
 	elif [[ $1 = "tme" ]]
 	then
 		ssh carana@172.16.131.15 'date +"%H:%M"' 
@@ -31,6 +34,7 @@ function gdate(){
 #creating a file to store results
 varDataStorage="$(gdate short).txt" #filename
 touch $varDataStorage #create 
+
 # this will iterate to the server groups e.g CAAC 
 for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#variable that store each server group per iteration
@@ -41,13 +45,10 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	varIndex=$(jq -r ".servers[$i].$srvGroup[0].index" $varData)
 	echo "$srvGroup..."
 
-	#this will edit the csv file
-	./edit_Csv_File.sh $varIndex $(gdate tme)
-
 	#this will store the count of all server's within current group 
 	srvGrpCount=$(jq -r ".servers[$i].$srvGroup | keys | length" $varData)
 	#Loop to each server's
-	for (( j = 1; j <= ${srvGrpCount}; j++ )); do
+	for (( j = 1; j < ${srvGrpCount}; j++ )); do
 		#this will get the ip address of each server
 		varSrvIp=$(jq -r ".servers[$i].$srvGroup[$j].serverip" $varData)
 		varSrvAlias=$(jq -r ".servers[$i].$srvGroup[$j].alias" $varData)
@@ -61,6 +62,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		ping -4 -c3 -W1.5 $varSrvIp > ./tmpPingRes
 		echo " " >> ./tmpPingRes
 		cat tmpPingRes >> $varDataStorage 
+
 		#Cheking if there is packet loss or ping discrepancy
 		varCurStat=$(cat tmpPingRes | grep "packet loss" | awk -F',' '{print $3}' | awk '{print $1}')
 		if [[ $varCurStat != "0%" ]]
@@ -71,9 +73,14 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 			echo "Server IP: $varSrvIp"
 			echo " "
 		fi
+		#remove temporary file
 		rm  tmpPingRes
 	done
-	#add space on each group
+
+	#this will edit the csv file
+	./edit_Csv_File.sh $varIndex $(gdate tme)
+
+	#add space below on each group
 	echo " " >> $varDataStorage
 done
 # This will echo out the final status of the file 
@@ -81,6 +88,9 @@ echo $varStatus
 
 #this will update the file from windows
 trans smu
-#PENDING
-# Access the csv File
-# write to a csv file
+: 'TO DO:
+[done] Access the csv File
+[done] write to a csv file
+[] create a condtiion that if it is not valid index of server it will skip
+the edit csv script
+'
