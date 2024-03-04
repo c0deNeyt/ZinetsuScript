@@ -85,7 +85,7 @@ function go(){
 		then	
 			ssh christian.arana@192.168.20.23
 			break
-	 	elif [[ -n $2 ]] && [[ -n $3 ]]&& [[ $1 = $key ]] 
+	 	elif [[ -n $2 ]] && [[ -n $3 ]] && [[ $1 = $key ]] 
 		then
 			ssh -p$3 $2@${srvIP[$key]}
 			break
@@ -99,4 +99,18 @@ function go(){
 			break
 		fi
 	done
+}
+#show commands 
+function show(){
+	if [[ $1 = "interface" ]]
+	then
+		netstat -i		
+	elif [[ $1 = "2" ]]
+	then
+		ssh carana@172.16.88.9
+	else
+		echo " "
+		echo "Second Paramerter is missing!"
+		echo " "
+	fi
 }
