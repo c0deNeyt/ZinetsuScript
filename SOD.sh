@@ -34,7 +34,7 @@ function gdate(){
 #creating a file to store results
 varDataStorage="$(gdate short).txt" #filename
 touch $varDataStorage #create 
-
+srvCount=0
 # this will iterate to the server groups e.g CAAC 
 for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#variable that store each server group per iteration
@@ -59,7 +59,9 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		# -c3 => give 3 packet test
 		# -W1.5 => wait interval to consider timeout in seconds
 		# > => to stdout the ouput into a file tmpPingRes
-		ping -4 -c3 -W1.5 $varSrvIp > ./tmpPingRes
+		srvCount=$(echo $srvCount + 1 | bc)
+		echo $srvCount
+		ping -4 -c1 -W1.5 $varSrvIp > ./tmpPingRes
 		echo " " >> ./tmpPingRes
 		cat tmpPingRes >> $varDataStorage 
 
@@ -76,9 +78,12 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		#remove temporary file
 		rm  tmpPingRes
 	done
-
-	#this will edit the csv file
-	./edit_Csv_File.sh $varIndex $(gdate tme)
+	if [[ $varIndex -ne 0 ]] 
+	then 
+		echo "This is the valid index" $varIndex
+		#this will edit the csv file
+#		./edit_Csv_File.sh $varIndex $(gdate tme)
+	fi
 
 	#add space below on each group
 	echo " " >> $varDataStorage
@@ -88,6 +93,7 @@ echo $varStatus
 
 #this will update the file from windows
 trans smu
+echo $srvCount
 : 'TO DO:
 [done] Access the csv File
 [done] write to a csv file

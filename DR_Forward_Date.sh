@@ -8,17 +8,17 @@ usr="chan"
 #Associative array for IP
 declare -A pdsIPs
 #TIS
-pdsIPs[TIS]="172.16.106.10"
+#pdsIPs[TIS]="172.16.106.10"
 
 #Market Page
-pdsIPs[MarketPage_1]="172.16.131.15"
-pdsIPs[MarketPage_2]="172.16.108.25"
-pdsIPs[MarketPage_3]="172.16.132.15"
+#pdsIPs[MarketPage_1]="172.16.131.15"
+#pdsIPs[MarketPage_2]="172.16.108.25"
+#pdsIPs[MarketPage_3]="172.16.132.15"
 
 #PDS Website
-pdsIPs[PDSWebsite_1]="172.16.108.10"
-pdsIPs[PDSWebsite_2]="172.16.131.12"
-pdsIPs[PDSWebsite_3]="172.16.132.12"
+#pdsIPs[PDSWebsite_1]="172.16.108.10"
+#pdsIPs[PDSWebsite_2]="172.16.131.12"
+#pdsIPs[PDSWebsite_3]="172.16.132.12"
 
 #PDS Clear 
 #pdsIPs[PDSClear_1]="172.16.108.20"
@@ -90,10 +90,10 @@ do
 		echo "Current Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
 		echo "Setting Date For $(ssh -p 222 $usr@$srv_ip 'hostname')..."
 		#Uncomment to Set date 2 days ahead  
-		#ssh -p 222 $usr@$srv_ip "sudo date -s '+2 days'"
+		ssh -p 222 $usr@$srv_ip "sudo date -s '+2 days'"
 		#ssh -p 222 $usr@$srv_ip "sudo date -s '+1 days'"
 
-		ssh $usr@$srv_ip "echo THIS_Is_A_Test_Result"
+		#ssh $usr@$srv_ip "echo THIS_Is_A_Test_Result"
 
 		#Uncomment to Sync date in realtime
 		#ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
@@ -104,10 +104,10 @@ do
 		echo "Current Date: " $(chk date)
 		echo "Setting Date For $(chk host)..."
 		#Uncomment Set date 2 days ahead  
-		#ssh $usr@$srv_ip "sudo date -s '+2 days'"
+		ssh $usr@$srv_ip "sudo date -s '+2 days'"
 		#ssh $usr@$srv_ip "sudo date -s '+1 days'"
 
-		ssh $usr@$srv_ip "echo THIS_Is_A_Test_Result"
+		#ssh $usr@$srv_ip "echo THIS_Is_A_Test_Result"
 
 		#Uncomment to Sync date in realtime
 		#ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
