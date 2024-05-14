@@ -84,5 +84,8 @@ srvIP["168.93"]="192.168.168.93" #mpredisharvesterfxtest
 srvIP["168.40"]="192.168.168.40" #PDSSITEAPPNG1T
 srvIP["168.115"]="192.168.168.115" #
 srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
+srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
+srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 
-pdsfrwdbonddbp
+
+
