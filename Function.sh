@@ -105,6 +105,9 @@ function show(){
 	if [[ $1 = "interface" ]]
 	then
 		netstat -i		
+	elif [[ $1 = "process" ]]
+	then
+		ps axjf	
 	elif [[ $1 = "2" ]]
 	then
 		ssh carana@172.16.88.9
