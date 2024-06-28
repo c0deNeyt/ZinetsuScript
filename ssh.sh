@@ -11,6 +11,7 @@ srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
 srvIP["me"]="192.168.20.23" #PDSDTAACPOINT1D
 srvIP["195.12"]="172.16.195.12" #PDSNROSSNG2P
+srvIP["122.21"]="172.16.122.21" #PDSSITEDBNG1P
 
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #ns01.pdshc.com.ph.local
@@ -36,6 +37,8 @@ srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
 #CAAC
 srvIP["1.127"]="172.32.1.127" #aristotle
+srvIP["9.9"]="172.32.9.9" #
+
 #API
 srvIP["7.251"]="172.16.7.251" #pdsapipxybal2p
 srvIP["9.69"]="172.16.9.69" #pdsapiwebapp2p
@@ -86,6 +89,6 @@ srvIP["168.115"]="192.168.168.115" #
 srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
 srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
-
+srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
 
 
