@@ -90,5 +90,6 @@ srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
 srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
+srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
 
 
