@@ -36,8 +36,9 @@ srvIP["89.3"]="172.16.89.3" #PDSDSSWEBPXY02P
 srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
 #CAAC
-srvIP["1.127"]="172.32.1.127" #aristotle
+srvIP["1.127"]="172.32.1.127" #aristotle (caac APP PROD)
 srvIP["9.9"]="172.32.9.9" #
+srvIP["1.19"]="172.30.1.19" #sungogh(caac DR DB)
 
 #API
 srvIP["7.251"]="172.16.7.251" #pdsapipxybal2p
@@ -91,5 +92,6 @@ srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
+
 
 
