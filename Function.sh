@@ -100,6 +100,13 @@ function go(){
 		fi
 	done
 }
+
+chkCon(){
+	for key in  ${!srvIP[@]}
+	do 
+		ping -c4 ${srvIP[$key]} 
+	done
+}
 #show commands 
 function show(){
 	if [[ $1 = "interface" ]]
