@@ -58,6 +58,7 @@ srvIP["108.25"]="172.16.108.25" #pdsfxbnmptc01d
 #TIS
 srvIP["106.10"]="172.16.106.10"
 srvIP["7.214"]="172.16.7.214" #TRADEINTNG2P
+srvIP["7.215"]="172.16.7.215" #TRADEINTNG1P
 #SIS
 srvIP["106.7"]="172.16.106.7"
 #SBL
@@ -96,5 +97,6 @@ srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
+srvIP["168.3"]="192.168.168.3" #BANCSDBSNG1U
 
 
