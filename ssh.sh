@@ -98,5 +98,5 @@ srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
 srvIP["168.3"]="192.168.168.3" #BANCSDBSNG1U
-
+srvIP["168.105"]="192.168.168.105" #pdsesiprept
 
