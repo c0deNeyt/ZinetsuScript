@@ -12,6 +12,7 @@ alias idate="watch -n 1 date"
 alias vBf="vim $HOME/Script/Function.sh"
 alias vBa="vim $HOME/Script/Alias.sh"
 alias vBs="vim $HOME/Script/ssh.sh"
+alias vBk="vim $HOME/.ssh/known_hosts"
 alias vB="vim ~/.bashrc"
 #vim 
 alias vs="vim $HOME/Script/DR_Forward_Date.sh"
