@@ -14,7 +14,13 @@ function uuid(){
 function test(){
 	if [[ $1 = "net" ]]
 	then
-		curl -I https://www.google.com
+		echo "======================================================="
+ 		echo "URL: www.google.com" 
+ 		echo "HTTP CODE:" "$(curl -SksIXGET https://www.google.com | awk 'NR==1')"
+ 		echo " " 
+ 		echo "URL: www.facebook.com" 
+ 		echo "HTTP CODE:" "$(curl -SksIXGET https://www.facebook.com | awk 'NR==1')"
+		echo "======================================================="
 	fi
 }
 
