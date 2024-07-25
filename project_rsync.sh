@@ -4,7 +4,7 @@
 shopt -s progcomp
 
 # Function to generate completions for read
-_read_completion() {
+_autocomplete() {
     local cur
     cur="${COMP_WORDS[COMP_CWORD]}"
     COMPREPLY=( $(compgen -o filenames -o bashdefault -- "${cur}") )
