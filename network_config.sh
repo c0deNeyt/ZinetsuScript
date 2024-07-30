@@ -37,6 +37,7 @@ selected_interface=$(echo "$interfaces" | awk -v num=$((iface_number)) -F'.' 'NR
 read -p "Enter the IP Address: " ipadd 
 read -p "Enter the Gateway: " gateway 
 read -p "Enter the DNS: " dns 
+echo "Warning Subnetmast is /24"
 
 Ips=("$ipadd" "$gateway" "$dns")
 
