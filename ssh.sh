@@ -41,6 +41,7 @@ srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
 #CAAC
 srvIP["1.127"]="172.32.1.127" #aristotle (caac APP PROD)
+srvIP["1.130"]="172.32.1.130" #pdscaacdbp (caac DB PROD)
 srvIP["9.9"]="172.32.9.9" #
 srvIP["1.19"]="172.30.1.19" #sungogh(caac DR DB)
 
