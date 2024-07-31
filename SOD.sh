@@ -7,6 +7,7 @@ varData0=$(<$HOME/Script/data.json)
 varStatus="NO ISSUE FOUND!"
 #jq command is for handling json data 
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
+
 #Function for Date
 function gdate(){
 	#Get Date time 
@@ -67,6 +68,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 
 		#Cheking if there is packet loss or ping discrepancy
 		varCurStat=$(cat tmpPingRes | grep "packet loss" | awk -F',' '{print $3}' | awk '{print $1}')
+		#checking if the pocket capture is not 0% loss
 		if [[ $varCurStat != "0%" ]]
 		then
 			varStatus="ISSUE(S) FOUND!"
@@ -80,9 +82,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	done
 	if [[ $varIndex -ne 0 ]] 
 	then 
-		echo "This is the valid index" $varIndex
 		#this will edit the csv file
-#		./edit_Csv_File.sh $varIndex $(gdate tme)
+		./edit_Csv_File.sh $varIndex $(gdate tme)
 	fi
 
 	#add space below on each group
@@ -94,9 +95,10 @@ echo $varStatus
 #this will update the file from windows
 trans smu
 echo $srvCount
+
 : 'TO DO:
 [done] Access the csv File
 [done] write to a csv file
-[] create a condtiion that if it is not valid index of server it will skip
+[done] create a condtiion that if it is not valid index of server it will skip
 the edit csv script
 '

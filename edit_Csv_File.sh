@@ -19,7 +19,7 @@ for ((i = 1; i <= $varLineCount; i++)); do
 	varid=$(echo $a | awk -F',' '{print $1}')
 
 	#condtion to check if it is belong to Server Group
-	if [ "$varid" == $1 ]; then
+	if [ "$varid" == $2 ]; then
 		#this will create new content or updated data
 		new_content=$(echo $a | awk -F',' -v newTime="$2" '{print $1","$2","$3","newTime,","$5","$6}')
 
@@ -33,6 +33,7 @@ done
 
 echo "Trasfering to windows machine..."
 trans smu
+
 : '
 TO DO:
 [done] Loop through each line of the file
@@ -41,4 +42,5 @@ TO DO:
 [done] Generate new line content 
 [done] Escape the special character for sed command to work 
 [done] replace the line with new output 
+
 '
