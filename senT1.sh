@@ -40,10 +40,6 @@ function iditFile(){
 		echo "$sec" | sudo tee -a $varHosts >> /dev/null;
 	fi
 }
-function addusr(){
-	sudo useradd -c "Christian Arana" carana;
-	sudo usermod -aG sys,bin,wheel,adm,disk carana
-}
 iditFile
 echo -e "\n"
 echo "SERVER NAME: $(hostname)"

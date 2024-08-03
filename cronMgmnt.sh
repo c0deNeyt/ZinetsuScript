@@ -6,7 +6,16 @@ TO DO:
 [done] get the length of the json
 [done] loop through the json variable
 [done] create a condition if the pattern is starts with # uncomment else comment
+[] prompt to apply changes 
 '
+#error checking
+if [ -z "$1" ] || [ -z "$2" ]; then
+	echo " "  
+	echo "ERROR: Incomplete Parameter!"
+	echo " "  
+	exit 1
+fi
+
 #JSON data
 cron_pattern='[
     {
@@ -60,8 +69,13 @@ cron_pattern='[
     }
 ]'
 
+USER=$1
+SERVER=$2
+
 # Backup current crontab
-crontab -l > crontab_backup.txt
+ssh $USER@$SERVER 'sudo crontab -l' > crontab_backup.txt
+
+echo -e "\nConnected as $USER@$SERVER..."
 
 # Get the length from the json variable
 jobCount=$(echo "$cron_pattern" | jq '. | length')
@@ -86,18 +100,71 @@ for (( i = 0; i < ${jobCount}; i++ )); do
 	fi
 done
 
-# Create a temporary file
-TEMP_CRON=$(mktemp)
+#transfer to the server the edited cron format
+scp -q crontab_backup.txt $USER@$SERVER:/home/$USER
 
-#apply the changes to temp file
-cat crontab_backup.txt > "$TEMP_CRON" 
+#FILE PREVIEW
+#======================================================
+file="crontab_backup.txt"
 
-# Install the new crontab
-crontab "$TEMP_CRON"
+# Read the content of the file
+file_content=$(cat "$file")
 
-# Remove the temporary file
-rm "$TEMP_CRON"
-rm crontab_backup.txt
+# Calculate the maximum length of any line in the file
+max_length=$(awk '{ if ( length > L ) { L = length } } END { print L }' "$file")
 
-echo "Cron job commented out."
+# Create the top and bottom borders
+top_border=$(printf '┌%*s┐' "$((max_length + 2))" "" | tr ' ' '─')
+bottom_border=$(printf '└%*s┘' "$((max_length + 2))" "" | tr ' ' '─')
+
+# Print the top border
+echo "$top_border"
+
+# Print the file content with side borders
+while IFS= read -r line; do
+  printf "│ %-*s │\n" "$max_length" "$line"
+done < "$file"
+
+# Print the bottom border
+echo "$bottom_border"
+#======================================================
+
+# Prompt user for confirmation
+echo " "
+read -p "Do you want to apply the Cron job changes? (yes/no): " confirm
+
+# Convert the user input to lowercase
+confirm=$(echo "$confirm" | tr '[:upper:]' '[:lower:]')
+
+# Check user's confirmation
+if [[ "$confirm" = "yes" || "$confirm" = "y" ]]; then
+	#execute siries of command inside the target server
+	ssh $USER@$SERVER "sudo bash -s" << 'EOF'
+	# Create a temporary file
+	TEMP_CRON=$(mktemp)
+
+	#apply the changes to temp file
+	cat crontab_backup.txt > "$TEMP_CRON" 
+
+	# Install the new crontab
+	crontab "$TEMP_CRON"
+	echo "Aplying changes..."
+
+	# Remove the temporary file
+	rm "$TEMP_CRON"
+	rm crontab_backup.txt
+EOF
+	rm crontab_backup.txt
+elif [[ "$confirm" = "no" || "$confirm" = "n" ]]; then
+	echo "Changes discarded..."
+	rm crontab_backup.txt
+	exit 1
+else
+	echo "Invalid input. Please enter 'yes' or 'no'."
+	exit 1
+fi
+
+echo -e "Cron job modified!.\n"
+
+ssh $USER@$SERVER 'sudo crontab -l' 
 

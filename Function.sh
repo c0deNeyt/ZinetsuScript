@@ -6,8 +6,8 @@ function uuid(){
                 '{str="";
                     for (i=1;i<=NF;i++)
                         if($i~/^\/dev/ || $i~/^UUID/ || $i~/^TYPE/)
-				{str= str " " $i}
-                        print str
+							{str= str " " $i}
+                        		print str
                 }' 
 }
 #test something
