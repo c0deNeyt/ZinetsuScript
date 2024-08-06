@@ -27,11 +27,11 @@ function test(){
 #SCP Transfer to Windows volume
 function trans(){
 	#windows machine workstation local path
-	des="christian.arana@192.168.20.23:/D:/chan/Linux/Script"
-	src0="christian.arana@192.168.20.23:/D:/chan/Linux/Send/*"
-	des1="christian.arana@192.168.20.23:/D:/chan/Linux/Recieved"
-	src1="christian.arana@192.168.20.23:/D:/chan/Linux/SOD_EOD/*"
-	src2="christian.arana@192.168.20.23:/D:/chan/Linux/SOD_EOD"
+	des="neyt@192.168.20.23:/D:/chan/Linux/Script"
+	src0="neyt@192.168.20.23:/D:/chan/Linux/Send/*"
+	des1="neyt@192.168.20.23:/D:/chan/Linux/Recieved"
+	src1="neyt@192.168.20.23:/D:/chan/Linux/SOD_EOD/*"
+	src2="neyt@192.168.20.23:/D:/chan/Linux/SOD_EOD"
 	if [[ $1 = "sh" ]]
 	then
 		#read  -p "Source: " src
@@ -89,7 +89,7 @@ function go(){
 	do 
 		if [[ $1 = "win" ]]
 		then	
-			ssh christian.arana@192.168.20.23
+			ssh neyt@192.168.20.23
 			break
 	 	elif [[ -n $2 ]] && [[ -n $3 ]] && [[ $1 = $key ]] 
 		then
