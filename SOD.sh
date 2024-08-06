@@ -61,7 +61,6 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		# -W1.5 => wait interval to consider timeout in seconds
 		# > => to stdout the ouput into a file tmpPingRes
 		srvCount=$(echo $srvCount + 1 | bc)
-		echo $srvCount
 		ping -4 -c1 -W1.5 $varSrvIp > ./tmpPingRes
 		echo " " >> ./tmpPingRes
 		cat tmpPingRes >> $varDataStorage 
@@ -83,7 +82,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	if [[ $varIndex -ne 0 ]] 
 	then 
 		#this will edit the csv file
-		./edit_Csv_File.sh $varIndex $(gdate tme)
+		#./edit_Csv_File.sh $varIndex $(gdate tme)
+		./edit_Csv_File.sh $(gdate tme)
 	fi
 
 	#add space below on each group

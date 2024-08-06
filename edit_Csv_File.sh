@@ -17,15 +17,15 @@ for ((i = 1; i <= $varLineCount; i++)); do
 
 	#store row ID
 	varid=$(echo $a | awk -F',' '{print $1}')
-
+	
 	#condtion to check if it is belong to Server Group
-	if [ "$varid" == $2 ]; then
+	if [[ "$varid" == "Server" || "$varid" == "Storage"  ]]; then
 		#this will create new content or updated data
-		new_content=$(echo $a | awk -F',' -v newTime="$2" '{print $1","$2","$3","newTime,","$5","$6}')
-
+		new_content=$(echo $a | awk -F',' -v newTime="$1" '{print $1","$2","newTime,","$4","$5}')
+	
 		#This will escape the special charcter inside the variable
 		escaped_variable=$(echo "$new_content" | sed 's/[][\.,/^$*+?(){}\\|]/\\&/g')
-		
+	
 		#this will alter the line 
 		sed -i "${i}s/.*/${escaped_variable}/" "$varData"
 	fi
