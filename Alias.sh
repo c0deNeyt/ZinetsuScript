@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 alias pds="ssh -L localhsot:5910:markinck.inf.uk:5910"
-alias l="ls -alh"
+alias l="ls -altrh"
 alias rld="source ~/.bashrc"
 alias usg="du -hac --time -d1"
 # -n 1 refresh interval equals to 1 

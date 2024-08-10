@@ -6,7 +6,7 @@ TO DO:
 [done] get the length of the json
 [done] loop through the json variable
 [done] create a condition if the pattern is starts with # uncomment else comment
-[] prompt to apply changes 
+[done] prompt to apply changes 
 '
 #error checking
 if [ -z "$1" ] || [ -z "$2" ]; then

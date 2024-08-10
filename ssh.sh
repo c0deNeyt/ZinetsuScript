@@ -14,10 +14,16 @@ srvIP["122.21"]="172.16.122.21" #PDSSITEDBNG1P
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #ns01.pdshc.com.ph.local
 
-#Docker
+# SSCP ISO Docker
 srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["123.17"]="172.16.123.17" #PDSSCCPISODB1P
 srvIP["123.18"]="172.16.123.18" #PDSSCCPISODB2P
+
+#SSCP ISO Docker (DR)
+srvIP["133.28"]="172.16.133.28" #
+srvIP["133.17"]="172.16.133.17" #PDSSCCPISODB1D
+
+srvIP["121.11"]="172.16.121.11" #PDSSITEAPPNG1P 
 
 #BANCS PROD 
 srvIP["96.2"]="172.16.96.2" #BANCSAPPTC1D
@@ -39,11 +45,13 @@ srvIP["89.3"]="172.16.89.3" #PDSDSSWEBPXY02P
 #PDS Clear
 srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
+
 #CAAC
 srvIP["1.127"]="172.32.1.127" #aristotle (caac APP PROD)
 srvIP["1.130"]="172.32.1.130" #pdscaacdbp (caac DB PROD)
-srvIP["9.9"]="172.32.9.9" #
-srvIP["1.19"]="172.30.1.19" #sungogh(caac DR DB)
+srvIP["9.9"]="172.16.9.9" #tts-db-prod-backup1
+srvIP["9.167"]="172.16.9.167" #vangogh (Web DR) 
+srvIP["1.19"]="172.30.1.19" #sungogh(caac DB DR)
 
 #API
 srvIP["7.251"]="172.16.7.251" #pdsapipxybal2p

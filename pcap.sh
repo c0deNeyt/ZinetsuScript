@@ -29,7 +29,6 @@ fi
 # Extract the selected interface name using awk
 selected_interface=$(echo "$interfaces" | awk -v num=$((iface_number)) -F'.' 'NR==num {print $2}')
 
-
 ######################
 # Get hosts          #
 ######################

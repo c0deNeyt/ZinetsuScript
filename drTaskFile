@@ -1,0 +1,18 @@
+			if [[ $key == $1 && $1 == "SIS" ]]; then
+				echo "Server IP: "$srv_ip
+				echo "Hostname: " $(ssh -p 222 $usr@$srv_ip 'hostname')
+				echo "Current Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
+				echo "Setting Date For $(ssh -p 222 $usr@$srv_ip 'hostname')..."
+				ssh -p 222 $usr@$srv_ip "sudo date -d '$2 days'"
+				echo "New Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
+				echo "==================END======================"
+			elif [[ $key == $1 && $1 != "SIS" ]]; then
+				echo "Server IP: "$srv_ip
+				echo "Hostname: " $(chk host $srv_ip)
+				echo "Current Date: " $(chk date $srv_ip)
+				echo "Setting Date For $(chk host $srv_ip )..."
+				ssh $usr@$srv_ip "sudo date -d '$2 days'"
+				echo "New Date: " $(chk date $srv_ip)
+				echo "==================END======================"
+				echo $1
+			fi
