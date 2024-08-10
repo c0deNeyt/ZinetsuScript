@@ -108,8 +108,8 @@ benigning
 ##############
 function selectDay(){
 	echo -e "\nSelect What Day:
-1.Sunday
-2.Monday\n"
+1.Push forward by 1 days
+2.Push forward by 2 days\n"
 	# Prompt the user to select an interface
 	read -p "Enter the DAY that you want to use: " day_number 
 	#validate the input
@@ -129,7 +129,7 @@ function getSrvIp(){
 	echo -e "\n=================START====================="
 	echo -e "Alias: $1\n" 
 	#proccess each server withting the $1 Group
-	printf "${pdsIPs[$1]}" | awk -v grp="$1" -v usrn="$usr" -v ajDate="$2"  -F' ' '
+	printf "${pdsIPs[$1]}" | awk -v tsk="$cond" -v grp="$1" -v usrn="$usr" -v ajDate="$2"  -F' ' '
 { 
 	for (i=1;i<=NF;i++) {
 		#GET SERVER IP
@@ -157,16 +157,29 @@ function getSrvIp(){
 		close(currentDate)
 		#GET SERVER CURRENT DATE 
 		print "Current Date: " curDate;
-		print "Setting date for " hostName ". . ." 
-		v1 = " sudo date -d ";
-		v3 = " days";
-		v4 = ajDate v3;
-    	v2 = "\x27" v4 "\x27"
-		remoteCmd = v1 v2;
-		setDate = runSsh " \x22"remoteCmd"\x22";
-		setDate | getline newDate;
-		close(setDate)
-		print newDate;
+		if ((tsk != "" || tsk != null) && (grp == "SCCPIso")) {
+			remoteCalibrate = " sudo systemctl restart chronyd | sleep 5"; 
+			calibrateDate = runSsh remoteCalibrate; 
+			calibrateDate |  getline reDate;
+			close(calibrateDate) 
+			print "Resyncing Time/DAte..." reDate;
+  		} else if (tsk) {
+			remoteCalibrate = " sudo ntpdate -b -u 172.16.48.2"; 
+			calibrateDate = runSsh remoteCalibrate 
+			calibrateDate |  getline reDate;
+			close(calibrateDate) 
+			print reDate;
+  		} else if (tsk == "" || tsk == null) {
+			v1 = " sudo date -s ";
+			v3 = " days";
+			v4 = ajDate v3;
+			v2 = "\x27" v4 "\x27"
+			remoteCmd = v1 v2;
+			setDate = runSsh " \x22"remoteCmd"\x22";
+			setDate | getline newDate;
+			close(setDate)
+			print "Setting date for " hostName ". . ." newDate;
+		}
 		remoteCmdnewdate = " date";
 		chkNewDate = runSsh remoteCmdnewdate 
 		chkNewDate | getline chkNewDate;
@@ -179,7 +192,6 @@ function getSrvIp(){
 }
 
 function selectServer(){
-	local file="./drServerList"
 	echo -e "\nSelect Server(s) that you want to use:"
 	cat drServerList
 	num_len="$(cat drServerList | wc -l)"
@@ -193,7 +205,10 @@ function selectServer(){
 			exit 1
 		fi 
 	done
-	selectDay	
+}
+function adjustDate(){
+	local file="./drServerList"
+	cond="$1"
 	# Loop through each line in the file
 	while IFS= read -r line; do
 		# Process each line from the file
@@ -206,68 +221,23 @@ function selectServer(){
 		done
 	done < "$file"
 }
-
 #Condition if what task needs to be done
 if [[ $task_number == 1 ]]
 then 
 	selectServer	
+	selectDay	
+	adjustDate
 elif [[ $task_number == 2 ]]
 then
-	echo "We are Calibrating the date!"
+	selectServer	
+	adjustDate $task_number 
 fi 
 
 
-#LOOP through the Ip address
-function runtime(){
-	for key in ${!pdsIPs[@]}
-	do 
-		echo "=================START====================="
-		echo "Alias: " $key
-		echo "Server IP: "${pdsIPs[$key]}
-		if [[ $key = "SIS" ]]
-		then 
-			echo "Hostname: " $(ssh -p 222 $usr@$srv_ip 'hostname')
-			echo "Current Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
-			echo "Setting Date For $(ssh -p 222 $usr@$srv_ip 'hostname')..."
-			#Uncomment to Set date 2 days ahead  
-			#ssh -p 222 $usr@$srv_ip "sudo date -s '+2 days'"
-			#ssh -p 222 $usr@$srv_ip "sudo date -s '+1 days'"
-
-			#ssh $usr@$srv_ip -p 222 "echo THIS_Is_A_Test_Result"
-
-			#Uncomment to Sync date in realtime
-			ssh -p 222 $usr@$srv_ip "sudo ntpdate -d -u 172.16.48.2" 
-			#ssh -p 222 $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
-			echo "New Date: " $(ssh -p 222 $usr@$srv_ip "sudo date")
-		else
-			echo "Hostname: " $(chk host)
-			echo "Current Date: " $(chk date)
-			echo "Setting Date For $(chk host)..."
-			#Uncomment Set date 2 days ahead  
-			#ssh $usr@$srv_ip "sudo date -s '+2 days'"
-			#ssh $usr@$srv_ip "sudo date -s '+1 days'"
-
-			#ssh $usr@$srv_ip "echo THIS_Is_A_Test_Result"
-
-			#Uncomment to Sync date in realtime
-			ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
-			ssh $usr@$srv_ip "sudo ntpdate -b -u 172.16.48.2" 
-			echo "New Date: " $(chk date)
-		fi
-		echo "==================END======================"
-		echo " "
-	done 
-	echo " "
-	echo "DONE!"
-}
-
 : '
 TODO:
-
 [done] What task are going to do is it change date or resync time to ntp server
 [done] function to list all the server available 
 [done] function to select multiple server based on the list 
-[] identify if can run ntp or chronyd
-
-ssh $usr@$srv_ip "sudo ntpdate -u 172.16.48.2" 
+[done] identify if can run ntp or chronyd
 '
