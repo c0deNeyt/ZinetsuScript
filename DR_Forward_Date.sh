@@ -5,26 +5,19 @@ usr="carana"
 declare -A pdsIPs
 #Market Page
 pdsIPs[MarketPage]="172.16.131.15 172.16.108.25 172.16.132.15"
-
 #PDS Website
 pdsIPs[PDSWebsite]="172.16.108.10 172.16.131.12 172.16.132.12"
-
 #SIS
 pdsIPs[SIS]="172.16.106.7"
-
 #SSCP_ISO (Docker DB)
 pdsIPs[SCCPIso]="172.16.133.28 172.16.133.17"
-
 #CAAC (Web App/DB)
-#pdsIPs[CAAC]="172.16.9.167 172.30.1.19"
-pdsIPs[CAAC]="172.30.1.19"
-
+pdsIPs[CAAC]="172.16.9.167 172.30.1.19"
+#pdsIPs[CAAC]="172.30.1.19"
 #TIS
 pdsIPs[TIS]="172.16.106.10"
-
 #PDS Clear (Web, App, DB)
 pdsIPs[PDSClear]="172.16.108.20 172.16.107.10 172.16.110.4"
-
 #API Gateway
 pdsIPs[PDSApigateway]="172.16.108.30 172.16.15.4"
 
@@ -64,7 +57,6 @@ function validateInput(){
 	fi
 }
 #This function will validate the server selection
-        #if (($i !~ /^[+-]?[0-9]*\.?[0-9]+$/) && ($i <= len) && !($i < 0)){
 validateServer() {
     local seq=$1
     local var_length=$2
@@ -195,6 +187,7 @@ function selectServer(){
 	echo -e "\nSelect Server(s) that you want to use:"
 	cat drServerList
 	num_len="$(cat drServerList | wc -l)"
+	echo -e "\nNote: multiple selection must be spearated by space e.g. 2 4 8"
 	read -p "Enter the server number(s): " -a server_numbers
 	# Validate the the user input 
 	#loop through the server_numbers from user input
@@ -232,7 +225,6 @@ then
 	selectServer	
 	adjustDate $task_number 
 fi 
-
 
 : '
 TODO:
