@@ -35,14 +35,15 @@ echo " "
 if [[ $varD1 == "consistent_synchronized" ]];
 then 
 	echo "Consisted and Sycronized!"
-	#echo "Setting allow read and write access!"
-	#echo "Stopping consistency group..."
-	#ssh -t "$USER@$SERVER" 'stoprcconsistgrp -access readwrite myConsistGroup'
+	./v6CronHash.sh
+	echo "Setting allow read and write access!"
+	echo "Stopping consistency group..."
+	ssh -t "$USER@$SERVER" 'svctask stoprcconsistgrp -access 0'
 
 	echo "Starting Flash Copy..."
-	ssh -t "carana@192.168.67.22" 'startfcconsistgrp DR_MIRROR_FC'
+	#ssh -t "$USER@$SERVER" 'svctask startfcconsistgrp -prep 1 DR_MIRROR_FC'
 else
 	echo "Unconsistent and Unsynchronized!"	
+	./v6CronHash.sh
+	ssh -t "$USER@$SERVER" 'svctask startrcconsistgrp -force -primary master 0'
 fi
-
-
