@@ -2,9 +2,28 @@
 
 #Update Manual 
 function updateMan(){
-		sudo cp ~/Script/manual/*.1 /usr/local/man/man1/
-		sudo mandb -q 
-		echo "Done Updating Manual...!"
+	# Directory to gzip files in
+	TARGET_DIR="/usr/local/man/man1/"
+	sudo cp ~/Script/manual/*.1 /usr/local/man/man1/
+	#remove all existing gzip file
+	sudo rm /usr/local/man/man1/*.gz
+
+	# Check if the directory exists
+	if [ -d "$TARGET_DIR" ]; then
+	  # Loop through all files in the directory
+	  for file in "$TARGET_DIR"*; do
+		# Check if it's a file (not a directory)
+		if [ -f "$file" ]; then
+		  # Gzip the file
+		  sudo gzip -f "$file"
+		fi
+	  done
+	  echo "All files in $TARGET_DIR have been gzipped."
+	else
+	  echo "Directory $TARGET_DIR does not exist."
+	fi
+	sudo mandb -q 
+	echo "Manual is now updated...!"
 }
 
 #Get the UUID 
