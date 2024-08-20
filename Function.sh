@@ -1,5 +1,12 @@
 #!/usr/bin/sh
 
+#Update Manual 
+function updateMan(){
+		sudo cp ~/Script/manual/*.1 /usr/local/man/man1/
+		sudo mandb -q 
+		echo "Done Updating Manual...!"
+}
+
 #Get the UUID 
 function uuid(){
         sudo blkid|grep /dev/|awk -F" " \

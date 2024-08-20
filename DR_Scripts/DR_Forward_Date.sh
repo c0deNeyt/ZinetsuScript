@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
 usr="carana"
+drServerList="$HOME/Script/DR_Scripts/drServerList"
 #Associative array for IP
 declare -A pdsIPs
 #Market Page
@@ -13,7 +14,6 @@ pdsIPs[SIS]="172.16.106.7"
 pdsIPs[SCCPIso]="172.16.133.28 172.16.133.17"
 #CAAC (Web App/DB)
 pdsIPs[CAAC]="172.16.9.167 172.30.1.19"
-#pdsIPs[CAAC]="172.30.1.19"
 #TIS
 pdsIPs[TIS]="172.16.106.10"
 #PDS Clear (Web, App, DB)
@@ -99,6 +99,7 @@ benigning
 # Select Day #
 ##############
 function selectDay(){
+#2.Push forward by 2 days\n"
 	echo -e "\nSelect What Day:
 1.Push forward by 1 days
 2.Push forward by 2 days\n"
@@ -185,8 +186,8 @@ function getSrvIp(){
 
 function selectServer(){
 	echo -e "\nSelect Server(s) that you want to use:"
-	cat drServerList
-	num_len="$(cat drServerList | wc -l)"
+	cat $drServerList
+	num_len="$(cat $drServerList | wc -l)"
 	echo -e "\nNote: multiple selection must be spearated by space e.g. 2 4 8"
 	read -p "Enter the server number(s): " -a server_numbers
 	# Validate the the user input 
@@ -200,7 +201,7 @@ function selectServer(){
 	done
 }
 function adjustDate(){
-	local file="./drServerList"
+	local file="$HOME/Script/DR_Scripts/drServerList"
 	cond="$1"
 	# Loop through each line in the file
 	while IFS= read -r line; do
