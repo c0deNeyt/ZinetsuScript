@@ -1,35 +1,41 @@
 .TH "Neyt's Manual" "v1.0" "August 2024" "~/Script/" "Manual For Linux Workstation"
-.SH Workstation Alias 
+.SH CUSTOMIZED ALIASES 
+ Different customized aliases for the worksation. Some of the aliases may thow an error if not configured properly inside the PDS Group local network or workstations.
+.SH SYNOPSIS
+.B rld \... 
 .TP
-.B Random Aliases 
+.B Random 
  rld \- Reload the bash configuration. 
  usg \- Show the size of files and direcotories. 
  idate \- View the date inteactively. 
+ l \- List,categorize dir/file and sort by time in Ascending order. 
+ mm \- View customize manual page. 
 .TP
-.B Editing Aliases 
+.B Editing 
  vB \- bashrc file. 
  vBa \- Customize Alias.
  vBf \- Customize functions.
  vdf \- Forward Date Script for DR(Disaster Recovery) Activity. 
+ vmm \- Main manual page. 
+ vss \- SOD EOD Script file(SOD.sh)   
+ vse \- SOD EOD Script file(edit_Csv_File.sh).
  vSk \- SSH Known hosts. 
  vSs \- Server list.
-.SH EXAMPLE 
-.B This is a simple example of how to customize functions. 
- Command: vBf 
-.SH SYNOPSIS
-.B example
-[\-h] [\-\-help]
-.SH DESCRIPTION
-This is a simple example of how to write a Linux manual page.
-.SH OPTIONS
+ vV \- .vimrc file.
+ vs \- SOD_EOD_System_Monitoring.csv file.
 .TP
-.B \-h, \-\-help
-Displays the help message.
-.SH EXAMPLES
-.B example \-h
+.B Execute Scripts 
+ rdfd \- Run DR(Disaster Recovery) Forward Date.
+ rds \- Run Mirrorring Script(showDRStat.sh).
+.TP
+.B Change Directories 
+ gGet \- Goto ~/trans/recieved
+ gS \- Goto ~/Script 
+ gSend \- Goto ~/trans/Send
+.TP
+.B Git Commands
+ gl \- Short for "git log --online". 
+ gs \- Short for "git status". 
 .SH AUTHOR
  Written by Christian Araña <christian.arana@pds.com.ph>
-.SH SEE ALSO
-.B man(1)
-This is a simple example of how to write a Linux manual page.
 

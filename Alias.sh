@@ -7,6 +7,7 @@ alias rld="source ~/.bashrc"
 alias usg="du -hac  --max-depth=1"
 # -n 1 refresh interval equals to 1 
 alias idate="watch -n 1 date"
+alias mm="man main"
 
 #Editing
 #vim Bassh
@@ -28,18 +29,14 @@ alias vse="vim $HOME/Script/edit_Csv_File.sh"
 alias vSk="vim $HOME/.ssh/known_hosts"
 alias vSs="vim $HOME/Script/ssh.sh"
 
-#vim Vim file
+#vim file
 alias vV="vim $HOME/.vimrc"
-
-#vim SOD
-alias vds="vim ~/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+alias vs="vim ~/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
 
 #Script Shortcut
 #run DR Script
 alias rdfd="$HOME/Script/DR_Scripts/DR_Forward_Date.sh"
 alias rds="$HOME/Script/DR_Scripts/showDRStat.sh"
-
-#ssh 
 
 #Change Direcory
 alias gS="cd ~/Script; l ; pwd"
