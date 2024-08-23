@@ -1,0 +1,19 @@
+#!/usr/bin/expect
+
+set user 	[lindex $argv 0]
+set host 	[lindex $argv 1]
+set newUser	[lindex $argv 2]
+
+# Start SSH session
+spawn ssh $user@$host "sudo passwd $newUser"
+# Handle password prompts for the new user
+expect {
+	"New password: " {
+    	send "Pds\$\$001\r"
+		exp_continue
+	}
+	"Retype new password: " {
+			send "Pds\$\$001\r"
+			exp_continue
+	}	
+}
