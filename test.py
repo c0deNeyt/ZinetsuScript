@@ -1,8 +1,15 @@
-from sys import exit
-import sys
-import os
+import importlib
 
-print('Hello World!')
-print(sys.path[4])
-os.system(f'echo "Hi from os.system"')
+def check_library_installed(library_name):
+    try:
+        module = importlib.import_module(library_name)
+        print(f"{library_name} is installed. Version: {module.__version__}")
+    except ImportError:
+        print(f"{library_name} is not installed.")
+
+# List of libraries to check
+libraries = ["numpy", "openpyxl", "pandas", "pytest", "flask"]
+
+for library in libraries:
+    check_library_installed(library)
 
