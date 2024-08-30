@@ -9,7 +9,6 @@ srvIP["7.247"]="172.16.7.247" #FXINTEGBLOT02
 srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
 srvIP["me"]="192.168.20.23" #PDSDTAACPOINT1D
 srvIP["195.12"]="172.16.195.12" #PDSNROSSNG2P
-srvIP["122.21"]="172.16.122.21" #PDSSITEDBNG1P
 
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #ns01.pdshc.com.ph.local
@@ -36,7 +35,10 @@ srvIP["87.5"]="172.16.87.5" #BANCSCARNG2P
 srvIP["132.15"]="172.16.132.15" #NMPDBTC1D
 srvIP["7.211"]="172.16.7.211" #BANCSINTNG1P
 srvIP["7.212"]="172.16.7.212" #BANCSINTNG2P
+
+#MARKET PAGE
 srvIP["2.71"]="172.16.2.71" #NMPDBNV2P
+srvIP["2.122"]="172.16.2.122" #NMPDBNP1P 
 
 #PDS PROXY
 srvIP["89.2"]="172.16.89.2" #PDSDSSWEBPXY01P
@@ -45,6 +47,14 @@ srvIP["89.3"]="172.16.89.3" #PDSDSSWEBPXY02P
 #PDS Clear
 srvIP["7.231"]="172.16.7.231" #pdsclgwyweb1p
 srvIP["7.232"]="172.16.7.232" #pdsclgwyweb2p
+
+#PDS WEBSITE 
+srvIP["122.22"]="172.16.122.22" #PDSWEBPRODDB2
+srvIP["122.21"]="172.16.122.21" #PDSSITEDBNG1P
+
+#PDS ITOP 
+srvIP["121.20"]="172.16.121.20" #PDSITOPSVR1P
+srvIP["132.12"]="172.16.132.12" #PDSSITEDBTC1D
 
 #CAAC
 srvIP["1.127"]="172.32.1.127" #aristotle (caac APP PROD)
@@ -77,12 +87,10 @@ srvIP["97.2"]="172.16.97.2" #BANCSCARTC1D
 srvIP["98.13"]="172.16.98.13" #pdsbancsv6db1d
 srvIP["86.3"]="172.16.86.3" #BANCSAPPNG2P
 srvIP["97.3"]="172.16.97.3" #BANCSREPVT01D
-srvIP["97.3"]="172.16.97.3" #BANCSREPVT01D
 srvIP["186.10"]="172.16.186.10" #PDSDTAACPOINT01
 #TEST Sever
 srvIP["168.99"]="192.168.168.99"
 srvIP["168.94"]="192.168.168.94" #PeejayTestServer
-srvIP["168.2"]="192.168.168.2" #BANCSWACNG1U
 srvIP["168.166"]="192.168.168.166" #station1
 srvIP["cloud"]="172.104.184.163" #personal Cloud
 srvIP["168.181"]="192.168.168.181" #pdsclgwyappmwt
@@ -92,7 +100,6 @@ srvIP["168.247"]="192.168.168.247" #FXINTEGBLOT02
 srvIP["168.172"]="192.168.168.172" #apimwt.pds.com.ph
 srvIP["168.175"]="192.168.168.175" #pdsapigateway2
 srvIP["168.177"]="192.168.168.177" #pdsclgwyapp1t
-srvIP["168.179"]="192.168.168.179" #pdsclgwydb1t
 srvIP["168.116"]="192.168.168.116" #pdsfxbnmpws01
 srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
 srvIP["168.41"]="192.168.168.41" #PDSWEBAPPSTST01
@@ -101,10 +108,27 @@ srvIP["168.108"]="192.168.168.108" #accstestenv
 srvIP["168.93"]="192.168.168.93" #mpredisharvesterfxtest
 srvIP["168.40"]="192.168.168.40" #PDSSITEAPPNG1T
 srvIP["168.115"]="192.168.168.115" #
-srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
 srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
-srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
 srvIP["168.3"]="192.168.168.3" #BANCSDBSNG1U
 srvIP["168.105"]="192.168.168.105" #pdsesiprept
+#TEST Marketpage
+srvIP["168.133"]="192.168.168.133" #nmpdbprdtest
+srvIP["168.30"]="192.168.168.30" #mrktpgedb1mwt
+#TEST PDS Website
+srvIP["168.32"]="192.168.168.32" #pdssitedbng1test
+srvIP["168.42"]="192.168.168.42" #PDSWEBDBNGTST01
+#TEST 19c 
+srvIP["168.11"]="192.168.168.11" #pdsbancsv6dbuat
+#TEST PDSClear 
+srvIP["168.179"]="192.168.168.179" #pdsclgwydb1t
+srvIP["168.153"]="192.168.168.153" #PDSITOPSVR1T
+#TEST Syscon 
+srvIP["168.2"]="192.168.168.2" #BANCSWACNG1U
+srvIP["168.97"]="192.168.168.97" #bcpfiles_test
+#TEST SIS
+srvIP["168.4"]="192.168.168.4" #BANCSINTNG1U
+#TEST CAAC 
+srvIP["168.154"]="192.168.168.154" #caacws
+srvIP["168.162"]="192.168.168.162" #PDSSCCPISODB1T
