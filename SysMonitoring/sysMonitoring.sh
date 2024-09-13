@@ -9,10 +9,13 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
+date
 echo "Generating Report..."
 source $HOME/Script/Function.sh
 srvAdm="$1"
-varData=$HOME/Script/SysMonitoring/data.json
+defaultDir="$HOME/Script/SysMonitoring"
+dumpDir="$HOME/Documents/SOD_EOD"
+varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
 #jq command is for handling json data 
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
@@ -50,7 +53,7 @@ function gdate(){
 
 #Function for IBM Storage Checking
 function runScript(){
-	$HOME/Script/SysMonitoring/storage.sh $1 $2 >> storageStatus
+	$defaultDir/storage.sh $1 $2 >> storageStatus
 }
 
 #Function notification incase Issue is found.
@@ -65,15 +68,15 @@ checkStatus(){
 	if [[ "$1" -ne 0 ]] && [[ "$6" == "NO ISSUE FOUND!" ]] 
 	then 
 		#this will edit the csv file
-		$HOME/Script/SysMonitoring/edit_Csv_File.sh "$2" "$3" "$4" "$5"
+		$defaultDir/edit_Csv_File.sh "$2" "$3" "$4" "$5"
 	else
-		$HOME/Script/SysMonitoring/edit_Csv_File.sh "$2" "$3" "$6" "$5"
+		$defaultDir/edit_Csv_File.sh "$2" "$3" "$6" "$5"
 	fi
 }
 
 #creating a file to store results
-varDataStorage="Monitoring_Results.txt" #filename
-touch $varDataStorage #create 
+varDataStorage="$defaultDir/Monitoring_Results.txt" #filename
+touch "$varDataStorage" #create 
 srvCount=0
 # this will iterate to the server groups e.g CAAC 
 for (( i = 0; i < ${varSrvCount}; i++ )); do
@@ -104,8 +107,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		# -c3 => give 3 packet test
 		# -W1.5 => wait interval to consider timeout in seconds
 		# > => to stdout the ouput into a file tmpPingRes
-		ping -4 -c1 -W1.5 $varSrvIp > ./tmpPingRes
-		echo " " >> ./tmpPingRes
+		ping -4 -c4 -W1.5 "$varSrvIp" > tmpPingRes
+		echo " " >> tmpPingRes
 		cat tmpPingRes >> $varDataStorage 
 
 		#Condition to check the heath of IBM Storages
@@ -123,18 +126,28 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 
 		#Cheking if there is packet loss or ping discrepancy
 		varCurStat=$(cat tmpPingRes | grep "packet loss" | awk -F',' '{print $3}' | awk '{print $1}')
-		#checking if the pocket capture is not 0% loss
-		if [ "$varCurStat" != "0%" ]; then
+		#checking if the pocket capture if not greater than 99% or string 
+		# Check if varCurStat is a valid number
+		varCurStatNum="${varCurStat%\%}"
+		if [[ "$varCurStatNum" =~ ^-?[0-9]+$ ]]; then
+			if [[ $varCurStatNum -ge 0 ]] && [[ $varCurStatNum -lt 100 ]]; then
+				srvStatus="UP"
+			else
+				varStatus="ISSUE(S) FOUND!"
+				srvStatus="$varStatus"
+				varGStatus="$varStatus"
+				notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
+			fi
+		else
 			varStatus="ISSUE(S) FOUND!"
 			varGStatus="$varStatus"
 			srvStatus="$varStatus"
 			notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
+		fi
 		#Condition to check the heath of IBM Storages
-		elif [ "$strgStat" ]; then
+		if [ "$strgStat" ]; then
 			srvStatus="$strgStat"
 			notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
-		else
-			srvStatus="UP"
 		fi
 		#remove temporary file
 		if [ -f storageStatus ]; then
@@ -145,35 +158,35 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#this considtion aims to avoid the noncritical server 
 	#to write on csv but also check the  server condition
 	checkStatus "$varIndex" $(gdate tme) "$srvAdm" "$srvStatus" "$srvGroup" "$varStatus"
-
+	#Update Global Status
 	#add space below on each group
 	echo " " >> $varDataStorage
 done
 # This will echo out the final status of the file 
 echo -e "\nMonitoring Status: $varGStatus"
 echo -e "Running CSV to HTML... \n"
-/usr/bin/python3 tohtml.py
+/usr/bin/python3 "$defaultDir"/tohtml.py
 echo -e "Starting to transfer the files... \n"
 #this will update the file SOD_EOD dir 
-rm $HOME/Documents/SOD_EOD/*.txt 
-mv $HOME/Script/SysMonitoring/*.txt $HOME/Documents/SOD_EOD/
+rm "$dumpDir"/*.txt >> /dev/null 2>&1
+mv $defaultDir/*.txt "$dumpDir"
 
 #this will update the Excel file based on the csv data
-/usr/bin/python3 toExcel.py
-cp $HOME/Documents/SOD_EOD/SystemMonitoring.xlsx $HOME/Documents/SOD_EOD/$(gdate xlsxName).xlsx 
+/usr/bin/python3 "$defaultDir"/toExcel.py
+cp "$dumpDir"/SystemMonitoring.xlsx "$dumpDir"/$(gdate xlsxName).xlsx 
 
 #this will update the file from windows
 #trans smu
 
 #transfer the excel file on smtp server 
 ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
-scp -q $HOME/Documents/SOD_EOD/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+scp -q "$dumpDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the html file on smtp server 
 scp -q ebody.html $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/ > /dev/null 2>&1
 
 #transfer the text file on smtp server 
-scp -q $HOME/Documents/SOD_EOD/Monitoring_Results.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+scp -q "$dumpDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the file on smtp server 
 gdate ampm 
@@ -184,8 +197,9 @@ echo -e "Trying to send Email... \n"
 ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
 
 #remove the xlsx file
-rm $HOME/Documents/SOD_EOD/$(gdate xlsxName).xlsx 
+rm "$dumpDir"/$(gdate xlsxName).xlsx 
 rm ebody.html 
 rm timeAmOrPm 
 
 echo -e "\nServer Count: $srvCount"
+date
