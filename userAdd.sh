@@ -23,27 +23,29 @@ for ((i = 2; i <= $lineCount; i++)); do
 
 	#check if port 22 is open
 	if nc -zv "$si" "$port" > /dev/null 2>&1; then
-		echo "Port $port on $si is open."
+		echo -e "\nPort $port on $si is open."
 	else
-		echo "Port $port on $si is closed or unreachable."
-	fi
-	#check if account exist on the si
-	if ssh "$adminUser@$si" "id -u $adminUser > /dev/null 2>&1"; then
-		echo "User $un exists on $si."
-	else
+		echo "Port $port on $si is closed or unreachable. !!!"
 		exit 1
 	fi
-
-	#if ssh $adminUser@$si "getent passwd $un" > /dev/null 2>&1; then
-	#	echo -e "\"$un\" Already exist! @ $si"
-	#	#ssh $adminUser@$si "sudo userdel -r $un" > /dev/null 2>&1
-	#else
-	#	echo "Connecting to: $si"
-	#	ssh $adminUser@$si "sudo useradd -c '$fn' $un" > /dev/null 2>&1
-	#	ssh $adminUser@$si "sudo usermod -aG $groups $un" > /dev/null 2>&1
-	#	expect sudoPasswd.exp $adminUser $si $un > /dev/null 2>&1
-	#	echo -e "\"$un\" Successfully created! @ $si"
-	#fi
+	#check if admin account exist on the server 
+	if ssh "$adminUser@$si" "id -u $adminUser > /dev/null 2>&1"; then
+		echo "Admin $adminUser found on $si."
+	else
+		echo -e "Admin $adminUser not found.!!!"
+		exit 1
+	fi
+	#check if account exist on the server 
+	if ssh $adminUser@$si "getent passwd $un" > /dev/null 2>&1; then
+		echo -e "\"$un\" Already exist! @ $si"
+	else
+		echo "Connecting to: $si"
+		ssh $adminUser@$si "sudo useradd -c '$fn' $un" > /dev/null 2>&1
+		ssh $adminUser@$si "sudo usermod -aG $groups $un" > /dev/null 2>&1
+		expect sudoPasswd.exp $adminUser $si $un > /dev/null 2>&1
+		ssh $adminUser@$si "sudo chage -d 0 $un" > /dev/null 2>&1
+		echo -e "\"$un\" Successfully created! @ $si"
+	fi
 done
 
 

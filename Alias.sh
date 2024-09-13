@@ -40,6 +40,7 @@ alias rds="$HOME/Script/DR_Scripts/showDRStat.sh"
 
 #Change Direcory
 alias gS="cd ~/Script; l ; pwd"
+alias gSm="cd ~/Script/SysMonitoring; l ; pwd"
 alias gSend="cd ~/trans/send; l ; pwd"
 alias gGet="cd ~/trans/recieved; l ; pwd"
 

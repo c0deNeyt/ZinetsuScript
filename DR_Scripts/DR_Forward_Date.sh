@@ -4,7 +4,7 @@ usr="carana"
 drServerList="$HOME/Script/DR_Scripts/drServerList"
 #Associative array for IP
 declare -A pdsIPs
-#Market Page
+#Market Page (Redis, MP3/BSP Calculator, DB)
 pdsIPs[MarketPage]="172.16.131.15 172.16.108.25 172.16.132.15"
 #PDS Website
 pdsIPs[PDSWebsite]="172.16.108.10 172.16.131.12 172.16.132.12"
@@ -233,4 +233,5 @@ TODO:
 [done] function to list all the server available 
 [done] function to select multiple server based on the list 
 [done] identify if can run ntp or chronyd
+[ ] add (*) option if you want to select all 
 '
