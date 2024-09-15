@@ -31,7 +31,7 @@ alias vSs="vim $HOME/Script/ssh.sh"
 
 #vim file
 alias vV="vim $HOME/.vimrc"
-alias vs="vim ~/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+alias vs="vim ~/Script/SysMonitoring/sysMonitoring.sh"
 
 #Script Shortcut
 #run DR Script
