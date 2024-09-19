@@ -8,7 +8,9 @@ if [ -z "$1" ]; then
 	echo " "  
 	exit 1
 fi
-
+###############
+# START STAMP #
+###############
 date
 echo "Generating Report..."
 source $HOME/Script/Function.sh
@@ -202,4 +204,8 @@ rm ebody.html
 rm timeAmOrPm 
 
 echo -e "\nServer Count: $srvCount"
+
+#############
+# END STAMP #
+#############
 date
