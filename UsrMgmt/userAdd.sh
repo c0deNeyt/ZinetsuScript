@@ -1,7 +1,10 @@
 #!/bin/bash
 
 #Csv File
-file="$HOME/trans/recieved/adduser.csv"
+file="$HOME/Script/UsrMgmt/usrs/adduser.csv"
+if [[ ! -f "$file" ]]; then
+	echo "Users file list do not exists!!"
+fi
 #Line count
 lineCount=$(cat $file | wc -l)
 #admin user that will be using
