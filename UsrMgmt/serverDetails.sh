@@ -6,7 +6,7 @@ source object.sh
 #Csv File
 file="usrs/ip.csv"
 if [[ ! -f "$file" ]]; then
-	echo "Users file list do not exists!!"
+	echo "CSV File not found!!!"
 fi
 # Temporary variable for loop
 lineCount=$(cat $file | wc -l)

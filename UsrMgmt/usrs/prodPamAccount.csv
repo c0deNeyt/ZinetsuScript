@@ -1,0 +1,22 @@
+fullName,userName,serverIP,role,status,
+PAM Account,pam360id,172.16.108.25,0,User already exist
+PAM Account,pam360id,172.16.108.25,0,User already exist
+PAM Account,pam360id,172.16.2.71,0,Account created
+PAM Account,pam360id,172.16.2.122,0,Account created
+PAM Account,pam360id,172.16.132.15,0,User already exist
+PAM Account,pam360id,172.16.7.231,0,Account created
+PAM Account,pam360id,172.16.7.232,0,Server unreachable
+PAM Account,pam360id,172.16.105.10,0,Account created
+PAM Account,pam360id,172.16.105.11,0,Server unreachable
+PAM Account,pam360id,172.16.15.4,0,User already exist
+PAM Account,pam360id,172.16.9.69,0,Account created
+PAM Account,pam360id,172.16.9.4,0,Account created
+PAM Account,pam360id,172.16.9.5,0,Account created
+PAM Account,pam360id,172.16.9.165,0,Account created
+PAM Account,pam360id,172.16.86.4,0,Account created
+PAM Account,pam360id,172.16.96.2,0,Account created
+PAM Account,pam360id,172.16.86.2,0,User already exist
+PAM Account,pam360id,172.16.87.11,0,Account created
+PAM Account,pam360id,172.16.87.5,0,Account created
+PAM Account,pam360id,172.16.7.211,0,Account created
+PAM Account,pam360id,172.16.7.212,0,Account created

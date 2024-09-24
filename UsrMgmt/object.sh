@@ -8,6 +8,8 @@ Server() {
 	inum="$3"
 	rawFile="$4"
 	ip="$5"
+	newUser="$6"
+	status=""
 
     # Method to check if the IP is pingable
     is_pingable() {
@@ -35,6 +37,20 @@ Server() {
         return $?
     }
 
+    # Method to check if a new user exists on a Linux server
+    new_user_exists() {
+		local nUser="${@:1:1}"
+		local port="${@:2:1}"
+
+		#condition to check if it is using port 22 or 222	 
+		if [[ "$port" -eq "222" ]];then
+        	ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "id -u $nUser" &> /dev/null
+		else
+        	ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "id -u $nUser" &> /dev/null
+		fi
+        return $?
+    }
+
     # Method to write in csv file 
     write_to_file() {
 		# $@ contains all the param
@@ -48,6 +64,25 @@ Server() {
 	
 		# write to csv file
 		sed -i "${inum}s/.*/${escaped_variable}/" "$rawFile"
+		
+		# Set status variable
+		varStatus="$x"
+    }
+    update_user_status() {
+		# $@ contains all the param
+		local x="$@"
+
+		# Format the content
+		new_content=$(echo "$data" | awk -F',' -v status="$x" '{print $1","$2","$3","$4","status}')
+
+		# Escape special char
+        escaped_variable=$(echo "$new_content" | sed 's/[][\.,/^$*+?(){}\\|]/\\&/g')
+	
+		# write to csv file
+		sed -i "${inum}s/.*/${escaped_variable}/" "$rawFile"
+		
+		# Set status variable
+		varStatus="$x"
     }
 
     # Method to get the server hostname 
@@ -62,6 +97,142 @@ Server() {
         	ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "hostname" 
 		fi	
     }
+
+	# Method to check if the server is ubuntu
+	is_ubuntu() {
+		local osFlavor="ubuntu"
+		local varCmd="uname -a | grep -iq $osFlavor" 
+		ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		return $?
+	}
+	
+	# Methond to check if admin or user
+	is_admin() {
+		if [[ $(echo "$data" | awk -F, '{print $4}') -eq "1" ]]; then
+			return 0 # admin
+		else 
+			return 1 # user
+		fi	
+	}	
+	
+	# Method adduser
+	cmd_adduser() {
+		local port="${@:1:1}"
+		local fn="${@:2:1}"
+		local un="${@:3:1}"
+		local varCmd="${@:4:1}"
+
+		# Verify what port to be use
+		if [[ "$port" -eq "222" ]]; then 
+			ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		else
+			ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		fi
+		return $?
+	}	
+	cmd_setpass(){
+		local port="${@:1:1}"
+		local un="${@:2:1}"
+
+		# Verify what port to be use
+		if [[ "$port" -eq "222" ]]; then 
+			expect sudoPasswd.exp "$usrAdm" "$ip" "$un" "$port" &> /dev/null 
+		else
+			expect sudoPasswd.exp "$usrAdm" "$ip" "$un" &> /dev/null 
+		fi
+		return $?
+	}
+
+	# Method create admin for ubuntu
+	creation() {
+		local port="${@:1:1}"
+		local fn="${@:2:1}"
+		local un="${@:3:1}"
+		local mainGroup="${@:4:1}"
+			
+		if [ -z "$mainGroup" ]; then
+			local varCmd="sudo useradd -c '$fn' -m -d /home/$un -s /bin/bash $un"
+		else
+			local varCmd="sudo useradd -c '$fn' -m -d /home/$un -s /bin/bash $un; sudo usermod -aG $mainGroup $un"
+		fi
+	
+		# Adduser 
+		cmd_adduser "$port" "$fn" "$un" "$varCmd"
+		# Set Default password 
+		cmd_setpass "$port" "$un" 
+		# Update Status
+		update_user_status "Account created"
+	}
+
+	# Method to create admin 
+	put_admin() {
+		local port="${@:1:1}"
+		local userFullName="${@:2:1}"
+		local userName="${@:3:1}"
+
+		if is_ubuntu; then
+			creation "$port" "$userFullName" "$userName" "admin"
+		else
+			creation "$port" "$userFullName" "$userName" "wheel"
+		fi	
+	}
+
+	# Method to create user only	
+	put_user() {
+		local port="${@:1:1}"
+		local userFullName="${@:2:1}"
+		local userName="${@:3:1}"
+
+		creation "$port" "$userFullName" "$userName" 
+	}
+	
+    # Method for account creation 
+	create_user() {
+		local port="${@:1:1}"
+		local userFullName="${@:2:1}"
+		local userName="${@:3:1}"
+
+		if [[ "$port" -eq "222" ]]; then 
+			if is_admin	; then
+				put_admin "$port" "$userFullName" "$userName"
+
+			else
+				put_user "$port" "$userFullName" "$userName"
+			fi
+		else
+			if is_admin	; then
+				put_admin "$port" "$userFullName" "$userName"
+			else
+				put_user "$port" "$userFullName" "$userName"
+			fi
+		fi
+	}	
+
+	# Method to validate the new user existence	
+	validate_new_user() {
+		local port="$@"
+		local fn=$(echo "$data" | awk -F, '{print $1}')
+		local un=$(echo "$data" | awk -F, '{print $2}' | tr -d '[:space:]')
+		
+		# Validate what port is using 	
+		if [[ "$port" -eq "222" ]]; then 
+			# Validate if the user exist 
+    		if new_user_exists "$newUser" "$port"; then
+				update_user_status "User already exist"
+			else
+				create_user "$port" "$fn" "$un" 
+			fi
+		else
+			# Validate if the user exist 
+    		if new_user_exists "$newUser"; then
+				update_user_status "User already exist"
+			else
+				create_user "" "$fn" "$un" 
+			fi
+		fi
+
+	}
+	
 
     # Method to check the server and print results
     check_server() {
@@ -80,7 +251,7 @@ Server() {
 					hstname=$(get_hostname "222")
 					write_to_file "$hstname"
                 else
-					write_to_file "User admin unavailable"
+					write_to_file "User Admin Not Found!"
                 fi
             elif is_port_open 3389; then
                 write_to_file "Port 3389 is open (Windows)"
@@ -90,6 +261,42 @@ Server() {
         else
 			write_to_file "Server unreachable"
         fi
+
+		# Display the status
+		if [[ ! -z "$varStatus" ]]; then
+			echo "$varStatus"
+		fi
+    }
+	
+    # Method for account creation 
+    create_account() {
+        echo -e "\nChecking IP: $ip (UserAdmin: $usrAdm)"
+        if is_pingable; then
+            if is_port_open 22; then
+                if user_exists; then
+					validate_new_user	
+                else
+					update_user_status "User admin unavailable"
+                fi
+            elif is_port_open 222; then
+                if user_exists 222; then
+					validate_new_user 222
+                else
+					update_user_status "User admin unavailable"
+                fi
+            elif is_port_open 3389; then
+                update_user_status "Port 3389 is open (Windows)"
+            else
+               	update_user_status "No relevant ports are open"
+            fi
+        else
+			update_user_status "Server unreachable"
+        fi
+
+		# Display the status
+		if [[ ! -z "$varStatus" ]]; then
+			echo "$varStatus"
+		fi
     }
 }
 
