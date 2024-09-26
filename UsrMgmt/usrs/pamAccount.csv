@@ -1,0 +1,133 @@
+fullName,userName,serverIP,role,status
+PAM Account,pam360id,192.168.167.74,0,User admin unavailable
+PAM Account,pam360id,172.16.123.28,0,User already exist
+PAM Account,pam360id,172.16.123.17,0,User already exist
+PAM Account,pam360id,172.16.123.18,0,User already exist
+PAM Account,pam360id,172.16.2.123,0,User admin unavailable
+PAM Account,pam360id,172.16.2.71,0,User already exist
+PAM Account,pam360id,172.16.186.10,0,Account created
+PAM Account,pam360id,192.168.167.220,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.121.20,0,Account created
+PAM Account,pam360id,172.16.123.13,0,User admin unavailable
+PAM Account,pam360id,172.16.9.8,0,User admin unavailable
+PAM Account,pam360id,172.16.123.21 ,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.30,0,Account created
+PAM Account,pam360id,172.16.82.52,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.50,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.51,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.150,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.17.2,0,Port 3389 is open (Windows)
+PAM Account,pam360id,192.168.167.15,0,Account created
+PAM Account,pam360id,172.16.7.252,0,User admin unavailable
+PAM Account,pam360id,172.16.9.68,0,User admin unavailable
+PAM Account,pam360id,172.16.7.231,0,User already exist
+PAM Account,pam360id,172.16.105.10,0,User already exist
+PAM Account,pam360id,172.16.7.241,0,User admin unavailable
+PAM Account,pam360id,172.16.121.11,0,Account created
+PAM Account,pam360id,172.16.122.21,0,Account created
+PAM Account,pam360id,172.16.89.3,0,Account created
+PAM Account,pam360id,172.16.123.20,0,Account created
+PAM Account,pam360id,172.16.7.247,0,Account created
+PAM Account,pam360id,172.16.195.12,0,Account created
+PAM Account,pam360id,192.168.167.100,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.151,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.17.3,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.7.251,0,Account created
+PAM Account,pam360id,172.16.9.69,0,User already exist
+PAM Account,pam360id,172.16.122.22,0,Account created
+PAM Account,pam360id,172.16.7.25,0,Account created
+PAM Account,pam360id,172.16.7.35,0,Account created
+PAM Account,pam360id,172.16.82.155,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.28,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.27,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.20,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.18,0,Server unreachable
+PAM Account,pam360id,172.16.82.120,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.32,0,Server unreachable
+PAM Account,pam360id,172.16.82.153,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.7.3,0,Account created
+PAM Account,pam360id,172.32.1.127,0,Account created
+PAM Account,pam360id,172.16.9.7,0,Account created
+PAM Account,pam360id,172.32.1.130,0,Account created
+PAM Account,pam360id,172.16.9.9,0,Account created
+PAM Account,pam360id,172.16.14.115,0,Account created
+PAM Account,pam360id,172.16.108.25,0,User already exist
+PAM Account,pam360id,172.16.9.164,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.92.30,0,User admin unavailable
+PAM Account,pam360id,172.16.133.10,0,No relevant ports are open
+PAM Account,pam360id,172.16.131.20,0,User admin unavailable
+PAM Account,pam360id,192.168.67.100,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.133.22,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.92.150,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.131.15,0,User already exist
+PAM Account,pam360id,172.16.95.11,0,Account created
+PAM Account,pam360id,172.16.216.10,0,Account created
+PAM Account,pam360id,172.16.108.30,0,User already exist
+PAM Account,pam360id,172.16.15.4,0,User already exist
+PAM Account,pam360id,172.16.108.20,0,User already exist
+PAM Account,pam360id,172.16.107.10,0,User already exist
+PAM Account,pam360id,172.16.108.10,0,User already exist
+PAM Account,pam360id,172.16.131.12,0,User already exist
+PAM Account,pam360id,172.16.132.12,0,User already exist
+PAM Account,pam360id,172.16.7.108,0,User admin unavailable
+PAM Account,pam360id,172.16.7.88,0,Server unreachable
+PAM Account,pam360id,192.168.168.191,0,Account created
+PAM Account,pam360id,192.168.168.154,0,Account created
+PAM Account,pam360id,192.168.167.50,0,User admin unavailable
+PAM Account,pam360id,192.168.168.93,0,Account created
+PAM Account,pam360id,192.168.168.40,0,Account created
+PAM Account,pam360id,192.168.168.41,0,Account created
+PAM Account,pam360id,192.168.168.42,0,Account created
+PAM Account,pam360id,192.168.168.97,0,Account created
+PAM Account,pam360id,192.168.168.127,0,User admin unavailable
+PAM Account,pam360id,192.168.168.116,0,Account created
+PAM Account,pam360id,192.168.167.53,0,Port 3389 is open (Windows)
+PAM Account,pam360id,192.168.168.91,0,Port 3389 is open (Windows)
+PAM Account,pam360id,192.168.168.65,0,Port 3389 is open (Windows)
+PAM Account,pam360id,192.168.168.125,0,Account created
+PAM Account,pam360id,192.168.168.99,0,User admin unavailable
+PAM Account,pam360id,172.16.7.211,0,Account created
+PAM Account,pam360id,172.16.7.212,0,Account created
+PAM Account,pam360id,172.16.86.2,0,User already exist
+PAM Account,pam360id,172.16.86.3,0,Account created
+PAM Account,pam360id,172.16.87.4,0,Account created
+PAM Account,pam360id,172.16.87.5,0,Account created
+PAM Account,pam360id,172.16.9.4 ,0,User already exist
+PAM Account,pam360id,172.16.9.5,0,User already exist
+PAM Account,pam360id,172.16.87.11,0,User already exist
+PAM Account,pam360id,172.16.87.12,0,Account created
+PAM Account,pam360id,172.16.88.8,0,Account created
+PAM Account,pam360id,172.16.88.9,0,Account created
+PAM Account,pam360id,172.16.1.2,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.0.8,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.82.12,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.2.122,0,User already exist
+PAM Account,pam360id,172.16.82.14,0,Port 3389 is open (Windows)
+PAM Account,pam360id,172.16.100.2,0,Account created
+PAM Account,pam360id,172.16.100.3,0,Account created
+PAM Account,pam360id,172.16.7.214 ,0,Account created
+PAM Account,pam360id,172.16.7.215,0,Account created
+PAM Account,pam360id,172.16.6.190,0,Port 3389 is open (Windows)
+PAM Account,pam360id,192.168.167.70,0,No relevant ports are open
+PAM Account,pam360id,192.168.167.71,0,No relevant ports are open
+PAM Account,pam360id,192.168.167.101,0,No relevant ports are open
+PAM Account,pam360id,192.168.167.102,0,No relevant ports are open
+PAM Account,pam360id,192.168.67.101,0,No relevant ports are open
+PAM Account,pam360id,172.16.98.13,0,Account created
+PAM Account,pam360id,172.16.106.10,0,User already exist
+PAM Account,pam360id,172.16.96.2,0,User already exist
+PAM Account,pam360id,172.16.97.2,0,Account created
+PAM Account,pam360id,172.16.9.165,0,User already exist
+PAM Account,pam360id,172.16.110.4,0,User already exist
+PAM Account,pam360id,172.16.106.7,0,User already exist
+PAM Account,pam360id,172.30.1.19,0,User already exist
+PAM Account,pam360id,172.16.9.167,0,User already exist
+PAM Account,pam360id,172.16.132.15,0,User already exist
+PAM Account,pam360id,192.168.168.4,0,Account created
+PAM Account,pam360id,192.168.168.3,0,Account created
+PAM Account,pam360id,192.168.168.2,0,Account created
+PAM Account,pam360id,172.16.12.51,0,User admin unavailable
+PAM Account,pam360id,172.16.185.13,0,No relevant ports are open
+PAM Account,pam360id,192.168.168.6,0,Account created
+PAM Account,pam360id,192.168.167.31,0,No relevant ports are open
+PAM Account,pam360id,192.168.167.32,0,No relevant ports are open

@@ -194,22 +194,24 @@ Server() {
     # Method for account creation 
 	create_user() {
 		local port="${@:1:1}"
+		#local userFullName="${@:2:1}"
+		#local userName="${@:3:1}"
 
 		if [[ "$port" -eq "222" ]]; then 
 			if is_admin	; then
-				# Method instance 
+				#put_admin "$port" "$userFullName" "$userName"
 				put_admin "$@"
 
 			else
-				# Method instance 
+				#put_user "$port" "$userFullName" "$userName"
 				put_user "$@"
 			fi
 		else
 			if is_admin	; then
-				# Method instance 
+				#put_admin "$port" "$userFullName" "$userName"
 				put_admin "$@"
 			else
-				# Method instance 
+				#put_user "$port" "$userFullName" "$userName"
 				put_user "$@"
 			fi
 		fi

@@ -4,6 +4,7 @@ set user 	[lindex $argv 0]
 set host 	[lindex $argv 1]
 set newUser	[lindex $argv 2]
 set port 	[lindex $argv 3]
+# This is important to handle server the is too long to respond
 set timeout 30
 
 # Conditional statement with elseif
@@ -68,4 +69,3 @@ if { $port == 222 } {
 		}	
 	}
 }
-
