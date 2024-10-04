@@ -5,7 +5,7 @@ set host 	[lindex $argv 1]
 set newUser	[lindex $argv 2]
 set port 	[lindex $argv 3]
 # This is important to handle server the is too long to respond
-set timeout 30
+set timeout 90
 
 # Conditional statement with elseif
 if { $port == 222 } {
@@ -13,59 +13,25 @@ if { $port == 222 } {
 	spawn ssh $user@$host -p $port "sudo passwd $newUser"
 	# Handle password prompts for the new user
 	expect {
-		"New password: " {
+		# Loop through the possible prompts until the password is set
+		-re "(?i)password.*:" { 
+			# Send the new password
 			send "Pds\$\$001\r"
 			exp_continue
 		}
-		"New UNIX password: " {
-			send "Pds\$\$001\r"
-			exp_continue
-		}
-		"Enter new UNIX password: " {
-			send "Pds\$\$001\r"
-			exp_continue
-		}
-		"Retype new password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
-		"Retype UNIX password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
-		"Retype new UNIX password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
+		eof
 	}
 } else {
 	# Start SSH session
 	spawn ssh $user@$host "sudo passwd $newUser"
 	# Handle password prompts for the new user
 	expect {
-		"New password: " {
+		# Loop through the possible prompts until the password is set
+		-re "(?i)password.*:" { 
+			# Send the new password
 			send "Pds\$\$001\r"
 			exp_continue
 		}
-		"New UNIX password: " {
-			send "Pds\$\$001\r"
-			exp_continue
-		}
-		"Enter new UNIX password: " {
-			send "Pds\$\$001\r"
-			exp_continue
-		}
-		"Retype new password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
-		"Retype UNIX password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
-		"Retype new UNIX password: " {
-				send "Pds\$\$001\r"
-				exp_continue
-		}	
+		eof
 	}
 }

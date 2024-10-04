@@ -10,8 +10,16 @@ srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
 srvIP["me"]="192.168.20.23" #PDSDTAACPOINT1D
 srvIP["195.12"]="172.16.195.12" #PDSNROSSNG2P
 
-#Redisharvester
+#POC STORAGE
+srvIP["86.20"]="172.16.86.20" #
+#ITOP
+srvIP["131.20"]="172.16.131.20" #PDSITOPSVR1D
+
+#Redisharvester DR
 srvIP["131.15"]="172.16.131.15" #mpredisharvesterd
+
+#Redisharvester PROD
+srvIP["2.123"]="172.16.2.123" #mpredisharvesterp
 
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #ns01.pdshc.com.ph.local
@@ -65,6 +73,7 @@ srvIP["132.12"]="172.16.132.12" #PDSSITEDBTC1D
 srvIP["1.127"]="172.32.1.127" #aristotle (caac APP PROD)
 srvIP["1.130"]="172.32.1.130" #pdscaacdbp (caac DB PROD)
 srvIP["9.9"]="172.16.9.9" #tts-db-prod-backup1
+srvIP["9.7"]="172.16.9.7" #donatello
 srvIP["9.167"]="172.16.9.167" #vangogh (Web DR) 
 srvIP["1.19"]="172.30.1.19" #sungogh(caac DB DR)
 
@@ -142,4 +151,5 @@ srvIP["168.161"]="192.168.168.161" #caacdb.local
 srvIP["168.125"]="192.168.168.125" #pdsemscmwt
 #TEST TIS 
 srvIP["168.6"]="192.168.168.6" #PDSWEBTIBTST01
+
 

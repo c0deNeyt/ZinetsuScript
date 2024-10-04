@@ -30,9 +30,9 @@ Server() {
 
 		#condition to check if it is using port 22 or 222	 
 		if [[ "$port" -eq "222" ]];then
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "id -u $usrAdm" &> /dev/null
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "id -u $usrAdm" &> /dev/null
 		else
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "id -u $usrAdm" &> /dev/null
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "id -u $usrAdm" &> /dev/null
 		fi
         return $?
     }
@@ -44,9 +44,9 @@ Server() {
 
 		#condition to check if it is using port 22 or 222	 
 		if [[ "$port" -eq "222" ]];then
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "id -u $nUser" &> /dev/null
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "id -u $nUser" &> /dev/null
 		else
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "id -u $nUser" &> /dev/null
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "id -u $nUser" &> /dev/null
 		fi
         return $?
     }
@@ -92,17 +92,22 @@ Server() {
 		
 		#condition to check if it is using port 22 or 222	 
 		if [[ "$port" -eq "222" ]];then
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "hostname" 
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "hostname" 
 		else
-        	ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "hostname" 
+        	ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "hostname" 
 		fi	
     }
 
 	# Method to check if the server is ubuntu
 	is_ubuntu() {
+		local port="${@:1:1}"
 		local osFlavor="ubuntu"
 		local varCmd="uname -a | grep -iq $osFlavor" 
-		ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		if [[ "$port" -eq "222" ]]; then 
+			ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		else
+			ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "$varCmd" &> /dev/null 
+		fi
 		return $?
 	}
 	
@@ -123,10 +128,10 @@ Server() {
 		# Verify what port to be use
 		if [[ "$port" -eq "222" ]]; then 
 			# Send to useradd command to the server using port 222
-			ssh -o BatchMode=yes -o ConnectTimeout=5 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
+			ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "$varCmd" &> /dev/null 
 		else
 			# Send to useradd command to the server 
-			ssh -o BatchMode=yes -o ConnectTimeout=5 "$usrAdm@$ip" "$varCmd" &> /dev/null 
+			ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "$varCmd" &> /dev/null 
 		fi
 		return $?
 	}	
@@ -138,12 +143,41 @@ Server() {
 
 		# Verify what port to be use
 		if [[ "$port" -eq "222" ]]; then 
-			expect sudoPasswd.exp "$usrAdm" "$ip" "$un" "$port" &> /dev/null 
+			/usr/bin/expect sudoPasswd.exp "$usrAdm" "$ip" "$un" "$port" &> /dev/null   
 		else
-			expect sudoPasswd.exp "$usrAdm" "$ip" "$un" &> /dev/null 
+			/usr/bin/expect sudoPasswd.exp "$usrAdm" "$ip" "$un" &> /dev/null  
 		fi
 		return $?
 	}
+
+	# Method to delete user
+	cmd_deluser(){
+		local port="${@:1:1}"
+		local user="${@:2:1}"
+
+		# Verify what port to be use
+		if [[ "$port" -eq "222" ]]; then 
+			ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "sudo userdel -r $user" &> /dev/null 
+		else
+			ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "sudo userdel -r $user" &> /dev/null 
+		fi
+		return $?
+	}
+	
+	# Method to have it be server ask to change pass
+	cmd_chage(){
+		local port="${@:1:1}"
+		local user="${@:2:1}"
+
+		# Verify what port to be use
+		if [[ "$port" -eq "222" ]]; then 
+			ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "sudo chage -d 0 $user" &> /dev/null 
+		else
+			ssh -o BatchMode=yes -o ConnectTimeout=90 "$usrAdm@$ip" "sudo chage -d 0 $user" &> /dev/null 
+		fi
+		return $?
+	}
+
 
 	# Method create account
 	creation() {
@@ -156,26 +190,29 @@ Server() {
 		if [ -z "$mainGroup" ]; then
 			local varCmd="sudo useradd -c '$fn' -m -d /home/$un -s /bin/bash $un"
 		else
-			local varCmd="sudo useradd -c '$fn' -m -d /home/$un -s /bin/bash $un; sudo usermod -aG $mainGroup $un"
+			local varCmd="sudo useradd -c '$fn' -m -d /home/$un -s /bin/bash $un && sudo usermod -aG $mainGroup $un"
 		fi
-
+		 
 		# Adduser 
 		if cmd_adduser "$port" "$fn" "$un" "$varCmd"; then
 			# Set Default password 
 			if cmd_setpass "$port" "$un"; then 
-				# Update Status
-				update_user_status "Account $un created"
+				# Method to ensure that the server ask to change pass.
+				if cmd_chage "$port" "$un"; then
+					# Update Status
+					update_user_status "Account $un created"
+				fi
 			else
-				echo "${LINENO}:: Error Setting password"
+				echo "${LINENO}:: cmd_setpass failed with exit code $?."
 			fi
 		else
-			echo "${LINENO}:: Error creating account."
+			echo "${LINENO}:: Error: cmd_adduser failed with exit code $?."
 		fi
 	}
 
 	# Method to create admin 
 	put_admin() {
-		if is_ubuntu; then
+		if is_ubuntu "$@"; then
 			# Method instance 
 			creation "$@" "admin"
 		else
@@ -186,32 +223,19 @@ Server() {
 
 	# Method to create user only	
 	put_user() {
-
 		# Method instance 
 		creation "$@" 
 	}
 	
-    # Method for account creation 
-	create_user() {
-		local port="${@:1:1}"
+    # Method to validate admin or user 
+	validate_role() {
+		if is_admin	; then
+			# Method instance 
+			put_admin "$@"
 
-		if [[ "$port" -eq "222" ]]; then 
-			if is_admin	; then
-				# Method instance 
-				put_admin "$@"
-
-			else
-				# Method instance 
-				put_user "$@"
-			fi
 		else
-			if is_admin	; then
-				# Method instance 
-				put_admin "$@"
-			else
-				# Method instance 
-				put_user "$@"
-			fi
+			# Method instance 
+			put_user "$@"
 		fi
 	}	
 
@@ -225,17 +249,24 @@ Server() {
 		if [[ "$port" -eq "222" ]]; then 
 			# Validate if the user exist 
     		if new_user_exists "$newUser" "$port"; then
+				#update_user_status "User already exist"
 				update_user_status "User $newUser already exist"
+
+				#Delete user Method
+				cmd_deluser "$port" "$newUser"
 			else
-				create_user "$port" "$fn" "$un" 
+				validate_role "$port" "$fn" "$un" 
 			fi
 		else
 			# Validate if the user exist 
     		if new_user_exists "$newUser"; then
 				#update_user_status "User already exist"
 				update_user_status "User $newUser already exist"
+
+				#Delete user Method
+				cmd_deluser "$port" "$newUser"
 			else
-				create_user "" "$fn" "$un" 
+				validate_role "" "$fn" "$un" 
 			fi
 		fi
 
@@ -307,4 +338,3 @@ Server() {
 		fi
     }
 }
-
