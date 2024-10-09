@@ -3,11 +3,16 @@
 # Import the Object
 source object.sh
 
-#Csv File
+# Csv File
 file="usrs/ip.csv"
-if [[ ! -f "$file" ]]; then
+sandbox="/media/sf_Linux/sandbox/ip.csv"
+
+if [[ ! -f "$file" && ! -f "$file1" ]]; then
 	echo "CSV File not found!!!"
+else
+	cp "$sandbox" "$file"
 fi
+
 # Temporary variable for loop
 lineCount=$(cat $file | wc -l)
 
@@ -28,3 +33,5 @@ for ((i = 2; i <= $lineCount; i++)); do
     check_server
 
 done < "$file"
+
+cp "$file" "$sandbox" 

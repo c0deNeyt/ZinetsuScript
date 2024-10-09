@@ -5,13 +5,13 @@ source object.sh
 
 # Csv File
 file="$HOME/Script/UsrMgmt/usrs/adduser.csv"
-file1="$HOME/trans/recieved/adduser.csv" 
+sandbox="/media/sf_Linux/sandbox/adduser.csv"
 
 if [[ ! -f "$file" && ! -f "$file1" ]]; then
 	echo "CSV File not found!!!"
 else
 	echo "Syncing the file..."
-	#cp "$file1" "$file"
+	#cp "$sandbox" "$file"
 fi
 
 # Line count
@@ -37,4 +37,4 @@ for ((i = 2; i <= $lineCount; i++)); do
 
 done < "$file"
 
-
+#cp "$file" "$sandbox" 

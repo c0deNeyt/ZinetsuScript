@@ -253,7 +253,7 @@ Server() {
 				update_user_status "User $newUser already exist"
 
 				#Delete user Method
-				cmd_deluser "$port" "$newUser"
+				#cmd_deluser "$port" "$newUser"
 			else
 				validate_role "$port" "$fn" "$un" 
 			fi
@@ -264,7 +264,7 @@ Server() {
 				update_user_status "User $newUser already exist"
 
 				#Delete user Method
-				cmd_deluser "$port" "$newUser"
+				#cmd_deluser "$port" "$newUser"
 			else
 				validate_role "" "$fn" "$un" 
 			fi
