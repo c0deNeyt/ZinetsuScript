@@ -9,6 +9,7 @@ sandbox="/media/sf_Linux/sandbox/ip.csv"
 
 if [[ ! -f "$file" && ! -f "$file1" ]]; then
 	echo "CSV File not found!!!"
+	exit 1
 else
 	cp "$sandbox" "$file"
 fi

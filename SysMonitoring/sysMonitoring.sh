@@ -177,9 +177,6 @@ mv $defaultDir/*.txt "$dumpDir"
 /usr/bin/python3 "$defaultDir"/toExcel.py
 cp "$dumpDir"/SystemMonitoring.xlsx "$dumpDir"/$(gdate xlsxName).xlsx 
 
-#this will update the file from windows
-#trans smu
-
 #transfer the excel file on smtp server 
 ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
 scp -q "$dumpDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/

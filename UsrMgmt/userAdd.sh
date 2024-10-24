@@ -7,11 +7,11 @@ source object.sh
 file="$HOME/Script/UsrMgmt/usrs/adduser.csv"
 sandbox="/media/sf_Linux/sandbox/adduser.csv"
 
-if [[ ! -f "$file" && ! -f "$file1" ]]; then
+if [[ ! -f "$file" ]]; then
 	echo "CSV File not found!!!"
 else
 	echo "Syncing the file..."
-	#cp "$sandbox" "$file"
+	cp "$sandbox" "$file"
 fi
 
 # Line count
@@ -30,11 +30,11 @@ for ((i = 2; i <= $lineCount; i++)); do
 
 	# Initialize the Object
 	# Server [per line data] [admin user] [index]i [ip] [new user]
-    #Server "$lineData" "carana" "$i" "$file" "$ip" "$un"
+    Server "$lineData" "carana" "$i" "$file" "$ip" "$un"
 
 	# Use the Method 
-   	#create_account 
+   	create_account 
 
 done < "$file"
 
-#cp "$file" "$sandbox" 
+cp "$file" "$sandbox" 

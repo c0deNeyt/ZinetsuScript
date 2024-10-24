@@ -1,5 +1,0 @@
-id name            master_cluster_id master_cluster_name aux_cluster_id   aux_cluster_name primary state                   relationship_count copy_type cycling_mode 
-0  BANCS_DR_MIRROR 000002006021C34A  PDS_SVC_LOCAL_DR    000002006021C43A pds_svc_cluster          idling                  8                  global    none         
-1  DB_CG           000002006041C354  PDS_SVC_PROD        000002006021C34A PDS_SVC_LOCAL_DR master  consistent_synchronized 27                 global    none         
-2  BANC_PRD_MIRROR 000002006041C354  PDS_SVC_PROD        000002006021C34A PDS_SVC_LOCAL_DR master  consistent_synchronized 6                  metro     none         
-3  BANC_PRD_GLOBAL 000002006041C354  PDS_SVC_PROD        000002006021C34A PDS_SVC_LOCAL_DR master  consistent_synchronized 2                  global    none         

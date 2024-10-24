@@ -163,6 +163,18 @@ Server() {
 		fi
 		return $?
 	}
+
+	# Method to Modify user
+	cmd_moduser(){
+		local port="${@:1:1}"
+		local user="${@:2:1}"
+		local group="${@:3:1}"
+
+		# Verify what port to be use
+		update_user_status "User $newUser role modified."
+		ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "sudo usermod -aG $group $user" &> /dev/null 
+		return $?
+	}
 	
 	# Method to have it be server ask to change pass
 	cmd_chage(){
@@ -220,22 +232,13 @@ Server() {
 			creation "$@" "wheel"
 		fi	
 	}
-
-	# Method to create user only	
-	put_user() {
-		# Method instance 
-		creation "$@" 
-	}
-	
-    # Method to validate admin or user 
 	validate_role() {
 		if is_admin	; then
 			# Method instance 
 			put_admin "$@"
-
 		else
 			# Method instance 
-			put_user "$@"
+			creation "$@" 
 		fi
 	}	
 
@@ -249,22 +252,35 @@ Server() {
 		if [[ "$port" -eq "222" ]]; then 
 			# Validate if the user exist 
     		if new_user_exists "$newUser" "$port"; then
-				#update_user_status "User already exist"
 				update_user_status "User $newUser already exist"
 
-				#Delete user Method
-				#cmd_deluser "$port" "$newUser"
+				# Method to modify user role
+				if is_ubuntu "$port"; then
+					# Method instance 
+					cmd_moduser "$port" "$newUser" "admin"
+					update_user_status "Account $newUser role modified."
+				else
+					# Method instance 
+					cmd_moduser "$port" "$newUser" "wheel"
+					update_user_status "Account $newUser role modified."
+				fi	
 			else
 				validate_role "$port" "$fn" "$un" 
 			fi
 		else
 			# Validate if the user exist 
     		if new_user_exists "$newUser"; then
-				#update_user_status "User already exist"
 				update_user_status "User $newUser already exist"
-
-				#Delete user Method
-				#cmd_deluser "$port" "$newUser"
+				# Method to modify user role
+				if is_ubuntu "22"; then
+					# Method instance 
+					cmd_moduser "22" "$newUser" "admin"
+					update_user_status "Account $newUser role modified."
+				else
+					# Method instance 
+					cmd_moduser "22" "$newUser" "wheel"
+					update_user_status "Account $newUser role modified."
+				fi	
 			else
 				validate_role "" "$fn" "$un" 
 			fi
