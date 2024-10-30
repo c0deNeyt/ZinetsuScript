@@ -216,3 +216,16 @@
 ./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
 ./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
 ./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.106.7 Sucess! 
+./dsa.sh Line 31:: dsa at 192.168.168.4 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.87.4 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.87.5 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.86.3 Sucess! 

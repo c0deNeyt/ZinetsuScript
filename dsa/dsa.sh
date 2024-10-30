@@ -31,11 +31,9 @@ function runDsa(){
 			get_log "$0 Line ${LINENO}:: dsa at $2 Sucess!" "$logFile"
 		else 
 			get_log "$0 Line ${LINENO}:: dsa Failed!" "$logFile"
-			continue # break iteration and proceed to the next
 		fi
 	else
 		get_log "$0 Line ${LINENO}:: IBM utils not found!" "$logFile"
-		continue # break iteration and proceed to the next
 	fi
 }
 
@@ -76,6 +74,7 @@ for (( i=1; i <= $lineCount; i++ )); do
 		get_log "$0 line ${LINENO}:: $lData Port 3389 is open (Windows)"  "$logFile"
 	else
 		get_log "$0 line ${LINENO}:: $lData No relevant ports are open" "$logFile"
+		continue # break iteration and proceed to the next
 	fi
 done & spinner
 

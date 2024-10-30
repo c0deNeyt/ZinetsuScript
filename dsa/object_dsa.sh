@@ -55,7 +55,8 @@ Dsa(){
         ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" "sudo rm -rf /var/log/IBM_Support/*" 
 
 		# run the dsa command
-		ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" 'sudo /root/'"$fileName"' -v >/dev/null' <<EOF
+		ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$usrAdm@$ip" 'sudo /root/'"$fileName"' -v' <<EOF
+Y
 Y
 EOF
 		#get the new generated long folder name 
