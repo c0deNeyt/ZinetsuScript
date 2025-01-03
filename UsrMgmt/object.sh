@@ -210,10 +210,10 @@ Server() {
 			# Set Default password 
 			if cmd_setpass "$port" "$un"; then 
 				# Method to ensure that the server ask to change pass.
-				if cmd_chage "$port" "$un"; then
+				#if cmd_chage "$port" "$un"; then
 					# Update Status
 					update_user_status "Account $un created"
-				fi
+				#fi
 			else
 				echo "${LINENO}:: cmd_setpass failed with exit code $?."
 			fi
@@ -255,15 +255,20 @@ Server() {
 				update_user_status "User $newUser already exist"
 
 				# Method to modify user role
-				if is_ubuntu "$port"; then
+				#if is_ubuntu "$port"; then
 					# Method instance 
-					cmd_moduser "$port" "$newUser" "admin"
-					update_user_status "Account $newUser role modified."
-				else
+				#	cmd_moduser "$port" "$newUser" "admin"
+				#	update_user_status "Account $newUser role modified."
+				#else
 					# Method instance 
-					cmd_moduser "$port" "$newUser" "wheel"
-					update_user_status "Account $newUser role modified."
-				fi	
+				#	cmd_moduser "$port" "$newUser" "wheel"
+				#	update_user_status "Account $newUser role modified."
+				#fi	
+
+				# Method to modify password 
+				cmd_setpass "$port" "$un"
+				update_user_status "Account $newUser password modified."
+
 			else
 				validate_role "$port" "$fn" "$un" 
 			fi
@@ -272,15 +277,18 @@ Server() {
     		if new_user_exists "$newUser"; then
 				update_user_status "User $newUser already exist"
 				# Method to modify user role
-				if is_ubuntu "22"; then
+				#if is_ubuntu "22"; then
 					# Method instance 
-					cmd_moduser "22" "$newUser" "admin"
-					update_user_status "Account $newUser role modified."
-				else
+				#	cmd_moduser "22" "$newUser" "admin"
+				#	update_user_status "Account $newUser role modified."
+				#else
 					# Method instance 
-					cmd_moduser "22" "$newUser" "wheel"
-					update_user_status "Account $newUser role modified."
-				fi	
+					#cmd_moduser "22" "$newUser" "wheel"
+					#update_user_status "Account $newUser role modified."
+				#fi	
+				# Method to modify password 
+				#cmd_setpass "$port" "$un"
+				#update_user_status "Account $newUser password modified."
 			else
 				validate_role "" "$fn" "$un" 
 			fi

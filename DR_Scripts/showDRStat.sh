@@ -1,11 +1,10 @@
 #!/bin/bash
 
-USER="carana"
+USER="superuser"
 SERVER="192.168.167.22"
 SERVER2="192.168.67.22"
 
 ssh -t "$USER@$SERVER" 'lsrcconsistgrp' 2>/dev/null > tempGrp
-
 
 # Function to print a table row
 print_row() {
@@ -36,16 +35,16 @@ echo " "
 if [[ $varD1 == "consistent_synchronized" ]];
 then 
 	echo "Consisted and Sycronized!"
-	v6CronHash.sh
+	#v6CronHash.sh
 	#echo "Setting allow read and write access!"
-	echo "Stopping consistency group..."
-	ssh -t "$USER@$SERVER" 'svctask stoprcconsistgrp -access 0'
+	#echo "Stopping consistency group..."
+	#ssh -t "$USER@$SERVER" 'svctask stoprcconsistgrp -access 0'
 
-	#echo "Starting Flash Copy..."
+	echo "Starting Flash Copy..."
 	#ssh -t "$USER@$SERVER2" 'svctask startfcconsistgrp -prep 1'
 else
 	echo "Unconsistent and Unsynchronized!"	
-	ssh -t "$USER@$SERVER" 'svctask startrcconsistgrp -force -primary master 0'
-	v6CronHash.sh
+	#ssh -t "$USER@$SERVER" 'svctask startrcconsistgrp -force -primary master 0'
+	#v6CronHash.sh
 fi
 rm tempGrp 

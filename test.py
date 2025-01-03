@@ -8,7 +8,7 @@ def check_library_installed(library_name):
         print(f"{library_name} is not installed.")
 
 # List of libraries to check
-libraries = ["numpy", "openpyxl", "pandas", "pytest", "flask","urllib3"]
+libraries = ["numpy", "openpyxl", "pandas", "pytest", "flask","urllib3","json"]
 
 for library in libraries:
     check_library_installed(library)
