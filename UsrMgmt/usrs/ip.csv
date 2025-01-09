@@ -1,108 +1,108 @@
 Ip,Hostname
-192.168.168.59,No relevant ports are open
-192.168.168.11,pdsbancsv6dbuat
-192.168.168.9,No relevant ports are open
-192.168.168.12,User Admin Not Found!
-192.168.168.42,PDSWEBDBNGTST01
-192.168.168.31,mwtpdswebapps
-192.168.168.32,pdssitedbng1test
-192.168.168.95,User Admin Not Found!
-192.168.168.55,No relevant ports are open
-192.168.168.40,PDSSITEAPPNG1T
-192.168.168.49,User Admin Not Found!
-192.168.168.56,User Admin Not Found!
-192.168.168.57,No relevant ports are open
-192.168.168.58,User Admin Not Found!
-192.168.168.54,User Admin Not Found!
-172.16.10.105,No relevant ports are open
-192.168.168.61,User Admin Not Found!
-192.168.168.85,User Admin Not Found!
-192.168.168.99,User Admin Not Found!
-192.168.168.105,pdsesiprept
-192.168.168.93,mpredisharvesterfxtest
-192.168.168.191,caacdb.local
-192.168.168.92,localhost.localdomain
-192.168.168.108,accstestenv
-192.168.168.124,User Admin Not Found!
-192.168.168.154,caacws
-192.168.168.159,User Admin Not Found!
-192.168.168.115,pdssblprod01p
-192.168.168.153,PDSITOPSVR1T
-172.16.10.106,Server unreachable
-192.168.168.133,nmpdbprdtest
-192.168.168.162,PDSSCCPISODB1T
-192.168.168.166,Server unreachable
-192.168.168.160,User Admin Not Found!
-172.16.82.3,No relevant ports are open
-172.16.82.2,No relevant ports are open
-172.16.82.30,ns01.pdshc.com.ph.local
-192.168.168.9,No relevant ports are open
-192.168.168.8,No relevant ports are open
-192.168.168.55,No relevant ports are open
-172.16.10.105,No relevant ports are open
-192.168.168.12,User Admin Not Found!
-172.16.82.30,ns01.pdshc.com.ph.local
-192.168.168.32,pdssitedbng1test
-192.168.168.31,mwtpdswebapps
-192.168.168.13,User Admin Not Found!
-192.168.168.42,PDSWEBDBNGTST01
-192.168.168.11,pdsbancsv6dbuat
-192.168.168.41,PDSWEBAPPSTST01
-192.168.168.57,No relevant ports are open
-192.168.168.49,User Admin Not Found!
-192.168.168.56,User Admin Not Found!
-192.168.168.58,User Admin Not Found!
-172.16.10.106,Server unreachable
-192.168.168.85,User Admin Not Found!
-192.168.168.61,User Admin Not Found!
-192.168.168.59,No relevant ports are open
-192.168.168.154,caacws
-192.168.168.54,User Admin Not Found!
-192.168.168.93,mpredisharvesterfxtest
-192.168.168.92,localhost.localdomain
-192.168.168.115,pdssblprod01p
-192.168.168.95,User Admin Not Found!
-192.168.168.108,accstestenv
-192.168.168.124,User Admin Not Found!
-192.168.168.105,pdsesiprept
-192.168.168.153,PDSITOPSVR1T
-192.168.168.133,nmpdbprdtest
-192.168.168.160,User Admin Not Found!
-192.168.168.166,Server unreachable
-192.168.168.162,PDSSCCPISODB1T
-192.168.168.191,caacdb.local
-172.16.82.3,No relevant ports are open
-172.16.82.2,No relevant ports are open
-192.168.168.8,No relevant ports are open
-192.168.168.59,No relevant ports are open
-192.168.168.159,User Admin Not Found!
-192.168.168.93,mpredisharvesterfxtest
-192.168.168.9,No relevant ports are open
-172.16.82.30,ns01.pdshc.com.ph.local
-192.168.168.12,User Admin Not Found!
-192.168.168.11,pdsbancsv6dbuat
-192.168.168.61,User Admin Not Found!
-192.168.168.54,User Admin Not Found!
-192.168.168.31,mwtpdswebapps
-192.168.168.49,User Admin Not Found!
-192.168.168.56,User Admin Not Found!
-192.168.168.32,pdssitedbng1test
-192.168.168.57,No relevant ports are open
-192.168.168.55,No relevant ports are open
-192.168.168.58,User Admin Not Found!
-192.168.168.40,PDSSITEAPPNG1T
-192.168.168.41,PDSWEBAPPSTST01
-192.168.168.85,User Admin Not Found!
-192.168.168.92,localhost.localdomain
-192.168.168.108,accstestenv
-192.168.168.99,User Admin Not Found!
-192.168.168.124,User Admin Not Found!
-192.168.168.105,pdsesiprept
-192.168.168.95,User Admin Not Found!
-172.16.10.106,Server unreachable
-192.168.168.115,pdssblprod01p
-192.168.168.162,PDSSCCPISODB1T
-192.168.168.133,nmpdbprdtest
+192.168.168.59,
+192.168.168.11,
+192.168.168.9,
+192.168.168.12,
+192.168.168.42,
+192.168.168.31,
+192.168.168.32,
+192.168.168.95,
+192.168.168.55,
+192.168.168.40,
+192.168.168.49,
+192.168.168.56,
+192.168.168.57,
+192.168.168.58,
+192.168.168.54,
+172.16.10.105,
+192.168.168.61,
+192.168.168.85,
+192.168.168.99,
+192.168.168.105,
+192.168.168.93,
+192.168.168.191,
+192.168.168.92,
+192.168.168.108,
+192.168.168.124,
+192.168.168.154,
+192.168.168.159,
+192.168.168.115,
+192.168.168.153,
+172.16.10.106,
+192.168.168.133,
+192.168.168.162,
+192.168.168.166,
+192.168.168.160,
+172.16.82.3,
+172.16.82.2,
+172.16.82.30,
+192.168.168.9,
+192.168.168.8,
+192.168.168.55,
+172.16.10.105,
+192.168.168.12,
+172.16.82.30,
+192.168.168.32,
+192.168.168.31,
+192.168.168.13,
+192.168.168.42,
+192.168.168.11,
+192.168.168.41,
+192.168.168.57,
+192.168.168.49,
+192.168.168.56,
+192.168.168.58,
+172.16.10.106,
+192.168.168.85,
+192.168.168.61,
+192.168.168.59,
+192.168.168.154,
+192.168.168.54,
+192.168.168.93,
+192.168.168.92,
+192.168.168.115,
+192.168.168.95,
+192.168.168.108,
+192.168.168.124,
+192.168.168.105,
+192.168.168.153,
+192.168.168.133,
+192.168.168.160,
+192.168.168.166,
+192.168.168.162,
+192.168.168.191,
+172.16.82.3,
+172.16.82.2,
+192.168.168.8,
+192.168.168.59,
+192.168.168.159,
+192.168.168.93,
+192.168.168.9,
+172.16.82.30,
+192.168.168.12,
+192.168.168.11,
+192.168.168.61,
+192.168.168.54,
+192.168.168.31,
+192.168.168.49,
+192.168.168.56,
+192.168.168.32,
+192.168.168.57,
+192.168.168.55,
+192.168.168.58,
+192.168.168.40,
+192.168.168.41,
+192.168.168.85,
+192.168.168.92,
+192.168.168.108,
+192.168.168.99,
+192.168.168.124,
+192.168.168.105,
+192.168.168.95,
+172.16.10.106,
+192.168.168.115,
+192.168.168.162,
+192.168.168.133,
 192.168.168.154,
 192.168.168.160,
 192.168.168.153,
