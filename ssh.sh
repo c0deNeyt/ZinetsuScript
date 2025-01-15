@@ -95,6 +95,8 @@ srvIP["106.7"]="172.16.106.7"
 srvIP["82.202"]="172.16.82.202" #PDSNGGURUCOLT
 #SBL
 srvIP["7.3"]="172.16.7.3" #pdsngsblprd01p
+#Enterprise Backup (Veeam)
+srvIP["170.7"]="192.168.170.7" #PDSNGHDLNX01P
 #DR Server
 srvIP["97.2"]="172.16.97.2" #BANCSCARTC1D
 srvIP["98.13"]="172.16.98.13" #pdsbancsv6db1d
@@ -159,4 +161,5 @@ srvIP["168.159"]="192.168.168.159" #caacws
 srvIP["168.125"]="192.168.168.125" #pdsemscmwt
 #TEST TIS 
 srvIP["168.6"]="192.168.168.6" #PDSWEBTIBTST01
+
 
