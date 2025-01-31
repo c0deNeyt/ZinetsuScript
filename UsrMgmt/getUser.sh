@@ -29,4 +29,7 @@ Information:
 This script addapting object oriented pattern,
 where in the actual script is sourcing a object file
 which contains functions/instruction.
+
+This Script is used to retrive a users and roles from 
+the list of server 
 '

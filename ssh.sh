@@ -21,7 +21,8 @@ srvIP["131.15"]="172.16.131.15" #mpredisharvesterd
 #Redisharvester PROD
 srvIP["2.123"]="172.16.2.123" #mpredisharvesterp
 #DNS Server
-srvIP["82.30"]="172.16.82.30" #ns01.pdshc.com.ph.local
+srvIP["82.30"]="172.16.82.30" #OLD DNS Serve IP
+srvIP["27.10"]="172.16.27.10" #ns01.pdshc.com.ph.local
 # SSCP ISO Docker
 srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["123.17"]="172.16.123.17" #PDSSCCPISODB1P
@@ -161,5 +162,7 @@ srvIP["168.159"]="192.168.168.159" #caacws
 srvIP["168.125"]="192.168.168.125" #pdsemscmwt
 #TEST TIS 
 srvIP["168.6"]="192.168.168.6" #PDSWEBTIBTST01
+#TEST ASM Team
+srvIP["168.15"]="192.168.168.15" #astestserver
 
 
