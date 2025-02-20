@@ -4,6 +4,7 @@
 Server() {
 	ip="$1"
 	admUser="$2"
+	varUser="$3"
     # Method to check if a port is open
     is_port_open() {
         local port="$@"
@@ -23,17 +24,17 @@ Server() {
 		spin[3]="/"
 
 		# Display the spinner while the process is running
-		echo -n -e "[Generating Report for @ ${@:1:1}...] \n ${spin[0]}"
+		echo -e "[Generating Report for @ ${@:1:1}...]"
 		while kill -0 $pid 2> /dev/null; do
 			for i in "${spin[@]}"; do
 				echo -ne "\b$i" 
 				sleep 0.1 
 			done 
 		done
-		echo -ne "\rDone...!\n"
+		echo -ne "\rDone...!\n\n"
 	}
 
-    # Method to get a server psswd file and store in a temporary file
+    # Method to get a server passwd file and store in a temporary file
 	get_passwd(){
 		REMOTE_USER="${@:1:1}"
 		REMOTE_HOST="${@:2:1}"
@@ -41,7 +42,7 @@ Server() {
 		TMP_FILE=$(mktemp /tmp/passwd_XXXXXX)
 
 		# SSH to the remote server and fetch the /etc/passwd file
-		ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$REMOTE_USER@$REMOTE_HOST" "cat /etc/passwd" > "$TMP_FILE"
+		ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$REMOTE_USER@$REMOTE_HOST" "cat /etc/passwd" &> "$TMP_FILE"
 
 		# Failover condition	
 		if [ $? -eq 0 ]; then
@@ -50,6 +51,19 @@ Server() {
 		  echo "Failed to fetch /etc/passwd from $REMOTE_HOST"
 		  exit 2
 		fi
+	}
+	check_user(){
+		local port="${@:1:1}" 
+
+		(ssh -o BatchMode=yes -o ConnectTimeout=90 -p "$port" "$admUser@$ip" "groups $user")
+		#echo "✅" 
+		
+		# Run the command remotely using SSH
+		#if [ $? -ne 0 ]; then
+		#	echo "❌ User '$USERNAME' does NOT exist on $REMOTE_HOST"
+		#else
+		#	echo "✅ User '$USERNAME' exists on $REMOTE_HOST"
+		#fi
 	}
 	
     # Method to check if a port is open
@@ -108,7 +122,7 @@ Server() {
 		rm -f "${tmp_file}"
 	}
 	
-	# Method to exicute filtering	
+	# Method to execute filtering	
 	run_filter(){
 		local port="${@:1:1}"
 		#get the temporary file content
@@ -117,7 +131,7 @@ Server() {
 		# Method instance to fileter the users
 		filter_users "$tmpFile" "$port"
 	}
-	
+
 	# Generate user and roles 
 	gen_users_rep(){
 		# Method that is used to validate if port 22 open
@@ -131,4 +145,19 @@ Server() {
 
 		return $?
 	}
+
+	# delete user account 
+	remove_account(){
+		# Method that is used to validate if port 22 open
+		if is_port_open "22"; then 
+			#method instance
+			check_user "22" 
+		else
+			#method instance
+			check_user "222" 
+		fi
+
+		return $?
+	}
+
 }

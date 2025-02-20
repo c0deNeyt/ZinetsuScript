@@ -210,10 +210,10 @@ Server() {
 			# Set Default password 
 			if cmd_setpass "$port" "$un"; then 
 				# Method to ensure that the server ask to change pass.
-				#if cmd_chage "$port" "$un"; then
+				if cmd_chage "$port" "$un"; then
 					# Update Status
-					update_user_status "Account $un created"
-				#fi
+					update_user_status "Account $un created ^+^"
+				fi
 			else
 				echo "${LINENO}:: cmd_setpass failed with exit code $?."
 			fi
@@ -266,8 +266,8 @@ Server() {
 				#fi	
 
 				# Method to modify password 
-				cmd_setpass "$port" "$un"
-				update_user_status "Account $newUser password modified."
+				#cmd_setpass "$port" "$un"
+				#update_user_status "Account $newUser password modified."
 
 			else
 				validate_role "$port" "$fn" "$un" 
@@ -283,8 +283,8 @@ Server() {
 				#	update_user_status "Account $newUser role modified."
 				#else
 					# Method instance 
-					#cmd_moduser "22" "$newUser" "wheel"
-					#update_user_status "Account $newUser role modified."
+				#	cmd_moduser "22" "$newUser" "wheel"
+				#	update_user_status "Account $newUser role modified."
 				#fi	
 				# Method to modify password 
 				#cmd_setpass "$port" "$un"
@@ -295,7 +295,6 @@ Server() {
 		fi
 
 	}
-	
 
     # Method to check the server and print results
     check_server() {
