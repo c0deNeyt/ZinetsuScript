@@ -164,5 +164,5 @@ srvIP["168.125"]="192.168.168.125" #pdsemscmwt
 srvIP["168.6"]="192.168.168.6" #PDSWEBTIBTST01
 #TEST ASM Team
 srvIP["168.15"]="192.168.168.15" #astestserver
-
-
+#TEST SSCP DOCKER 
+srvIP["168.165"]="192.168.168.165" #astestserver
