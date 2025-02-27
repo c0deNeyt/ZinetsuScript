@@ -23,6 +23,7 @@ srvIP["2.123"]="172.16.2.123" #mpredisharvesterp
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #OLD DNS Serve IP
 srvIP["27.10"]="172.16.27.10" #ns01.pdshc.com.ph.local
+srvIP["27.11"]="172.16.27.11" #
 # SSCP ISO Docker
 srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["123.17"]="172.16.123.17" #PDSSCCPISODB1P
