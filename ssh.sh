@@ -88,6 +88,7 @@ srvIP["105.11"]="172.16.105.11" #pdsclgwyapp2p
 srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
 #New Market Page
 srvIP["108.25"]="172.16.108.25" #pdsfxbnmptc01d
+srvIP["7.236"]="172.16.7.236" #PDSNGMDFE1P
 #TIS
 srvIP["106.10"]="172.16.106.10"
 srvIP["7.214"]="172.16.7.214" #TRADEINTNG2P
@@ -169,3 +170,4 @@ srvIP["168.15"]="192.168.168.15" #astestserver
 #TEST SSCP DOCKER 
 srvIP["168.165"]="192.168.168.165" #PDSDOCKISOTEST
 srvIP["168.28"]="192.168.168.28" #mpredisharvestermwt
+
