@@ -111,9 +111,10 @@ srvIP["186.10"]="172.16.186.10" #PDSDTAACPOINT01
 srvIP["167.135"]="192.168.167.135" #V6REPORTSHAMGT01P
 srvIP["123.13"]="172.16.123.13" #PDSGITLABSVR1P
 #TEST Sever
-srvIP["82.204"]="172.16.82.204" # Nmap server 
-srvIP["167.15"]="192.168.167.15" # BANCSHAMNG1P
-srvIP["168.99"]="192.168.168.99" # Inactive
+srvIP["12.51"]="172.16.12.51" #dbtestserver1
+srvIP["82.204"]="172.16.82.204" #Nmap server 
+srvIP["167.15"]="192.168.167.15" #BANCSHAMNG1P
+srvIP["168.99"]="192.168.168.99" #Inactive
 srvIP["167.4"]="192.168.167.4" # 
 srvIP["168.94"]="192.168.168.94" #PeejayTestServer
 srvIP["168.166"]="192.168.168.166" #station1
@@ -170,4 +171,3 @@ srvIP["168.15"]="192.168.168.15" #astestserver
 #TEST SSCP DOCKER 
 srvIP["168.165"]="192.168.168.165" #PDSDOCKISOTEST
 srvIP["168.28"]="192.168.168.28" #mpredisharvestermwt
-
