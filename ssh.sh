@@ -83,6 +83,7 @@ srvIP["14.115"]="172.16.14.115" #PDSDSSWEBPXY01D
 srvIP["100.3"]="172.16.100.3" #pdsapidbsvr2p
 #Gateway
 srvIP["108.20"]="172.16.108.20" #pdsclgwyweb1d
+srvIP["108.30"]="172.16.108.30" #pdsapipxybal1d
 srvIP["105.10"]="172.16.105.10" #pdsclgwyapp1p
 srvIP["105.11"]="172.16.105.11" #pdsclgwyapp2p
 srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
@@ -113,6 +114,7 @@ srvIP["123.13"]="172.16.123.13" #PDSGITLABSVR1P
 #TEST Sever
 srvIP["12.51"]="172.16.12.51" #dbtestserver1
 srvIP["82.204"]="172.16.82.204" #Nmap server 
+srvIP["168.73"]="192.168.168.73" #pdsngild1test
 srvIP["167.15"]="192.168.167.15" #BANCSHAMNG1P
 srvIP["168.99"]="192.168.168.99" #Inactive
 srvIP["167.4"]="192.168.167.4" # 
