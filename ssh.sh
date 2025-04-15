@@ -35,6 +35,7 @@ srvIP["121.11"]="172.16.121.11" #PDSSITEAPPNG1P
 #FORWARD BONDS
 srvIP["7.133"]="172.16.7.133" #pdsfrwdbonddb
 srvIP["7.35"]="172.16.7.35" #pdsfrwdbonddbp
+srvIP["7.25"]="172.16.7.25" #pdsfrwdbondp
 #BANCS PROD 
 srvIP["9.4"]="172.16.9.4" #BANCSWEBNG1P
 srvIP["9.5"]="172.16.9.5" #BANCSWEBNG2P
@@ -173,3 +174,4 @@ srvIP["168.15"]="192.168.168.15" #astestserver
 #TEST SSCP DOCKER 
 srvIP["168.165"]="192.168.168.165" #PDSDOCKISOTEST
 srvIP["168.28"]="192.168.168.28" #mpredisharvestermwt
+
