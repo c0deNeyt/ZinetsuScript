@@ -1,0 +1,133 @@
+IP Address,Hostname,Detected IP,RHEL Version
+168.162,PDSSCCPISODB1T,192.168.168.162,Red Hat Enterprise Linux release 8.3 (Ootpa)
+82.202,Connection Failed,N/A,N/A
+123.29,Connection Failed,N/A,N/A
+9.69,pdsapiwebapp2p,172.16.9.69,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+168.161,Connection Failed,N/A,N/A
+9.68,pdsapiwebapp1p,172.16.9.68,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+168.166,Connection Failed,N/A,N/A
+82.204,rhel.chan,172.16.82.204,Red Hat Enterprise Linux release 8.8 (Ootpa)
+168.165,PDSDOCKISOTEST,192.168.168.165,Red Hat Enterprise Linux release 8.3 (Ootpa)
+88.2,Connection Failed,N/A,N/A
+170.7,Connection Failed,N/A,N/A
+87.11,BANCSREPNG1P,192.168.167.133,Red Hat Enterprise Linux release 8.4 (Ootpa)
+88.3,Connection Failed,N/A,N/A
+87.12,BANCSREPNG2P,192.168.167.134,Red Hat Enterprise Linux release 8.4 (Ootpa)
+121.11,PDSSITEAPPNG1P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+1.19,sungogh,172.30.1.19,Not RHEL or file missing
+168.29,MPWEBMWT,192.168.168.29,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+168.247,Connection Failed,N/A,N/A
+7.247,FXINTEGBLOT02,172.16.7.247,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+168.28,mpredisharvestermwt,,Red Hat Enterprise Linux Server release 5.5 (Tikanga)
+7.241,PDSSITEWEBNG1P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+95.11,PDSNROSSTC1D,172.16.95.11,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+168.21,Connection Failed,N/A,N/A
+168.20,Connection Failed,N/A,N/A
+105.11,Connection Failed,N/A,N/A
+105.10,pdsclgwyapp1p,172.16.105.10,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+1.130,pdscaacdbp,172.32.1.130,Not RHEL or file missing
+7.35,pdsfrwdbonddbp,172.16.7.35,Red Hat Enterprise Linux release 9.5 (Plow)
+168.32,pdssitedbng1test,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+89.3,PDSDSSWEBPXY02P,172.16.89.3,Red Hat Enterprise Linux Server release 6.8 (Santiago)
+7.251,pdsapipxybal2p,172.16.7.251,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+89.2,Connection Failed,N/A,N/A
+168.159,caacws,192.168.168.159,Not RHEL or file missing
+168.30,mrktpgedb1mwt,192.168.168.30,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+7.252,pdsapipxybal1p,172.16.7.252,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+168.31,mwtpdswebapps,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+96.2,BANCSAPPTC1D,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+168.154,caacws,192.168.168.154,Not RHEL or file missing
+168.153,PDSITOPSVR1T,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+106.7,Connection Failed,N/A,N/A
+168.99,Connection Failed,N/A,N/A
+27.10,ns01.pdshc.com.ph.local,172.16.27.10,Red Hat Enterprise Linux Server release 6.3 (Santiago)
+27.11,pdsngextdns1p,172.16.27.11,Red Hat Enterprise Linux release 9.5 (Plow)
+92.30,ns02.pdshc.com.ph.local,172.16.92.30,
+9.9,tts-db-prod-backup1,172.16.9.9,Not RHEL or file missing
+12.51,dbtestserver1,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+1.127,aristotle,172.32.1.127,Not RHEL or file missing
+131.15,mpredisharvesterd,,Red Hat Enterprise Linux Server release 5.5 (Tikanga)
+9.7,donatello,172.16.9.7,Not RHEL or file missing
+132.12,PDSSITEDBTC1D,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+82.30,Connection Failed,N/A,N/A
+168.92,localhost.localdomain,192.168.168.92,Red Hat Enterprise Linux release 8.8 (Ootpa)
+9.5,BANCSWEBNG2P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+168.93,mpredisharvesterfxtest,,Red Hat Enterprise Linux Server release 5.5 (Tikanga)
+9.4,BANCSWEBNG1P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+168.94,Connection Failed,N/A,N/A
+133.28,PDSDOCKISO1D,172.16.133.28,Red Hat Enterprise Linux release 8.3 (Ootpa)
+132.15,NMPDBTC1D,169.254.95.120,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+168.97,bcpfiles_test,192.168.168.97,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+186.10,PDSDTAACPOINT01,172.16.186.10,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+168.11,pdsbancsv6dbuat,192.168.168.11,Red Hat Enterprise Linux release 8.10 (Ootpa)
+123.13,PDSGITLABSVR1P,172.16.123.13,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+168.61,PDSSITEWEBMWT,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.15,asmtestserver,192.168.168.15,Red Hat Enterprise Linux release 9.3 (Plow)
+167.4,BANCSWEBNG2P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+14.115,PDSDSSWEBPXY01D,172.16.14.115,Red Hat Enterprise Linux Server release 6.8 (Santiago)
+123.17,PDSSCCPISODB1P,172.16.123.17,Red Hat Enterprise Linux release 8.3 (Ootpa)
+107.10,pdsclgwyapp1d,172.16.107.10,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+106.10,TRADEINTTC1D,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+86.4,Connection Failed,N/A,N/A
+123.18,PDSSCCPISODB2P,172.16.123.18,Red Hat Enterprise Linux release 8.3 (Ootpa)
+168.133,nmpdbprdtest,192.168.168.133,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+108.25,pdsfxbnmptc01d,172.16.108.25,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+7.133,pdsfrwdbonddbd,172.16.7.133,Red Hat Enterprise Linux release 9.5 (Plow)
+cloud,Connection Failed,N/A,N/A
+167.135,V6REPORTSHAMGT01P,192.168.167.135,Red Hat Enterprise Linux release 8.4 (Ootpa)
+167.15,BANCSHAMNG1P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+97.2,BANCSCARTC1D,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+216.10,PDSDTAACPOINT1D,172.16.216.10,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+97.3,BANCSREPVT01D,172.16.97.3,Red Hat Enterprise Linux release 8.4 (Ootpa)
+86.2,BANCSAPPNG1P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+86.3,BANCSAPPNG2P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+108.20,pdsclgwyweb1d,172.16.108.20,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+15.4,pdsapiwebapp1d,172.16.15.4,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+168.73,pdsngild1test,192.168.168.73,Red Hat Enterprise Linux release 9.5 (Plow)
+168.3,BANCSDBSNG1U,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+7.3,pdsngsblprd01p,172.16.7.3,Red Hat Enterprise Linux release 8.3 (Ootpa)
+168.125,pdsemscmwt,192.168.168.125,Red Hat Enterprise Linux release 9.4 (Plow)
+168.2,BANCSWACNG1U,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+195.10,Connection Failed,N/A,N/A
+168.4,Connection Failed,N/A,N/A
+195.12,Connection Failed,N/A,N/A
+168.6,PDSWEBTIBTST01,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+7.236,pdsngmdfe1p,172.16.7.236,Red Hat Enterprise Linux release 9.5 (Plow)
+2.123,mpredisharvesterp,,Red Hat Enterprise Linux Server release 5.5 (Tikanga)
+2.122,NMPDBNP1P,169.254.95.120,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+108.30,pdsapipxybal1d,172.16.108.30,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+100.3,pdsapidbsvr2p,172.16.100.3,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+7.232,Connection Failed,N/A,N/A
+2.71,NMPDBNV2P,172.16.2.71,Red Hat Enterprise Linux Server release 6.6 (Santiago)
+7.231,pdsclgwyweb1p,172.16.7.231,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+131.20,PDSITOPSVR1D,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.116,pdsfxbnmpws01,192.168.168.116,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+168.115,pdssblprod01p,192.168.168.115,Red Hat Enterprise Linux release 8.3 (Ootpa)
+168.180,Connection Failed,N/A,N/A
+168.181,Connection Failed,N/A,N/A
+168.182,Connection Failed,N/A,N/A
+87.5,BANCSCARNG2P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+122.22,PDSWEBPRODDB2,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+87.4,BANCSCARNG1P,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+122.21,PDSSITEDBNG1P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.175,pdsapigateway2.pds.local,192.168.168.175,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+9.165,BANCSWEBTC1D,,Red Hat Enterprise Linux Server release 5.7 (Tikanga)
+168.177,pdsclgwyapp1t,192.168.168.177,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+me,Connection Failed,N/A,N/A
+9.167,vangogh,172.16.9.167,Not RHEL or file missing
+168.105,pdsesiprept,192.168.168.105,Red Hat Enterprise Linux release 9.5 (Plow)
+168.172,Connection Failed,N/A,N/A
+168.108,accstestenv,192.168.168.108,Red Hat Enterprise Linux Server release 6.5 (Santiago)
+7.108,Connection Failed,N/A,N/A
+7.211,Connection Failed,N/A,N/A
+7.212,Connection Failed,N/A,N/A
+86.20,Connection Failed,N/A,N/A
+133.17,PDSSCCPISODB1D,172.16.133.17,Red Hat Enterprise Linux release 8.3 (Ootpa)
+168.179,pdsclgwydb1t,192.168.168.179,Red Hat Enterprise Linux Server release 7.6 (Maipo)
+7.214,TRADEINTNG2P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.42,PDSWEBDBNGTST01,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+7.215,TRADEINTNG1P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.41,PDSWEBAPPSTST01,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+121.20,PDSITOPSVR1P,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+168.40,PDSSITEAPPNG1T,,Red Hat Enterprise Linux Server release 6.1 (Santiago)
+98.13,pdsbancsv6db1d,172.16.98.13,Red Hat Enterprise Linux release 8.10 (Ootpa)

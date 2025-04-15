@@ -1,231 +1,20 @@
-12:: File esources/serverList not found.
-./dsa.sh line 12:: File esources/serverList not found.
-./dsa.sh line 13:: File esources/serverList not found.
-./dsa.sh line 13:: File esources/serverList not found.
-./dsa.sh line 13:: File esources/serverList not found.
-./dsa.sh 34:: Can't ping 172.16.7.214 
-./dsa.sh 34:: Can't ping 172.16.9.4 
-./dsa.sh line 34:: Can't ping 172.16.7.214 
-./dsa.sh line 34:: Can't ping 172.16.9.4 
-./dsa.sh line 34:: Can't ping 172.16.7.214 
-./dsa.sh line 34:: Can't ping 172.16.9.4 
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 56:: @172.16.9.9 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 63:: @172.16.7.212 unavailable.
-./dsa.sh line 56:: @172.16.9.7 unavailable.
-./dsa.sh line 56:: @172.16.86.2 unavailable.
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 56:: @172.16.9.9 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 63:: @172.16.7.212 unavailable.
-./dsa.sh line 56:: @172.16.9.7 unavailable.
-./dsa.sh line 56:: @172.16.86.2 unavailable.
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 63:: @172.16.7.212 unavailable.
-./dsa.sh line 56:: @172.16.86.2 unavailable.
-./dsa.sh line 63:: @172.16.106.7 unavailable.
-./dsa.sh line 56:: @172.16.9.167 unavailable.
-./dsa.sh line 63:: @192.168.168.4 unavailable.
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 63:: @172.16.7.212 unavailable.
-./dsa.sh line 56:: @172.16.86.2 unavailable.
-./dsa.sh line 63:: @172.16.106.7 unavailable.
-./dsa.sh line 56:: @172.16.9.167 unavailable.
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 56:: @172.16.96.2 unavailable.
-./dsa.sh line 63:: @172.16.7.211 unavailable.
-./dsa.sh line 63:: @172.16.7.212 unavailable.
-./dsa.sh line 56:: @172.16.86.2 unavailable.
-./dsa.sh line 61:: @172.16.96.2 unavailable.
-./dsa.sh line 68:: @172.16.7.211 unavailable.
-./dsa.sh line 68:: @172.16.7.212 unavailable.
-./dsa.sh line 61:: @172.16.86.2 unavailable.
-./dsa.sh line 68:: @172.16.106.7 unavailable.
-./dsa.sh line 61:: @172.16.9.167 unavailable.
-./dsa.sh line 68:: @192.168.168.4 unavailable.
-./dsa.sh line 61:: @172.16.87.4 unavailable.
-./dsa.sh line 61:: @172.16.87.5 unavailable.
-./dsa.sh line 68:: @172.16.7.211 unavailable.
-./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin).
-./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin).
-./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin).
-./dsa.sh 29:: IBM utils found.
-./dsa.sh 29:: IBM utils found!
-./dsa.sh line 61:: carana@192.168.168.166 unavailable.
-./dsa.sh 29:: IBM utils found!
-./dsa.sh:: IBM utils not found
-./dsa.sh 30:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 54:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 54:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 54:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh line 100:: 172.16.96.2 No relevant ports are open
-./dsa.sh:: IBM utils not found!
-./dsa.sh 54:: dsa sucess!
-./dsa.sh:: IBM utils not found!
-./dsa.sh:: IBM utils not found!
-./dsa.sh:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 60:: IBM utils not found!
-./dsa.sh 60:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 60:: IBM utils not found!
-./dsa.sh 60:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-
-./dsa.sh 59:: IBM utils not found!
-
-./dsa.sh 59:: IBM utils not found!
-
-./dsa.sh 59:: IBM utils not found!
-
-./dsa.sh 59:: IBM utils not found!./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 59:: IBM utils not found!
-./dsa.sh 53:: dsa sucess!
-./dsa.sh 58:: IBM utils not found!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess!
-./dsa.sh 52:: dsa at 172.16.96.2 sucess! 
-./dsa.sh 52:: dsa at 172.16.96.2 sucess! 
-./dsa.sh 52:: dsa at 172.16.96.2 sucess! 
-./dsa.sh 54:: dsa Failed! 
-./dsa.sh 54:: dsa Failed! 
-./dsa.sh 52:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 54:: dsa Failed! 
-./dsa.sh 54:: dsa Failed! 
-./dsa.sh 54:: dsa Failed! 
-./dsa.sh 52:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 52:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 51:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 51:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 51:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 51:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 51:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 79:: Can't ping 192.168.168.99 
-./dsa.sh line 79:: Can't ping 192.168.168.99 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 78:: Can't ping 192.168.168.99 
-./dsa.sh line 77:: Can't ping 192.168.168.99 
-./dsa.sh line 77:: Can't ping 192.168.168.99 
-./dsa.sh line 77:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh line 58:: Can't ping 192.168.168.99 
-./dsa.sh line 59:: Can't ping 192.168.168.99 
-./dsa.sh line 59:: Can't ping 192.168.168.99 
-./dsa.sh line 59:: Can't ping 192.168.168.99 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 56:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 55:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 55:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 55:: Can't ping 192.168.168.99 
-./dsa.sh 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh line 55:: Can't ping 192.168.168.99 
+./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin). 
+./dsa.sh line 64:: admin@172.16.96.2 unavailable. 
 ./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.106.7 Sucess! 
-./dsa.sh Line 33:: dsa Failed! 
-./dsa.sh Line 31:: dsa at 172.16.87.4 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.87.5 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh line 54:: Can't ping  
+./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin). 
 ./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
+./dsa.sh 22:: Missing parameter (eg. ./dsa.sh admin). 
+./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
 ./dsa.sh Line 31:: dsa at 172.16.106.7 Sucess! 
+./dsa.sh line 74:: 172.16.6.190 Port 3389 is open (Windows) 
+./dsa.sh line 54:: Can't ping 172.16.1.19 
+./dsa.sh Line 36:: IBM utils not found! 
 ./dsa.sh Line 31:: dsa at 192.168.168.4 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.87.4 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.87.5 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.96.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.86.2 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.106.7 Sucess! 
-./dsa.sh Line 31:: dsa at 192.168.168.4 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.87.4 Sucess! 
-./dsa.sh Line 31:: dsa at 172.16.87.5 Sucess! 
 ./dsa.sh Line 31:: dsa at 172.16.86.3 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.87.4 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.9.5 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.211 Sucess! 
+./dsa.sh Line 31:: dsa at 172.16.7.212 Sucess! 
+./dsa.sh line 74:: 172.16.82.12 Port 3389 is open (Windows) 
+./dsa.sh line 54:: Can't ping 172.16.82.101 
+./dsa.sh Line 36:: IBM utils not found! 
