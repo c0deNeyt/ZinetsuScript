@@ -12,6 +12,7 @@ srvIP["195.12"]="172.16.195.12" #PDSNROSSNG2P
 srvIP["195.10"]="172.16.195.10" #pdsbtrrelay1d
 srvIP["92.30"]="172.16.92.30" #ns02.pdshc.com.ph.local
 srvIP["7.108"]="172.16.7.108" #
+srvIP["7.20"]="172.16.7.20" #pdsesipp
 #POC STORAGE
 srvIP["86.20"]="172.16.86.20" #
 #ITOP
