@@ -143,6 +143,8 @@ srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
 srvIP["168.3"]="192.168.168.3" #BANCSDBSNG1U
 srvIP["168.105"]="192.168.168.105" #pdsesiprept
+srvIP["168.71"]="192.168.168.71" #pdsngbbs1test (bloomberg smtp) 
+srvIP["168.72"]="192.168.168.72" #pdsngpppag1test (Phil Pas Api Gateway)
 #TEST Marketpage
 srvIP["168.133"]="192.168.168.133" #nmpdbprdtest
 srvIP["168.30"]="192.168.168.30" #mrktpgedb1mwt
@@ -175,4 +177,3 @@ srvIP["168.15"]="192.168.168.15" #astestserver
 #TEST SSCP DOCKER 
 srvIP["168.165"]="192.168.168.165" #PDSDOCKISOTEST
 srvIP["168.28"]="192.168.168.28" #mpredisharvestermwt
-
