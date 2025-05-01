@@ -15,6 +15,9 @@ srvIP["7.108"]="172.16.7.108" #
 srvIP["7.20"]="172.16.7.20" #pdsesipp
 #POC STORAGE
 srvIP["86.20"]="172.16.86.20" #
+#Oracle 19c
+srvIP["88.8"]="172.16.88.8" #node 1
+srvIP["88.9"]="172.16.88.9" #node 2
 #ITOP
 srvIP["131.20"]="172.16.131.20" #PDSITOPSVR1D
 #Redisharvester DR
