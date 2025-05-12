@@ -133,10 +133,35 @@ function go(){
 	done
 }
 
-chkCon(){
-	for key in  ${!srvIP[@]}
+#Check function to check internet
+function chk(){
+	if [[ -z $1 ]] 
+	then
+		echo "$0 LINE: $LINENO --> incomplete parameter!"	
+		echo "eg. chk net [port] [ip]"	
+		echo "chk net 22 192.168.168.2"	
+	elif [[ -n $2 ]] && [[ -n $3 ]] && [[ $1 = "net" ]]
+	then
+		ssh -o BatchMode=yes -o ConnectTimeout=15 -p $2 carana@$3 bash << 'EOF'
+			echo "Hostname: $(hostname)"
+			curl -ko /dev/null -sw "Http Status Code: %{http_code}\n" https://access.redhat.com
+EOF
+	elif [[ $1 = "net" ]]
+	then
+		echo "HTTP Status Code: $(curl -ko /dev/null -sw "%{http_code}\n" https://access.redhat.com)"
+	else
+		echo " "
+		echo "$0 LINE: $LINENO --> incomplete parameter!"	
+		echo "eg. chk net [port] [ip]"	
+		echo "chk net 22 192.168.168.2"	
+		echo " "
+	fi
+}
+
+chkcon(){
+	for key in  ${!srvip[@]}
 	do 
-		ping -c4 ${srvIP[$key]} 
+		ping -c4 ${srvip[$key]} 
 	done
 }
 #show commands 
