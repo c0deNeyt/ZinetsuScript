@@ -23,6 +23,12 @@ srvIP["88.9"]="172.16.88.9" #node 2
 srvIP["131.20"]="172.16.131.20" #PDSITOPSVR1D
 #Redisharvester DR
 srvIP["131.15"]="172.16.131.15" #mpredisharvesterd
+#PDS Website DR
+srvIP["131.12"]="172.16.131.12" #PDSSITEAPPTC1D
+# PDS Clear DR
+srvIP["110.4"]="172.16.110.4" #pdsapidbsvr1d
+srvIP["108.20"]="172.16.108.20" #pdsclgwyweb1d
+srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
 #Redisharvester PROD
 srvIP["2.123"]="172.16.2.123" #mpredisharvesterp
 #DNS Server
@@ -88,11 +94,9 @@ srvIP["15.4"]="172.16.15.4" #pdsapiwebapp1d
 srvIP["14.115"]="172.16.14.115" #PDSDSSWEBPXY01D
 srvIP["100.3"]="172.16.100.3" #pdsapidbsvr2p
 #Gateway
-srvIP["108.20"]="172.16.108.20" #pdsclgwyweb1d
 srvIP["108.30"]="172.16.108.30" #pdsapipxybal1d
 srvIP["105.10"]="172.16.105.10" #pdsclgwyapp1p
 srvIP["105.11"]="172.16.105.11" #pdsclgwyapp2p
-srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
 #New Market Page
 srvIP["108.25"]="172.16.108.25" #pdsfxbnmptc01d
 srvIP["7.236"]="172.16.7.236" #PDSNGMDFE1P

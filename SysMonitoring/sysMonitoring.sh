@@ -160,6 +160,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#this considtion aims to avoid the noncritical server 
 	#to write on csv but also check the  server condition
 	checkStatus "$varIndex" $(gdate tme) "$srvAdm" "$srvStatus" "$srvGroup" "$varStatus"
+	echo "$varIndex $(gdate tme) $srvAdm $srvStatus $srvGroup $varStatus"
 	#Update Global Status
 	#add space below on each group
 	echo " " >> $varDataStorage
@@ -171,32 +172,35 @@ echo -e "Running CSV to HTML... \n"
 echo -e "Starting to transfer the files... \n"
 #this will update the file SOD_EOD dir 
 rm "$dumpDir"/*.txt >> /dev/null 2>&1
-mv $defaultDir/*.txt "$dumpDir"
+mv $defaultDir/*.txt /media/sf_Linux/sandbox/SOD_EOD/
+#mv $defaultDir/*.txt "$dumpDir"
 
 #this will update the Excel file based on the csv data
 /usr/bin/python3 "$defaultDir"/toExcel.py
-cp "$dumpDir"/SystemMonitoring.xlsx "$dumpDir"/$(gdate xlsxName).xlsx 
+rm /media/sf_Linux/sandbox/SOD_EOD/*.xlsx 
+cp "$dumpDir"/SystemMonitoring.xlsx /media/sf_Linux/sandbox/SOD_EOD/$(gdate xlsxName).xlsx 
+#cp "$dumpDir"/SystemMonitoring.xlsx "$dumpDir"/$(gdate xlsxName).xlsx 
 
 #transfer the excel file on smtp server 
-ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
-scp -q "$dumpDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+#ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
+#scp -q "$dumpDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the html file on smtp server 
-scp -q ebody.html $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/ > /dev/null 2>&1
+#scp -q ebody.html $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/ > /dev/null 2>&1
 
 #transfer the text file on smtp server 
-scp -q "$dumpDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+#scp -q "$dumpDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the file on smtp server 
-gdate ampm 
-echo "$(gdate xlsxName).xlsx" >> timeAmOrPm 
-scp -q timeAmOrPm $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+#gdate ampm 
+#echo "$(gdate xlsxName).xlsx" >> timeAmOrPm 
+#scp -q timeAmOrPm $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
-echo -e "Trying to send Email... \n"
-ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
+#echo -e "Trying to send Email... \n"
+#ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
 
 #remove the xlsx file
-rm "$dumpDir"/$(gdate xlsxName).xlsx 
+#rm "$dumpDir"/$(gdate xlsxName).xlsx 
 rm ebody.html 
 rm timeAmOrPm 
 

@@ -2,6 +2,7 @@
 
 # Set your SSH username
 USER="carana"
+source $HOME/Script/ssh.sh
 
 # Output CSV file
 OUTPUT="server_info.csv"
