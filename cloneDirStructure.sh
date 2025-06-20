@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 #get file structure on prod and put into temporary file
-ssh chan@192.168.168.99 'find /bancsmireports -maxdepth 5 -type d ! -path "/bancsmireports/V602_PROD/OnlineReports/*"' > tmpDirStructure
+#ssh chan@192.168.168.99 'find /bancsmireports -maxdepth 5 -type d ! -path "/bancsmireports/V602_PROD/OnlineReports/*"' > tmpDirStructure
 #ssh chan@192.168.168.99 'find /bancsmireports1 -maxdepth 6 -type d -not -path "/bancsmireports1/EQ_PROD/EmailDaemon/EmailLogs/*"' > tmpDirStructure
 #ssh chan@192.168.168.99 'find /bancsmireports2 -maxdepth 6 -type d' > tmpDirStructure
 #ssh chan@192.168.168.99 'find /bancsmireports3 -maxdepth 6 -type d' > tmpDirStructure
