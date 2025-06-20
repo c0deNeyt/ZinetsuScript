@@ -59,7 +59,7 @@ checkWhile(){
 }
 
 #current_date=$(date +%d__%S)
-echo $current_date
+#echo $current_date
 myFunction(){
 	#sudo mtr --report 1.1.1.1 & spinner
 	ssh carana@172.16.186.10 'date' > ~/Script/test.txt
