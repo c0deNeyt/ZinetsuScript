@@ -2,8 +2,8 @@
 
 declare -A srvIP
 #RANDOM 
-srvIP["88.2"]="172.16.88.2" #BANCSDBSNG1P
-srvIP["88.3"]="172.16.88.3" #BANCSDBSNG2P
+#srvIP["88.2"]="172.16.88.2" #BANCSDBSNG1P
+#srvIP["88.3"]="172.16.88.3" #BANCSDBSNG2P
 srvIP["95.11"]="172.16.95.11" #PDSNROSSTC1D
 srvIP["7.247"]="172.16.7.247" #FXINTEGBLOT02
 srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
@@ -121,6 +121,9 @@ srvIP["186.10"]="172.16.186.10" #PDSDTAACPOINT01
 #CLUSTER MANAGER
 srvIP["167.135"]="192.168.167.135" #V6REPORTSHAMGT01P
 srvIP["123.13"]="172.16.123.13" #PDSGITLABSVR1P
+#NEW V6 NFS
+srvIP["160.13"]="172.18.160.13" #pdsvtrv6nfs1p
+srvIP["160.11"]="172.18.160.11" #pdsngv6nfs1p
 #TEST Sever
 srvIP["12.51"]="172.16.12.51" #dbtestserver1
 srvIP["82.204"]="172.16.82.204" #Nmap server 
@@ -152,6 +155,7 @@ srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
 srvIP["168.3"]="192.168.168.3" #BANCSDBSNG1U
 srvIP["168.105"]="192.168.168.105" #pdsesiprept
 srvIP["168.71"]="192.168.168.71" #pdsngbbs1test (bloomberg smtp) 
+srvIP["168.76"]="192.168.168.76" #PDSDAP4BBG1U
 srvIP["168.72"]="192.168.168.72" #pdsngpppag1test (Phil Pas Api Gateway)
 #TEST Marketpage
 srvIP["168.133"]="192.168.168.133" #nmpdbprdtest
@@ -182,6 +186,7 @@ srvIP["168.125"]="192.168.168.125" #pdsemscmwt
 srvIP["168.6"]="192.168.168.6" #PDSWEBTIBTST01
 #TEST ASM Team
 srvIP["168.15"]="192.168.168.15" #astestserver
+srvIP["168.10"]="192.168.168.10" #astestserver(caac)
 #TEST SSCP DOCKER 
 srvIP["168.165"]="192.168.168.165" #PDSDOCKISOTEST
 srvIP["168.28"]="192.168.168.28" #mpredisharvestermwt

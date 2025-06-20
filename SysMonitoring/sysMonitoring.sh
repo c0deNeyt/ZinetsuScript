@@ -22,7 +22,7 @@ varGStatus="NO ISSUE FOUND!"
 #jq command is for handling json data 
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
 adminUsr="carana"
-timeBasis="172.16.88.9"
+timeBasis="127.0.0.1"
 smtpip="192.168.168.166"
 
 #Function for Date
@@ -30,26 +30,26 @@ function gdate(){
 	#Get Date time 
 	if [[ $1 = "long" ]]
 	then
-		ssh $adminUsr@$timeBasis 'date +"%B %d, %Y %A, %r"' 
+		date +"%B %d, %Y %A, %r" 
 	elif [[ $1 = "xlsxName" ]]
 	then
 		#condition for EOD
-		if [[ $(ssh $adminUsr@$timeBasis 'date +"%p"') = "PM" ]]
+		if [[ $(date +"%p") = "PM" ]]
 		then 
-			ssh $adminUsr@$timeBasis 'date +"EOD_System_Monitoring_%B_%d_%Y_%A"' 
+			date +"EOD_System_Monitoring_%B_%d_%Y_%A" 
 		#condition for SOD 
-		elif [[	$(ssh $adminUsr@$timeBasis 'date +"%p"') = "AM" ]]
+		elif [[	$(date +"%p") = "AM" ]]
 		then
-			ssh $adminUsr@$timeBasis 'date +"SOD_System_Monitoring_%B_%d_%Y_%A"' 
+			date +"SOD_System_Monitoring_%B_%d_%Y_%A" 
 		fi
 	#get time e.g. 13:00
 	elif [[ $1 = "tme" ]]
 	then
-		ssh $adminUsr@$timeBasis 'date +"%H:%M"' 
+		date +"%H:%M" 
 	elif [[ $1 = "ampm" ]]
 	then
-		ssh $adminUsr@$timeBasis 'date +"%p"' > timeAmOrPm
-		ssh $adminUsr@$timeBasis 'date +"%B %d, %Y-%A"' >> timeAmOrPm
+		date +"%p" > timeAmOrPm
+		date +"%B %d, %Y-%A" >> timeAmOrPm
 	fi
 }
 
