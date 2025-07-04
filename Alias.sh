@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 
 #Random Aliases
+alias dra="sudo su dradmin"
 alias s99="go 168.99 chan"
 alias pds="ssh -L localhsot:5910:markinck.inf.uk:5910"
 alias rld="source ~/.bashrc"

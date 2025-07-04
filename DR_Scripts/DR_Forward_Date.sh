@@ -24,29 +24,6 @@ pdsIPs[PDSApigateway]="172.16.108.30 172.16.15.4"
 #Function for Cheking and systemd commands 
 # ${ FNR == 3 } means select row 3
 #{ -F'-' } means set/read as field separator
-function chk(){
-	#check Date 
-	if [[ "date" = $1 ]]
-	then
-		ssh $usr@$2 "sudo date"
-	#check status
-	elif [[ "st" = $1 ]]
-	then
-		ssh $usr@$2 'systemctl status crond' | awk 'FNR == 3'
-	#stop crond service
-	elif [[ "stp" = $1 ]]
-	then
-		ssh $usr@$2 'sudo systemctl stop crond' | awk 'FNR == 3'
-	#check hostname 
-	elif [[ "host" = $1 ]]
-	then
-		ssh $usr@$2 "hostname"
-	#restart crond service
-	elif [[ "rt" = $1 ]]
-	then
-		ssh $usr@$2'sudo systemctl restart crond' | awk 'FNR == 3'
-	fi
-}
 
 #This will validate the input of each read command
 function validateInput(){
