@@ -14,6 +14,8 @@ srvIP["92.30"]="172.16.92.30" #ns02.pdshc.com.ph.local
 srvIP["7.108"]="172.16.7.108" #
 srvIP["7.20"]="172.16.7.20" #pdsesipp
 srvIP["155.13"]="172.19.155.13" #pdsdrauto1d
+srvIP["wp"]="10.111.128.46" #AWS word press
+srvIP["dp"]="10.111.128.94" #AWS Data app
 #POC STORAGE
 srvIP["86.20"]="172.16.86.20" #
 #Oracle 19c
