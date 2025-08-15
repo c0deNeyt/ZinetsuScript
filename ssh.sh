@@ -14,8 +14,11 @@ srvIP["92.30"]="172.16.92.30" #ns02.pdshc.com.ph.local
 srvIP["7.108"]="172.16.7.108" #
 srvIP["7.20"]="172.16.7.20" #pdsesipp
 srvIP["155.13"]="172.19.155.13" #pdsdrauto1d
-srvIP["wp"]="10.111.128.46" #AWS word press
-srvIP["dp"]="10.111.128.94" #AWS Data app
+srvIP["ns"]="10.111.138.180" #AWS NFS Server
+srvIP["wp"]="10.111.128.46" #AWS Word press
+srvIP["mda"]="10.111.128.94" #AWS Marketpage Data App
+srvIP["mdw"]="10.111.140.92" #AWS Marketpage Data Web
+srvIP["ms"]="10.111.10.13" #AWS Management Server
 #POC STORAGE
 srvIP["86.20"]="172.16.86.20" #
 #Oracle 19c
