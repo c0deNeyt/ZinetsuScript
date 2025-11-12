@@ -6,6 +6,7 @@ alias s99="go 168.99 chan"
 alias pds="ssh -L localhsot:5910:markinck.inf.uk:5910"
 alias rld="source ~/.bashrc"
 alias usg="du -hac  --max-depth=1"
+alias vim='/usr/local/bin/nvim'
 # -n 1 refresh interval equals to 1 
 alias idate="watch -n 1 date"
 alias mm="man main"

@@ -89,15 +89,15 @@ function fnd(){
 }
 
 #SSH to Database Nodes
-function node(){
-	if [[ $1 = "1" ]]
-	then
-		ssh carana@172.16.88.8
-	elif [[ $1 = "2" ]]
-	then
-		ssh carana@172.16.88.9
-	fi
-}
+#function node(){
+#	if [[ $1 = "1" ]]
+#	then
+#		ssh carana@172.16.88.8
+#	elif [[ $1 = "2" ]]
+#	then
+#		ssh carana@172.16.88.9
+#	fi
+#}
 #SSH key Pairing
 function sad(){
 	ssh-copy-id carana@$1
@@ -148,7 +148,9 @@ function chk(){
 EOF
 	elif [[ $1 = "net" ]]
 	then
-		echo "HTTP Status Code: $(curl -ko /dev/null -sw "%{http_code}\n" https://access.redhat.com)"
+		echo "Redhat Http Code: $(curl -ko /dev/null -sw "%{http_code}\n" https://access.redhat.com)"
+		echo "Google Http Code: $(curl -ko /dev/null -sw "%{http_code}\n" https://www.google.com)"
+		echo "FaceBook Http Code: $(curl -ko /dev/null -sw "%{http_code}\n" https://www.facebook.com)"
 	else
 		echo " "
 		echo "$0 LINE: $LINENO --> incomplete parameter!"	

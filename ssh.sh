@@ -2,18 +2,20 @@
 
 declare -A srvIP
 #RANDOM 
-#srvIP["88.2"]="172.16.88.2" #BANCSDBSNG1P
-#srvIP["88.3"]="172.16.88.3" #BANCSDBSNG2P
 srvIP["95.11"]="172.16.95.11" #PDSNROSSTC1D
 srvIP["7.247"]="172.16.7.247" #FXINTEGBLOT02
 srvIP["216.10"]="172.16.216.10" #PDSDTAACPOINT1D
-srvIP["me"]="192.168.20.23" #PDSDTAACPOINT1D
+srvIP["me"]="192.168.20.23" #
 srvIP["195.12"]="172.16.195.12" #PDSNROSSNG2P
 srvIP["195.10"]="172.16.195.10" #pdsbtrrelay1d
 srvIP["92.30"]="172.16.92.30" #ns02.pdshc.com.ph.local
 srvIP["7.108"]="172.16.7.108" #
 srvIP["7.20"]="172.16.7.20" #pdsesipp
+
+#DR Automation
 srvIP["155.13"]="172.19.155.13" #pdsdrauto1d
+
+#AWS Servers
 srvIP["ns"]="10.111.138.180" #AWS NFS Server
 srvIP["wp"]="10.111.128.46" #AWS Word press
 srvIP["mda"]="10.111.128.94" #AWS Marketpage Data App
@@ -38,8 +40,8 @@ srvIP["107.10"]="172.16.107.10" #pdsclgwyapp1d
 srvIP["2.123"]="172.16.2.123" #mpredisharvesterp
 #DNS Server
 srvIP["82.30"]="172.16.82.30" #OLD DNS Serve IP
-srvIP["27.10"]="172.16.27.10" #ns01.pdshc.com.ph.local
-srvIP["27.11"]="172.16.27.11" #
+srvIP["27.10"]="172.16.27.10" #Recent External DNS IP
+srvIP["27.11"]="172.16.27.11" #New External DNS IP
 # SSCP ISO Docker
 srvIP["123.29"]="172.16.123.29" #PDSDOCKISO2P
 srvIP["123.17"]="172.16.123.17" #PDSSCCPISODB1P
@@ -58,13 +60,19 @@ srvIP["9.5"]="172.16.9.5" #BANCSWEBNG2P
 srvIP["9.165"]="172.16.9.165" #BANCSWEBTC1D
 srvIP["86.4"]="172.16.86.4" #BANCSAPPNG1P
 srvIP["96.2"]="172.16.96.2" #BANCSAPPTC1D
+#--> app
 srvIP["86.2"]="172.16.86.2" #BANCSAPPNG1P
+srvIP["86.3"]="172.16.86.3" #BANCSAPPNG2P
+#--> eq
 srvIP["87.11"]="172.16.87.11" #BANCSREPNG1P
 srvIP["87.12"]="172.16.87.12" #BANCSREPNG2P
+#--> comms
 srvIP["87.4"]="172.16.87.4" #BANCSCARNG1P
 srvIP["87.5"]="172.16.87.5" #BANCSCARNG2P
+#--> sis 
 srvIP["7.211"]="172.16.7.211" #BANCSINTNG1P
 srvIP["7.212"]="172.16.7.212" #BANCSINTNG2P
+
 srvIP["7.241"]="172.16.7.241" #PDSSITEWEBNG1P
 srvIP["86.20"]="172.16.86.20" #rhel7-pds
 #MARKET PAGE
@@ -120,7 +128,6 @@ srvIP["170.7"]="192.168.170.7" #PDSNGHDLNX01P
 #DR Server
 srvIP["97.2"]="172.16.97.2" #BANCSCARTC1D
 srvIP["98.13"]="172.16.98.13" #pdsbancsv6db1d
-srvIP["86.3"]="172.16.86.3" #BANCSAPPNG2P
 srvIP["97.3"]="172.16.97.3" #BANCSREPVT01D
 srvIP["186.10"]="172.16.186.10" #PDSDTAACPOINT01
 #CLUSTER MANAGER
@@ -153,7 +160,7 @@ srvIP["168.92"]="192.168.168.92" #ForwardBods
 srvIP["168.108"]="192.168.168.108" #accstestenv
 srvIP["168.93"]="192.168.168.93" #mpredisharvesterfxtest
 srvIP["168.40"]="192.168.168.40" #PDSSITEAPPNG1T
-srvIP["168.115"]="192.168.168.115" #
+srvIP["168.115"]="192.168.168.115" # Dev Test Env
 srvIP["168.21"]="192.168.168.21" #pdsfrwdbonddbp
 srvIP["168.20"]="192.168.168.20" #pdsfrwdbondp
 srvIP["168.31"]="192.168.168.31" #mwtpdswebapps
