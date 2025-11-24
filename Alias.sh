@@ -7,7 +7,7 @@ alias pds="ssh -L localhsot:5910:markinck.inf.uk:5910"
 alias rld="source ~/.bashrc"
 alias usg="du -hac  --max-depth=1"
 alias vim='/usr/local/bin/nvim'
-# -n 1 refresh interval equals to 1 
+# -n 1 refresh interval equals to 1
 alias idate="watch -n 1 date"
 alias mm="man main"
 
@@ -17,17 +17,17 @@ alias vB="vim ~/.bashrc"
 alias vBa="vim $HOME/Script/Alias.sh"
 alias vBf="vim $HOME/Script/Function.sh"
 
-#vim DR 
+#vim DR
 alias vdf="vim $HOME/Script/DR_Scripts/DR_Forward_Date.sh"
 
-#vim manual 
+#vim manual
 alias vmm="vim $HOME/Script/manual/main.1"
 
-#vim script 
+#vim script
 alias vss="vim $HOME/Script/SOD.sh"
 alias vse="vim $HOME/Script/edit_Csv_File.sh"
 
-#vim .ssh 
+#vim .ssh
 alias vSk="vim $HOME/.ssh/known_hosts"
 alias vSs="vim $HOME/Script/ssh.sh"
 
