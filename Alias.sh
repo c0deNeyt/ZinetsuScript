@@ -56,4 +56,4 @@ alias gl="git log --oneline"
 alias gs="git status"
 
 #This Alias should be at the end of the line
-alias l='(ls --color=always -lrthA | awk '\''BEGIN {print "\033[1;34mDirectories:\033[0m"} /^d/ && !/^\.\.?$/ {print; next} !/^d/ {files=files $0 "\n"} END {print "\033[1;34m\nFiles:\033[0m"; printf files}'\'')'
+alias ls='(ls --color=always -lrthAp | awk '\''BEGIN {print "\033[1;34mDirectories:\033[0m"} /^d/ && !/^\.\.?$/ {print; next} !/^d/ {files=files $0 "\n"} END {print "\033[1;34m\nFiles:\033[0m"; printf files}'\'')'

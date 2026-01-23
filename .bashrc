@@ -5,12 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#Aliases
-source $HOME/Script/Alias.sh
-#Function
-source $HOME/Script/Function.sh
-#List of server IP's
-source $HOME/Script/ssh.sh
 # Reload config (mainly to load keybrd conf)
 source ~/.config/x11/xinitrc
 
