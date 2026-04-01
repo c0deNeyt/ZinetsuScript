@@ -1,0 +1,16 @@
+Filesystem Sync Report
+=======================
+Threshold: 10
+Source: /tmp/testFolder
+Destination: testfolder
+
+Source files: 25
+Destination files: 26
+Source dirs: 0
+Destination dirs: 0
+
+Files missing in destination: 0
+Extra files in destination: 1
+
+Detailed comparison compressed file:
+compare_folders.file.gz

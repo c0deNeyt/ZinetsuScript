@@ -106,9 +106,9 @@ function sad(){
 function s1(){
 	ssh carana@$1 'bash -s' < $HOME/Script/senT1.sh
 }
-function s2(){
-	ssh root@$1 'bash -s' < $HOME/Script/senT1.sh
-}
+# function s2(){
+# 	ssh root@$1 'bash -s' < $HOME/Script/senT1.sh
+# }
 #this function if for hopping into a different server
 function go(){
 	for key in  ${!srvIP[@]}

@@ -7,12 +7,8 @@
 
 #Aliases
 source $HOME/Script/Alias.sh
-#Function
-source $HOME/Script/Function.sh
 #List of server IP's
 source $HOME/Script/ssh.sh
-# Reload config (mainly to load keybrd conf)
-source ~/.config/x11/xinitrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -43,7 +39,6 @@ export PATH=$PATH:/sbin:/usr/sbin
 #  alias dr="$HOME/dr_automation/scripts/main.sh"
 #  alias util="$HOME/dr_automation/scripts/util.sh"
 #fi
-export BASE_DIR="$HOME/dr_automation"
 
 export OpenAI_KEY="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"
 export GEMINI_API_KEY="AIzaSyBnKj3fqiN77Tysb4zVlUaJTmFKboSlo9Q"
@@ -51,7 +46,5 @@ export GEMINI_API_KEY="AIzaSyBnKj3fqiN77Tysb4zVlUaJTmFKboSlo9Q"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-#export CUSTOM_SSH_CFG="/home/dradmin/dr_automation/config/.ssh/ssh_config"
-#export PATH=$PATH:/sbin:/usr/sbin
-#cd $HOME/dr_automation
+
 alias vim='nvim'

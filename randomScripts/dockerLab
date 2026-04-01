@@ -1,0 +1,74 @@
+#!/bin/env bash
+#
+# RHCSA EX200K Docker Lab Deployment Script
+# Creates: rhel1, rhel2, rhel3 with systemd
+# Environment: CentOS Stream 9-based (closest to RHEL9)
+#
+
+IMAGE="quay.io/centos/centos:stream9"
+CONTAINERS=(rhel1 rhel2 rhel3)
+
+echo "==> Pulling systemd-capable RHEL9 (CentOS Stream 9) image..."
+docker pull $IMAGE
+
+echo "==> Creating RHCSA lab containers..."
+for node in "${CONTAINERS[@]}"; do
+    echo "--> Creating $node ..."
+    docker run -d --name $node --privileged \
+        --hostname $node.lab.local \
+        -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+        $IMAGE /sbin/init
+done
+
+sleep 3
+
+echo "==> Installing essential RHCSA packages..."
+for node in "${CONTAINERS[@]}"; do
+    docker exec -it $node bash -c "
+        dnf install -y vim bash-completion \
+        firewalld chrony httpd podman \
+        tar gzip zip unzip nfs-utils lvm2 man-db
+    "
+done
+
+echo "==> Enabling system services..."
+for node in "${CONTAINERS[@]}"; do
+    docker exec -it $node systemctl enable --now firewalld
+    docker exec -it $node systemctl enable --now chronyd
+done
+
+echo "==> Configuring rhel1 as HTTP + NFS server..."
+docker exec -it rhel1 bash -c "
+    systemctl enable --now httpd
+    echo 'RHEL9 Docker Lab Server' > /var/www/html/index.html
+
+    mkdir -p /srv/nfs/share
+    chmod 777 /srv/nfs/share
+    echo '/srv/nfs/share *(rw,no_root_squash)' > /etc/exports
+    systemctl enable --now nfs-server
+    exportfs -rav
+"
+
+echo "==> Creating LVM loopback disk on rhel1..."
+docker exec -it rhel1 bash -c "
+    dd if=/dev/zero of=/root/disk1.img bs=1M count=800
+    losetup -fP /root/disk1.img
+    LOOP=\$(losetup -a | grep disk1 | cut -d: -f1)
+    pvcreate \$LOOP
+    vgcreate vg01 \$LOOP
+    lvcreate -n lvdata -L 300M vg01
+    mkfs.xfs /dev/vg01/lvdata
+    mkdir -p /mnt/lvdata
+    mount /dev/vg01/lvdata /mnt/lvdata
+"
+
+echo "==> Lab deployment complete!"
+echo ""
+echo "Containers running:"
+docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Image}}"
+
+echo ""
+echo "Login example:"
+echo "docker exec -it rhel1 bash"
+echo ""
+echo "Happy RHCSA studying!"

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 : ' 
 TO DO:
 [done] Validate if parameter if provided 

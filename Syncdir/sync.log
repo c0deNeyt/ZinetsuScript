@@ -1,0 +1,145 @@
+2026-03-18 15:48:00 - ERROR: Missing arguments
+2026-03-18 15:48:09 - Starting rsync…
+2026-03-18 15:48:09 - ERROR: rsync failed.
+2026-03-18 15:50:15 - Starting rsync…
+2026-03-18 15:50:15 - ERROR: rsync failed.
+2026-03-18 15:50:20 - Starting rsync…
+2026-03-18 15:50:20 - ERROR: rsync failed.
+2026-03-18 15:51:01 - Starting rsync…
+2026-03-18 15:51:01 - ERROR: rsync failed.
+2026-03-18 15:56:37 - Starting rsync…
+2026-03-18 15:56:37 - ERROR: rsync failed.
+2026-03-18 15:56:41 - Starting rsync…
+2026-03-18 15:56:41 - ERROR: rsync failed.
+2026-03-18 15:57:13 - Starting rsync…
+2026-03-18 15:57:13 - ERROR: rsync failed.
+2026-03-18 15:57:58 - Starting rsync…
+2026-03-18 15:57:58 - ERROR: rsync failed.
+2026-03-18 16:08:34 - Starting rsync…
+sending incremental file list
+./
+testfiles1
+              0 100%    0.00kB/s    0:00:00 (xfr#1, to-chk=24/26)
+testfiles10
+              0 100%    0.00kB/s    0:00:00 (xfr#2, to-chk=23/26)
+testfiles11
+              0 100%    0.00kB/s    0:00:00 (xfr#3, to-chk=22/26)
+testfiles12
+              0 100%    0.00kB/s    0:00:00 (xfr#4, to-chk=21/26)
+testfiles13
+              0 100%    0.00kB/s    0:00:00 (xfr#5, to-chk=20/26)
+testfiles14
+              0 100%    0.00kB/s    0:00:00 (xfr#6, to-chk=19/26)
+testfiles15
+              0 100%    0.00kB/s    0:00:00 (xfr#7, to-chk=18/26)
+testfiles16
+              0 100%    0.00kB/s    0:00:00 (xfr#8, to-chk=17/26)
+testfiles17
+              0 100%    0.00kB/s    0:00:00 (xfr#9, to-chk=16/26)
+testfiles18
+              0 100%    0.00kB/s    0:00:00 (xfr#10, to-chk=15/26)
+testfiles19
+              0 100%    0.00kB/s    0:00:00 (xfr#11, to-chk=14/26)
+testfiles2
+              0 100%    0.00kB/s    0:00:00 (xfr#12, to-chk=13/26)
+testfiles20
+              0 100%    0.00kB/s    0:00:00 (xfr#13, to-chk=12/26)
+testfiles3
+              0 100%    0.00kB/s    0:00:00 (xfr#14, to-chk=11/26)
+testfiles4
+              0 100%    0.00kB/s    0:00:00 (xfr#15, to-chk=10/26)
+testfiles5
+              0 100%    0.00kB/s    0:00:00 (xfr#16, to-chk=9/26)
+testfiles6
+              0 100%    0.00kB/s    0:00:00 (xfr#17, to-chk=8/26)
+testfiles7
+              0 100%    0.00kB/s    0:00:00 (xfr#18, to-chk=7/26)
+testfiles8
+              0 100%    0.00kB/s    0:00:00 (xfr#19, to-chk=6/26)
+testfiles9
+              0 100%    0.00kB/s    0:00:00 (xfr#20, to-chk=5/26)
+folder1/
+folder2/
+folder3/
+folder4/
+folder5/
+
+Number of files: 26 (reg: 20, dir: 6)
+Number of created files: 25 (reg: 20, dir: 5)
+Number of deleted files: 0
+Number of regular files transferred: 20
+Total file size: 0 bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 1,307
+Total bytes received: 423
+
+sent 1,307 bytes  received 423 bytes  3,460.00 bytes/sec
+total size is 0  speedup is 0.00
+2026-03-18 16:08:34 - rsync completed. Files copied: 20
+2026-03-18 16:08:34 - Generating file inventories…
+2026-03-18 16:08:34 - Inventories generated.
+2026-03-18 16:08:34 - Performing large-scale comparison…
+2026-03-18 16:08:34 - Comparison completed. Output: compare_folders.file.gz
+2026-03-18 16:08:34 - Writing summary report…
+2026-03-18 16:08:34 - Report written to report.file
+2026-03-18 16:08:34 - Completed successfully.
+2026-03-18 16:20:47 - Starting rsync…
+sending incremental file list
+
+Number of files: 26 (reg: 20, dir: 6)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 0 bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 501
+Total bytes received: 17
+
+sent 501 bytes  received 17 bytes  1,036.00 bytes/sec
+total size is 0  speedup is 0.00
+2026-03-18 16:20:47 - rsync completed. Files copied: 0
+2026-03-18 16:20:47 - Generating file inventories…
+2026-03-18 16:20:47 - Inventories generated.
+2026-03-18 16:20:47 - Performing large-scale comparison…
+2026-03-18 16:20:47 - Comparison completed. Output: compare_folders.file.gz
+2026-03-18 16:20:47 - Writing summary report…
+2026-03-18 16:20:47 - Report written to report.file
+2026-03-18 16:20:47 - Completed successfully.
+2026-03-18 16:21:14 - Starting rsync…
+sending incremental file list
+./
+
+Number of files: 25 (reg: 19, dir: 6)
+Number of created files: 0
+Number of deleted files: 0
+Number of regular files transferred: 0
+Total file size: 0 bytes
+Total transferred file size: 0 bytes
+Literal data: 0 bytes
+Matched data: 0 bytes
+File list size: 0
+File list generation time: 0.001 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 493
+Total bytes received: 24
+
+sent 493 bytes  received 24 bytes  344.67 bytes/sec
+total size is 0  speedup is 0.00
+2026-03-18 16:21:15 - rsync completed. Files copied: 0
+2026-03-18 16:21:15 - Generating file inventories…
+2026-03-18 16:21:15 - Inventories generated.
+2026-03-18 16:21:15 - Performing large-scale comparison…
+2026-03-18 16:21:15 - Comparison completed. Output: compare_folders.file.gz
+2026-03-18 16:21:15 - Writing summary report…
+2026-03-18 16:21:15 - Report written to report.file
+2026-03-18 16:21:15 - Completed successfully.

@@ -13,7 +13,8 @@ fi
 source $HOME/Script/Function.sh
 
 #MainFile
-varData="$HOME/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+#varData="$HOME/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+varData="/media/sf_Linux/SOD_EOD/SOD_EOD_System_Monitoring.csv"
 
 #stores total length for the line inside the file
 varLineCount=$(cat $varData | wc -l)

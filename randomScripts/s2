@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#ssh to server, that's why s2
+source "$HOME/Script/ssh.sh" || { echo "Missing ssh.sh"; exit 1; }
+
+for key in  ${!srvIP[@]}; do 
+	if [[ $1 = "win" ]]; then
+		ssh neyt@192.168.20.23
+		break
+	elif [[ -n $2 ]] && [[ -n $3 ]] && [[ $1 = $key ]]; then
+		ssh -p$3 $2@${srvIP[$key]}
+		break
+	elif [[ -n $2 ]] && [[ $1 = $key ]]; then
+		ssh $2@${srvIP[$key]}
+		break
+	elif [[ $1 = $key ]]; then
+		ssh carana@${srvIP[$key]}
+		break
+	fi
+done

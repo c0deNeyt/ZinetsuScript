@@ -1,0 +1,53 @@
+#!/bin/env bash
+
+# List of commands to check
+commands=(
+    awk 
+    cat 
+    grep
+    sort
+    ss
+    netstat
+)
+
+missing=0
+
+for cmd in "${commands[@]}"; do
+    if command -v "$cmd" >/dev/null 2>&1; then
+        echo "[ OK ] $cmd is installed"
+    else
+        echo "[ MISSING ] $cmd is NOT installed"
+        missing=1
+    fi
+done
+
+if [ $missing -eq 1 ]; then
+    echo ""
+    echo "Some commands are missing. Please install them before proceeding."
+else
+    echo ""
+    echo "All commands are available ✔"
+fi
+ 
+# Log location
+LOGFILE="remote_ips.log"
+ 
+# Create log file if not existing
+touch "$LOGFILE"
+chmod 600 "$LOGFILE"
+ 
+echo "----- $(date '+%Y-%m-%d %H:%M:%S') -----" >> "$LOGFILE"
+ 
+# Check for ss first (modern)
+if command -v ss >/dev/null 2>&1; then
+    CONNECTIONS=$(ss -tuna | awk 'NR>1 {print $5}')
+else
+    # Fallback for old RHEL/Ubuntu
+    CONNECTIONS=$(netstat -tuna | awk 'NR>2 {print $5}')
+fi
+ 
+# Extract, clean, and log unique remote IPs
+echo "$CONNECTIONS" | \
+cut -d':' -f1 | \
+grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' | \
+sort -u >> "$LOGFILE"
