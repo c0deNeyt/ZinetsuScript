@@ -1,9 +1,12 @@
 import pandas as pd
 
-# Read the CSV file
-df = pd.read_csv('/home/kaizen/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv', encoding='ISO-8859-1')
+# Paths to files
+csv_file = '/media/sf_Linux/SOD_EOD/SOD_EOD_System_Monitoring.csv'
 
-#HML Template
+# Read the CSV file
+df = pd.read_csv(csv_file, encoding='ISO-8859-1')
+
+#HTML Template
 htmlHead = """
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +64,7 @@ for i, row in df.iterrows():
     if i >= 57 and i <= 71:
         html_content += "           <tr>\n" 
         for item in row:
-            status = row[4]
+            status = row.iloc[4]
             if status != "UP" and item == status:
                 html_content += '               <th style="background-color: #ffadad;">{}</th>\n'.format(item)
             else: 
@@ -72,5 +75,5 @@ html_content += htmlNote
 html_content += htmlFooter 
 
 # Save the HTML table to a file
-with open('ebody.html', 'w', encoding='ISO-8859-1') as file:
+with open('/media/sf_Linux/SOD_EOD/ebody.html', 'w', encoding='ISO-8859-1') as file:
     file.write(html_content)

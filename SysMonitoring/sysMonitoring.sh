@@ -16,8 +16,7 @@ echo "Generating Report..."
 source $HOME/Script/Function.sh
 srvAdm="$1"
 defaultDir="$HOME/Script/SysMonitoring"
-#dumpDir="$HOME/Documents/SOD_EOD"
-dumpDir="/media/sf_Linux/SOD_EOD"
+mountedDir="/media/sf_Linux/SOD_EOD/"
 varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
 #jq command is for handling json data
@@ -157,7 +156,10 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 			rm  storageStatus
 		fi
 		rm  tmpPingRes
+		break
 	done
+
+	break 
 	#this considtion aims to avoid the noncritical server
 	#to write on csv but also check the  server condition
 	checkStatus "$varIndex" $(gdate tme) "$srvAdm" "$srvStatus" "$srvGroup" "$varStatus"
@@ -172,25 +174,23 @@ echo -e "Running CSV to HTML... \n"
 /usr/bin/python3 "$defaultDir"/tohtml.py
 echo -e "Starting to transfer the files... \n"
 #this will update the file SOD_EOD dir
-rm "$dumpDir"/*.txt >> /dev/null 2>&1
-mv $defaultDir/*.txt /media/sf_Linux/sandbox/SOD_EOD/
-#mv $defaultDir/*.txt "$dumpDir"
+rm "$mountedDir"/*.txt >> /dev/null 2>&1
+mv $defaultDir/*.txt  "$mountedDir"
 
 #this will update the Excel file based on the csv data
 /usr/bin/python3 "$defaultDir"/toExcel.py
-rm /media/sf_Linux/sandbox/SOD_EOD/*.xlsx
-cp "$dumpDir"/SystemMonitoring.xlsx /media/sf_Linux/sandbox/SOD_EOD/$(gdate xlsxName).xlsx
-#cp "$dumpDir"/SystemMonitoring.xlsx "$dumpDir"/$(gdate xlsxName).xlsx
+#rm "$mountedDir"*.xlsx
+cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 
 #transfer the excel file on smtp server
 #ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
-#scp -q "$dumpDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+#scp -q "$mountedDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the html file on smtp server
 #scp -q ebody.html $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/ > /dev/null 2>&1
 
 #transfer the text file on smtp server
-#scp -q "$dumpDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+#scp -q "$mountedDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the file on smtp server
 #gdate ampm
@@ -201,9 +201,9 @@ cp "$dumpDir"/SystemMonitoring.xlsx /media/sf_Linux/sandbox/SOD_EOD/$(gdate xlsx
 #ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
 
 #remove the xlsx file
-#rm "$dumpDir"/$(gdate xlsxName).xlsx
-rm ebody.html
-rm timeAmOrPm
+#rm "$mountedDir"/$(gdate xlsxName).xlsx
+#rm ebody.html
+#rm timeAmOrPm
 
 echo -e "\nServer Count: $srvCount"
 
