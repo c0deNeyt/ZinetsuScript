@@ -1,0 +1,16 @@
+{
+	"servers": [
+		{
+			"CAAC": [
+				{
+					"index": 58
+				},
+				{
+					"alias": "Google DNS",
+					"serverip": "8.8.8.8",
+					"classification": "Critical"
+				}
+			]
+		}
+	]
+}

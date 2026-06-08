@@ -159,7 +159,6 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 		break
 	done
 
-	break 
 	#this considtion aims to avoid the noncritical server
 	#to write on csv but also check the  server condition
 	checkStatus "$varIndex" $(gdate tme) "$srvAdm" "$srvStatus" "$srvGroup" "$varStatus"
@@ -171,7 +170,7 @@ done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
 echo -e "Running CSV to HTML... \n"
-/usr/bin/python3 "$defaultDir"/tohtml.py
+/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varGStatus"
 echo -e "Starting to transfer the files... \n"
 #this will update the file SOD_EOD dir
 rm "$mountedDir"/*.txt >> /dev/null 2>&1
