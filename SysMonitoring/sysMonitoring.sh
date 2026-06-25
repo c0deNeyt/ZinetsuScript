@@ -16,7 +16,7 @@ echo "Generating Report..."
 source $HOME/Script/Function.sh
 srvAdm="$1"
 defaultDir="$HOME/Script/SysMonitoring"
-mountedDir="/media/sf_Linux/SOD_EOD/"
+mountedDir="$defaultDir/sandbox/"
 varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
 #jq command is for handling json data
@@ -169,8 +169,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
-echo -e "Running CSV to HTML... \n"
-/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varGStatus"
+#echo -e "Running CSV to HTML... \n"
+#/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varGStatus"
 echo -e "Starting to transfer the files... \n"
 #this will update the file SOD_EOD dir
 rm "$mountedDir"/*.txt >> /dev/null 2>&1
@@ -178,7 +178,7 @@ mv $defaultDir/*.txt  "$mountedDir"
 
 #this will update the Excel file based on the csv data
 /usr/bin/python3 "$defaultDir"/toExcel.py
-#rm "$mountedDir"*.xlsx
+rm "$mountedDir"*_System_Monitoring_*.xlsx
 cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 
 #transfer the excel file on smtp server

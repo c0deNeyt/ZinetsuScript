@@ -1,0 +1,8 @@
+PING 192.168.167.22 (192.168.167.22) 56(84) bytes of data.
+64 bytes from 192.168.167.22: icmp_seq=3 ttl=255 time=1.78 ms
+64 bytes from 192.168.167.22: icmp_seq=4 ttl=255 time=2.40 ms
+
+--- 192.168.167.22 ping statistics ---
+4 packets transmitted, 2 received, 50% packet loss, time 3104ms
+rtt min/avg/max/mdev = 1.784/2.092/2.401/0.308 ms
+ 

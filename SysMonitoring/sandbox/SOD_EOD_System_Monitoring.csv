@@ -1,0 +1,80 @@
+Infrastructure Segment,Details,Time,Checked by,Status (Up/Down)
+Network,Check the “Devices by Availability”,,,
+,Check Top “Network Top 10”,,,
+,Checking of Metro-E and I-Gate lines,,,
+,Checking of SCCP-PDS Connectivity,,,
+,Checking of SCCP-PDS Test Connectivity,,,
+,Checking of VPN Tunnel Availability & Status,,,
+,Checking of SFTP server Availability via https://mxtoolbox.com,,,
+,Checking of Website Availability via https://tools.pingdom.com & https://mxtoolbox.com,,,
+,BGP Propagation Check via https://lg.he.net/,,,
+,Core Switch Status Check,,,
+,WANAGG Status Check,,,
+,NTP Status Check,,,
+Telecoms,Checking IP Office 500 Primary,,,
+,Memory Card,,,
+,Control Unit  Trunk line,,,
+,Utilization Summary,,,
+,Time,,,
+,Checking R230 Primary,,,
+,System,,,
+,H.323 Extension,,,
+,Extension testing,,,
+,Voice Mail Pro,,,
+,Mail Box,,,
+,R230 Web Access,,,
+,Services,,,
+,System,,,
+,Verint Audiolog Server,,,
+,       Checking Housekeeping clean up,,,
+,Checking voice recording Time and Duration,,,
+,       Checking Voice recording quality,,,
+,TELCO Equipments,,,
+,PLDT,,,
+,Globe/BayanTel,,,
+,TELCO Line,,,
+,PLDT,,,
+,I-Gate 12MB,,,
+,Trunk Line E1R2,,,
+,Metro Ethernet 50MB,,,
+,Metro Ethernet 50MB,,,
+,Metro Ethernet 20MB,,,
+,DSL 100 MBPS,,,
+,Globe/BayanTel,,,
+,Direct Internet 12MB,,,
+,Metro E Line 50MB,,,
+,Metro E Line 50MB,,,
+,Metro E Line 20MB,,,
+,DSL 15 MBPS,,,
+,Microsoft 365,,,
+,Domains Health,,,
+,"Service Health (Exchange, Microsoft 365 Suite, Teams and Others)",,,
+,Directory Sync Status,,,
+,External Email Test,,,
+,Test Send and Receive External Email,,,
+,External Email Server SMTP Test (MXTOOLBOX),,,
+,Test PDS.COM.PH,,,
+,Enterprise Communications Backup,,,
+,Check Enterprise Communications Backup,,,
+Server,CAAC,16:30,Chan,UP
+Server,API_BSP_ISO,16:30,Chan,UP
+Server,NEW_SCCP_INTERFACE,16:30,Chan,UP
+Server,NEW_MARKETPAGE_MP3,16:30,Chan,UP
+Server,New_PDS_CLEAR,16:30,Chan,UP
+Server,PDS_WEBSITE,16:31,Chan,UP
+Server,BANCS_V6,16:31,Chan,UP
+Server,NTP_SERVER,16:31,Chan,UP
+Server,DATA_ACCESS_POINT,16:31,Chan,UP
+Server,BSP_DATASCOPE_SELECT_PROXY,16:31,Chan,UP
+Server,REPORTS_PORTAL,16:31,Chan,UP
+Server,ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS,16:31,Chan,UP
+Server,NEW_SFTP_SERVER,16:31,Chan,UP
+Server,NROSS_PROD,16:31,Chan,UP
+Storage,IBM_STORAGE,16:32,Chan,UP
+Datacenter Facilities,NG UPS,,,
+,NG PACU,,,
+,NG Fire Suppression system,,,
+,NG Door Security and Camera System,,,
+,Sync Servive S 200,,,
+,BDO FM200,,,
+,BDO UPS,,,
