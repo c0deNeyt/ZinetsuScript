@@ -477,11 +477,6 @@
 					"alias": "PdsProdVmV7000",
 					"serverip": "192.168.167.110",
 					"classification": "Critical"
-				},
-				{
-					"alias": "PdsDrVmV7000",
-					"serverip": "192.168.67.12",
-					"classification": "DR"
 				}
 			]
 		},
