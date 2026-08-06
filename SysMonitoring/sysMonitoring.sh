@@ -156,7 +156,6 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 			rm  storageStatus
 		fi
 		rm  tmpPingRes
-		break
 	done
 
 	#this considtion aims to avoid the noncritical server

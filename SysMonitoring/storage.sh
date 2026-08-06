@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 #this condition is added for the reason no lsnode command in 192.168.67.12
 if [ "$2" != "192.168.67.12" ]; then
