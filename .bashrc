@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-<<<<<<< HEAD
 #Aliases
 source $HOME/Script/Alias.sh
 #List of server IP's
