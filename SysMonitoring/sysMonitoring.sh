@@ -15,8 +15,8 @@ date
 echo "Generating Report..."
 source $HOME/Script/Function.sh
 srvAdm="$1"
-defaultDir="$HOME/Script/SysMonitoring"
-mountedDir="/media/sf_Linux/SOD_EOD/"
+defaultDir="$HOME/Downloads/git/Scripts/SysMonitoring"
+mountedDir="$defaultDir/SOD_EOD/"
 varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
 #jq command is for handling json data
