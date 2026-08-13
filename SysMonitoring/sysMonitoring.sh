@@ -19,11 +19,10 @@ defaultDir="$HOME/Downloads/git/Scripts/SysMonitoring"
 mountedDir="$defaultDir/SOD_EOD/"
 varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
+
 #jq command is for handling json data
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
 adminUsr="carana"
-timeBasis="127.0.0.1"
-smtpip="192.168.168.166"
 
 #Function for Date
 function gdate(){
@@ -48,6 +47,7 @@ function gdate(){
 		date +"%H:%M"
 	elif [[ $1 = "ampm" ]]
 	then
+		rm timeAmOrPm > /dev/null 2>&1
 		date +"%p" > timeAmOrPm
 		date +"%B %d, %Y-%A" >> timeAmOrPm
 	fi
@@ -172,6 +172,7 @@ echo -e "\nMonitoring Status: $varGStatus"
 echo -e "Running CSV to HTML... \n"
 /usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varGStatus"
 echo -e "Starting to transfer the files... \n"
+
 #this will update the file SOD_EOD dir
 rm "$mountedDir"/*.txt >> /dev/null 2>&1
 mv $defaultDir/*.txt  "$mountedDir"
@@ -192,9 +193,49 @@ cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 #scp -q "$mountedDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 #transfer the file on smtp server
-#gdate ampm
-#echo "$(gdate xlsxName).xlsx" >> timeAmOrPm
+gdate ampm
+echo "$(gdate xlsxName).xlsx" >> timeAmOrPm
 #scp -q timeAmOrPm $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
+
+if [ ! -f ./timeAmOrPm ]; then
+	echo "$0 Error Line: ${LINENO}: Missing File!"
+	exit -0
+fi
+
+#Initialize excel File name
+excelFname="$(awk 'NR == 3' ./timeAmOrPm)"
+
+#Mailing
+#TO_ADDRESS="it.infrastructure@pds.com.ph"
+TO_ADDRESS="christian.arana@pds.com.ph"
+FILE1="$defaultDir/SOD_EOD/$excelFname"
+FILE2="$defaultDir/SOD_EOD/Monitoring_Results.txt"
+
+#Check the files
+if [[ ! -f "$FILE" ]] || [[ ! -f "$FILE2"]]; then
+	echo "$0 Error Line: ${LINENO}: Missing File!"
+	exit -0
+fi
+
+#Initialize Subject 
+timeStat="$(head -n1 ./timeAmOrPm)"
+subStr="$(awk 'NR == 2' ./timeAmOrPm)"
+if [ $timeStat == "AM" ]; then
+	SUBJECT="SOD System Monitoring $subStr"
+else
+	SUBJECT="EOD Server Monitoring $subStr"
+fi
+
+#Send the email using mutt
+mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < ebody.html
+
+#check if the email wast sent successfully
+
+if [ $? -eq 0 ]; then
+	echo "Email Sent Successfully!"
+else
+	echo "Failed to send email!"
+fi
 
 #echo -e "Trying to send Email... \n"
 #ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
