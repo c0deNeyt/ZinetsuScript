@@ -56,21 +56,21 @@ Telecoms,Checking IP Office 500 Primary,,,
 ,Test PDS.COM.PH,,,
 ,Enterprise Communications Backup,,,
 ,Check Enterprise Communications Backup,,,
-Server,CAAC,23:10,Chan,UP
-Server,API_BSP_ISO,23:10,Chan,UP
-Server,NEW_SCCP_INTERFACE,23:10,Chan,UP
-Server,NEW_MARKETPAGE_MP3,23:11,Chan,UP
-Server,New_PDS_CLEAR,23:11,Chan,UP
-Server,PDS_WEBSITE,23:11,Chan,UP
-Server,BANCS_V6,23:11,Chan,UP
-Server,NTP_SERVER,23:11,Chan,ISSUE(S) FOUND!
-Server,DATA_ACCESS_POINT,23:11,Chan,UP
-Server,BSP_DATASCOPE_SELECT_PROXY,23:11,Chan,UP
-Server,REPORTS_PORTAL,23:11,Chan,UP
-Server,ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS,23:11,Chan,UP
-Server,NEW_SFTP_SERVER,23:11,Chan,UP
-Server,NROSS_PROD,23:11,Chan,UP
-Storage,IBM_STORAGE,23:11,Chan,UP
+Server,CAAC,10:25,Christian,UP
+Server,API_BSP_ISO,07:00,Christian,UP
+Server,NEW_SCCP_INTERFACE,07:01,Christian,UP
+Server,NEW_MARKETPAGE_MP3,07:01,Christian,UP
+Server,New_PDS_CLEAR,07:01,Christian,UP
+Server,PDS_WEBSITE,07:02,Christian,UP
+Server,BANCS_V6,07:03,Christian,UP
+Server,NTP_SERVER,07:03,Christian,UP
+Server,DATA_ACCESS_POINT,07:03,Christian,UP
+Server,BSP_DATASCOPE_SELECT_PROXY,07:03,Christian,UP
+Server,REPORTS_PORTAL,07:03,Christian,UP
+Server,ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS,07:04,Christian,UP
+Server,NEW_SFTP_SERVER,07:04,Christian,UP
+Server,NROSS_PROD,07:04,Christian,UP
+Storage,IBM_STORAGE,07:04,Christian,UP
 Datacenter Facilities,NG UPS,,,
 ,NG PACU,,,
 ,NG Fire Suppression system,,,

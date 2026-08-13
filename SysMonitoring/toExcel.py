@@ -2,8 +2,8 @@ import pandas as pd
 import openpyxl
 
 # Paths to files
-csv_file = '/media/sf_Linux/SOD_EOD/SOD_EOD_System_Monitoring.csv'
-excel_file = '/media/sf_Linux/SOD_EOD/SystemMonitoring.xlsx'
+csv_file = '/home/carana/Downloads/git/Scripts/SysMonitoring/SOD_EOD/SOD_EOD_System_Monitoring.csv'
+excel_file = '/home/carana/Downloads/git/Scripts/SysMonitoring/SOD_EOD/SystemMonitoring.xlsx'
 
 # Read the CSV file
 csv_data  = pd.read_csv(csv_file, encoding='ISO-8859-1')

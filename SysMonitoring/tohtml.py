@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 
 # Paths to files
-csv_file = '/media/sf_Linux/SOD_EOD/SOD_EOD_System_Monitoring.csv'
+csv_file = '/home/carana/Downloads/git/Scripts/SysMonitoring/SOD_EOD/SOD_EOD_System_Monitoring.csv'
 
 # Read the CSV file
 df = pd.read_csv(csv_file, encoding='ISO-8859-1')
@@ -127,5 +127,5 @@ html_content += htmlNote
 html_content += htmlFooter 
 
 # Save the HTML table to a file
-with open('/media/sf_Linux/SOD_EOD/ebody.html', 'w', encoding='ISO-8859-1') as file:
+with open('/home/carana/Downloads/git/Scripts/SysMonitoring/SOD_EOD/ebody.html', 'w', encoding='ISO-8859-1') as file:
     file.write(html_content)

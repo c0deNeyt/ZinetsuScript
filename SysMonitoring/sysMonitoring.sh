@@ -13,7 +13,7 @@ fi
 ###############
 date
 echo "Generating Report..."
-source $HOME/Script/Function.sh
+source $HOME/Downloads/git/Scripts/Function.sh
 srvAdm="$1"
 defaultDir="$HOME/Downloads/git/Scripts/SysMonitoring"
 mountedDir="$defaultDir/SOD_EOD/"

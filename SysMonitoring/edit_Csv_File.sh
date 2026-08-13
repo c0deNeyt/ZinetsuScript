@@ -10,11 +10,11 @@ fi
 
 #echo "Writing to csv file..."
 # import customize function 
-source $HOME/Script/Function.sh
+source $HOME/Downloads/git/Scripts/Function.sh
 
 #MainFile
 #varData="$HOME/Documents/SOD_EOD/SOD_EOD_System_Monitoring.csv"
-varData="/media/sf_Linux/SOD_EOD/SOD_EOD_System_Monitoring.csv"
+varData="$HOME/Downloads/git/Scripts/SysMonitoring/SOD_EOD/SOD_EOD_System_Monitoring.csv"
 
 #stores total length for the line inside the file
 varLineCount=$(cat $varData | wc -l)
