@@ -166,6 +166,8 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#Update Global Status
 	#add space below on each group
 	echo " " >> $varDataStorage
+	#added for testing
+	break
 done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
@@ -212,7 +214,7 @@ FILE1="$defaultDir/SOD_EOD/$excelFname"
 FILE2="$defaultDir/SOD_EOD/Monitoring_Results.txt"
 
 #Check the files
-if [[ ! -f "$FILE" ]] || [[ ! -f "$FILE2"]]; then
+if [[ ! -f "$FILE" ]] || [[ ! -f "$FILE2" ]]; then
 	echo "$0 Error Line: ${LINENO}: Missing File!"
 	exit -0
 fi
