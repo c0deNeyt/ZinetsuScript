@@ -179,8 +179,6 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	#add space below on each group
 	echo " " >> $varDataStorage
 
-	#added for testing
-	break
 done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
