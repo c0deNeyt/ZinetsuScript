@@ -85,6 +85,7 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 	varStatus="NO ISSUE FOUND!"
 	#variable that store each server group per iteration
 	srvGroup=$(jq -r ".servers[$i] | keys[0]" $varData)
+	echo "This is the Server Group $srvGroup"
 	echo "=====================================================" >> $varDataStorage
 	echo "$srvGroup" $(gdate long) >> $varDataStorage
 	echo "=====================================================" >> $varDataStorage
@@ -184,20 +185,9 @@ mv $defaultDir/*.txt  "$mountedDir"
 #rm "$mountedDir"*.xlsx
 cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 
-#transfer the excel file on smtp server
-#ssh $adminUsr@$smtpip 'rm /home/carana/SystemMonitoring/*.xlsx' > /dev/null 2>&1
-#scp -q "$mountedDir"/$(gdate xlsxName).xlsx $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
-
-#transfer the html file on smtp server
-#scp -q ebody.html $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/ > /dev/null 2>&1
-
-#transfer the text file on smtp server
-#scp -q "$mountedDir"/*.txt $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
-
-#transfer the file on smtp server
+# Generate time convention
 gdate ampm
 echo "$(gdate xlsxName).xlsx" >> timeAmOrPm
-#scp -q timeAmOrPm $adminUsr@$smtpip:/home/$adminUsr/SystemMonitoring/
 
 if [ ! -f ./timeAmOrPm ]; then
 	echo "$0 Error Line: ${LINENO}: Missing File!"
@@ -229,15 +219,15 @@ else
 fi
 
 #Send the email using mutt
-mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < ./SOD_EOD/ebody.html
+#mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < ./SOD_EOD/ebody.html
 
 #check if the email wast sent successfully
 
-if [ $? -eq 0 ]; then
-	echo "Email Sent Successfully!"
-else
-	echo "Failed to send email!"
-fi
+# if [ $? -eq 0 ]; then
+# 	echo "Email Sent Successfully!"
+# else
+# 	echo "Failed to send email!"
+# fi
 
 #echo -e "Trying to send Email... \n"
 #ssh $adminUsr@$smtpip 'cd SystemMonitoring; ./send_email.sh'
