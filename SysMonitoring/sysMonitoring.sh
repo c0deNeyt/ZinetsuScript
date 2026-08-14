@@ -19,6 +19,7 @@ defaultDir="$HOME/Downloads/git/Scripts/SysMonitoring"
 mountedDir="$defaultDir/SOD_EOD/"
 varData=$defaultDir/data.json
 varGStatus="NO ISSUE FOUND!"
+varEmailStatus="Passed" 
 
 #jq command is for handling json data
 varSrvCount=$(jq -r '.servers | keys | length' $varData)
@@ -73,6 +74,16 @@ checkStatus(){
 		$defaultDir/edit_Csv_File.sh "$2" "$3" "$4" "$5"
 	else
 		$defaultDir/edit_Csv_File.sh "$2" "$3" "$6" "$5"
+	fi
+}
+
+# If the server is critical have the 
+# email overall status Failed
+checkCritical(){
+	notif "$1" "$2" "$3"
+	if [[ "$3" -eq "Critical" ]] 
+	then
+		varEmailStatus="Failed" 
 	fi
 }
 
@@ -139,18 +150,18 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 				varStatus="ISSUE(S) FOUND!"
 				srvStatus="$varStatus"
 				varGStatus="$varStatus"
-				notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
+				checkCritical "$varSrvAlias" "$varSrvIp" "$varSrvCat"
 			fi
 		else
 			varStatus="ISSUE(S) FOUND!"
 			varGStatus="$varStatus"
 			srvStatus="$varStatus"
-			notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
+			checkCritical "$varSrvAlias" "$varSrvIp" "$varSrvCat"
 		fi
 		#Condition to check the heath of IBM Storages
 		if [ "$strgStat" ]; then
 			srvStatus="$strgStat"
-			notif "$varSrvAlias" "$varSrvIp" "$varSrvCat"
+			checkCritical "$varSrvAlias" "$varSrvIp" "$varSrvCat"
 		fi
 		#remove temporary file
 		if [ -f storageStatus ]; then
@@ -174,7 +185,7 @@ done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
 echo -e "Running CSV to HTML... \n"
-/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varGStatus"
+/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varEmailStatus"
 echo -e "Starting to transfer the files... \n"
 
 #this will update the file SOD_EOD dir
@@ -244,3 +255,11 @@ echo -e "\nServer Count: $srvCount"
 # END STAMP #
 #############
 date
+
+: '
+TO DO:
+> if the server is index to 0 then it is a non critical server
+> Over all status for email should be Passed
+> Is server is Index to > 0 and server
+
+'
