@@ -204,7 +204,7 @@ FILE1="$defaultDir/SOD_EOD/$excelFname"
 FILE2="$defaultDir/SOD_EOD/Monitoring_Results.txt"
 
 #Check the files
-if [[ ! -f "$FILE" ]] || [[ ! -f "$FILE2" ]]; then
+if [[ ! -f "$FILE1" ]] || [[ ! -f "$FILE2" ]]; then
 	echo "$0 Error Line: ${LINENO}: Missing File!"
 	exit -0
 fi
