@@ -89,7 +89,7 @@ htmlFooter = """
           <td style="background-color:#f0f4f8; padding:15px; text-align:center; font-size:12px; color:#888888;">
             Regards,<br>
             ESG Team<br><br>
-            © 2026 Your Company. All rights reserved.
+            &copy; 2026 PDS Group. All rights reserved.
           </td>
         </tr>
 
