@@ -24,14 +24,11 @@ for ((i = 1; i <= $varLineCount; i++)); do
 	#this will store details per line
 	a=$(awk -v lnum="$i" 'NR == lnum  { print; exit }' $varData)
 
-	echo "this is the raw varriable $a"
-
 	#store row ID
 	varid=$(echo $a | awk -F',' '{print $2}')
 
-	echo "this is the varid variable $varid"
-	#condtion to check if it is belong to Server Group
-	#if [[ "$varid" == "Server" || "$varid" == "Storage"  ]]; then
+	# This will check if the data.json server group is matched 
+	# on row 2 section of csv file. If yes we will update csv file
 	if [[ "$varid" == "$4" ]]; then
 		#this will create new content or updated data
 		new_content=$(echo $a | awk -F',' -v srvGrp="$4" -v newTime="$1" -v srvAdm="$2" -v varStat="$3" '{print $1","srvGrp","newTime","srvAdm","varStat}')

@@ -157,16 +157,17 @@ for (( i = 0; i < ${varSrvCount}; i++ )); do
 			rm  storageStatus
 		fi
 		rm  tmpPingRes
-		break
 	done
 
-	#this considtion aims to avoid the noncritical server
-	#to write on csv but also check the  server condition
+	# this will orverwrite csv file and if the server 
+	# is not index to 0 means it's under non critical srever.
 	checkStatus "$varIndex" $(gdate tme) "$srvAdm" "$srvStatus" "$srvGroup" "$varStatus"
 	echo "$varIndex $(gdate tme) $srvAdm $srvStatus $srvGroup $varStatus"
 	#Update Global Status
+
 	#add space below on each group
 	echo " " >> $varDataStorage
+
 	#added for testing
 	break
 done
