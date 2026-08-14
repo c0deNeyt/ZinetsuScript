@@ -48,7 +48,6 @@ function gdate(){
 		date +"%H:%M"
 	elif [[ $1 = "ampm" ]]
 	then
-		rm timeAmOrPm > /dev/null 2>&1
 		date +"%p" > timeAmOrPm
 		date +"%B %d, %Y-%A" >> timeAmOrPm
 	fi
@@ -199,13 +198,13 @@ cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 gdate ampm
 echo "$(gdate xlsxName).xlsx" >> timeAmOrPm
 
-if [ ! -f ./timeAmOrPm ]; then
+if [ ! -f timeAmOrPm ]; then
 	echo "$0 Error Line: ${LINENO}: Missing File!"
 	exit -0
 fi
 
 #Initialize excel File name
-excelFname="$(awk 'NR == 3' ./timeAmOrPm)"
+excelFname="$(awk 'NR == 3' timeAmOrPm)"
 
 #Mailing
 #TO_ADDRESS="it.infrastructure@pds.com.ph"
@@ -220,8 +219,8 @@ if [[ ! -f "$FILE1" ]] || [[ ! -f "$FILE2" ]]; then
 fi
 
 #Initialize Subject 
-timeStat="$(head -n1 ./timeAmOrPm)"
-subStr="$(awk 'NR == 2' ./timeAmOrPm)"
+timeStat="$(head -n1 timeAmOrPm)"
+subStr="$(awk 'NR == 2' timeAmOrPm)"
 if [ $timeStat == "AM" ]; then
 	SUBJECT="SOD System Monitoring $subStr"
 else
@@ -246,6 +245,7 @@ echo -e "\nServer Count: $srvCount"
 #############
 date
 
+rm timeAmOrPm > /dev/null 2>&1
 : '
 TO DO:
 > if the server is index to 0 then it is a non critical server
