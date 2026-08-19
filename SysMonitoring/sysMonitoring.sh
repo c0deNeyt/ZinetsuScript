@@ -231,7 +231,6 @@ fi
 mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < ./SOD_EOD/ebody.html
 
 #check if the email wast sent successfully
-
 if [ $? -eq 0 ]; then
 	echo "Email Sent Successfully!"
 else
