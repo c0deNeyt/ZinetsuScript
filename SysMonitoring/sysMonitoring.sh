@@ -206,7 +206,10 @@ fi
 #Initialize excel File name
 excelFname="$(awk 'NR == 3' timeAmOrPm)"
 
-#Mailing
+##################
+# Mailing config #
+##################
+
 #TO_ADDRESS="it.infrastructure@pds.com.ph"
 TO_ADDRESS="christian.arana@pds.com.ph"
 FILE1="$defaultDir/SOD_EOD/$excelFname"
@@ -243,8 +246,6 @@ echo -e "\nServer Count: $srvCount"
 # END STAMP #
 #############
 date
-
-rm timeAmOrPm > /dev/null 2>&1
 : '
 TO DO:
 > if the server is index to 0 then it is a non critical server
