@@ -351,7 +351,7 @@
 				},
 				{
 					"alias": "NtpServer",
-					"serverip": "172.16.168.2",
+					"serverip": "172.16.168.11",
 					"classification": "Critical"
 				}
 			]
