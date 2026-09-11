@@ -1,0 +1,1272 @@
+=====================================================
+CAAC September 11, 2026 Friday, 01:34:39 PM
+=====================================================
+*** DBServer ***
+PING 172.32.1.127 (172.32.1.127) 56(84) bytes of data.
+64 bytes from 172.32.1.127: icmp_seq=1 ttl=63 time=0.870 ms
+64 bytes from 172.32.1.127: icmp_seq=2 ttl=63 time=0.622 ms
+64 bytes from 172.32.1.127: icmp_seq=3 ttl=63 time=0.982 ms
+64 bytes from 172.32.1.127: icmp_seq=4 ttl=63 time=0.440 ms
+
+--- 172.32.1.127 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3059ms
+rtt min/avg/max/mdev = 0.440/0.728/0.982/0.211 ms
+ 
+*** WebAppServer ***
+PING 172.16.9.7 (172.16.9.7) 56(84) bytes of data.
+64 bytes from 172.16.9.7: icmp_seq=1 ttl=63 time=0.981 ms
+64 bytes from 172.16.9.7: icmp_seq=2 ttl=63 time=0.535 ms
+64 bytes from 172.16.9.7: icmp_seq=3 ttl=63 time=0.600 ms
+64 bytes from 172.16.9.7: icmp_seq=4 ttl=63 time=0.595 ms
+
+--- 172.16.9.7 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3067ms
+rtt min/avg/max/mdev = 0.535/0.677/0.981/0.176 ms
+ 
+*** DbServerDr ***
+PING 172.30.1.19 (172.30.1.19) 56(84) bytes of data.
+64 bytes from 172.30.1.19: icmp_seq=1 ttl=60 time=11.5 ms
+64 bytes from 172.30.1.19: icmp_seq=2 ttl=60 time=1.65 ms
+64 bytes from 172.30.1.19: icmp_seq=3 ttl=60 time=5.09 ms
+64 bytes from 172.30.1.19: icmp_seq=4 ttl=60 time=1.68 ms
+
+--- 172.30.1.19 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.653/4.985/11.514/4.020 ms
+ 
+*** WebAppServerDr ***
+PING 172.16.9.167 (172.16.9.167) 56(84) bytes of data.
+64 bytes from 172.16.9.167: icmp_seq=1 ttl=60 time=3.09 ms
+64 bytes from 172.16.9.167: icmp_seq=2 ttl=60 time=2.40 ms
+64 bytes from 172.16.9.167: icmp_seq=3 ttl=60 time=2.49 ms
+64 bytes from 172.16.9.167: icmp_seq=4 ttl=60 time=4.21 ms
+
+--- 172.16.9.167 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.397/3.047/4.213/0.724 ms
+ 
+ 
+=====================================================
+API_BSP_ISO September 11, 2026 Friday, 01:34:52 PM
+=====================================================
+*** DBProd1Server ***
+PING 172.16.100.2 (172.16.100.2) 56(84) bytes of data.
+64 bytes from 172.16.100.2: icmp_seq=1 ttl=63 time=0.891 ms
+64 bytes from 172.16.100.2: icmp_seq=2 ttl=63 time=0.747 ms
+64 bytes from 172.16.100.2: icmp_seq=3 ttl=63 time=0.502 ms
+64 bytes from 172.16.100.2: icmp_seq=4 ttl=63 time=0.550 ms
+
+--- 172.16.100.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3082ms
+rtt min/avg/max/mdev = 0.502/0.672/0.891/0.156 ms
+ 
+*** ProxyLoadBalancesProd1Server ***
+PING 172.16.7.252 (172.16.7.252) 56(84) bytes of data.
+64 bytes from 172.16.7.252: icmp_seq=1 ttl=63 time=1.07 ms
+64 bytes from 172.16.7.252: icmp_seq=2 ttl=63 time=0.556 ms
+64 bytes from 172.16.7.252: icmp_seq=3 ttl=63 time=0.544 ms
+64 bytes from 172.16.7.252: icmp_seq=4 ttl=63 time=0.715 ms
+
+--- 172.16.7.252 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.544/0.720/1.066/0.210 ms
+ 
+*** GatewayPlatformProd1Server ***
+PING 172.16.9.68 (172.16.9.68) 56(84) bytes of data.
+64 bytes from 172.16.9.68: icmp_seq=1 ttl=63 time=1.56 ms
+64 bytes from 172.16.9.68: icmp_seq=2 ttl=63 time=0.865 ms
+64 bytes from 172.16.9.68: icmp_seq=3 ttl=63 time=0.619 ms
+64 bytes from 172.16.9.68: icmp_seq=4 ttl=63 time=0.731 ms
+
+--- 172.16.9.68 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.619/0.942/1.556/0.364 ms
+ 
+*** DBProd2Server ***
+PING 172.16.100.3 (172.16.100.3) 56(84) bytes of data.
+64 bytes from 172.16.100.3: icmp_seq=1 ttl=63 time=1.11 ms
+64 bytes from 172.16.100.3: icmp_seq=2 ttl=63 time=0.656 ms
+64 bytes from 172.16.100.3: icmp_seq=3 ttl=63 time=0.645 ms
+64 bytes from 172.16.100.3: icmp_seq=4 ttl=63 time=2.05 ms
+
+--- 172.16.100.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.645/1.116/2.052/0.572 ms
+ 
+*** ProxyLoadBalancesProd2Server ***
+PING 172.16.7.251 (172.16.7.251) 56(84) bytes of data.
+64 bytes from 172.16.7.251: icmp_seq=1 ttl=63 time=0.932 ms
+64 bytes from 172.16.7.251: icmp_seq=2 ttl=63 time=0.556 ms
+64 bytes from 172.16.7.251: icmp_seq=3 ttl=63 time=0.631 ms
+64 bytes from 172.16.7.251: icmp_seq=4 ttl=63 time=0.686 ms
+
+--- 172.16.7.251 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.556/0.701/0.932/0.140 ms
+ 
+*** GatewayPlatformProd2Server ***
+PING 172.16.9.69 (172.16.9.69) 56(84) bytes of data.
+64 bytes from 172.16.9.69: icmp_seq=1 ttl=63 time=1.02 ms
+64 bytes from 172.16.9.69: icmp_seq=2 ttl=63 time=1.03 ms
+64 bytes from 172.16.9.69: icmp_seq=3 ttl=63 time=0.672 ms
+64 bytes from 172.16.9.69: icmp_seq=4 ttl=63 time=0.775 ms
+
+--- 172.16.9.69 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3051ms
+rtt min/avg/max/mdev = 0.672/0.873/1.026/0.154 ms
+ 
+*** DbDrServer ***
+PING 172.16.110.4 (172.16.110.4) 56(84) bytes of data.
+64 bytes from 172.16.110.4: icmp_seq=1 ttl=60 time=2.53 ms
+64 bytes from 172.16.110.4: icmp_seq=2 ttl=60 time=1.83 ms
+64 bytes from 172.16.110.4: icmp_seq=3 ttl=60 time=1.83 ms
+64 bytes from 172.16.110.4: icmp_seq=4 ttl=60 time=1.77 ms
+
+--- 172.16.110.4 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+rtt min/avg/max/mdev = 1.771/1.988/2.526/0.311 ms
+ 
+*** ProxyLoadBalanceDrServer ***
+PING 172.16.108.30 (172.16.108.30) 56(84) bytes of data.
+64 bytes from 172.16.108.30: icmp_seq=1 ttl=60 time=3.54 ms
+64 bytes from 172.16.108.30: icmp_seq=2 ttl=60 time=2.85 ms
+64 bytes from 172.16.108.30: icmp_seq=3 ttl=60 time=2.50 ms
+64 bytes from 172.16.108.30: icmp_seq=4 ttl=60 time=2.66 ms
+
+--- 172.16.108.30 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 2.497/2.884/3.535/0.395 ms
+ 
+*** GatewayPlatformDrServer ***
+PING 172.16.15.4 (172.16.15.4) 56(84) bytes of data.
+64 bytes from 172.16.15.4: icmp_seq=1 ttl=60 time=3.34 ms
+64 bytes from 172.16.15.4: icmp_seq=2 ttl=60 time=2.60 ms
+64 bytes from 172.16.15.4: icmp_seq=3 ttl=60 time=3.13 ms
+64 bytes from 172.16.15.4: icmp_seq=4 ttl=60 time=7.02 ms
+
+--- 172.16.15.4 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.601/4.023/7.021/1.751 ms
+ 
+ 
+=====================================================
+NEW_SCCP_INTERFACE September 11, 2026 Friday, 01:35:20 PM
+=====================================================
+*** NewSccpEcsInterfaceServer ***
+PING 172.16.123.21 (172.16.123.21) 56(84) bytes of data.
+64 bytes from 172.16.123.21: icmp_seq=1 ttl=127 time=1.38 ms
+64 bytes from 172.16.123.21: icmp_seq=2 ttl=127 time=0.578 ms
+64 bytes from 172.16.123.21: icmp_seq=3 ttl=127 time=4.83 ms
+64 bytes from 172.16.123.21: icmp_seq=4 ttl=127 time=0.631 ms
+
+--- 172.16.123.21 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3051ms
+rtt min/avg/max/mdev = 0.578/1.852/4.826/1.745 ms
+ 
+*** NewSccpInterfaceDr ***
+PING 172.16.133.22 (172.16.133.22) 56(84) bytes of data.
+64 bytes from 172.16.133.22: icmp_seq=1 ttl=124 time=4.20 ms
+64 bytes from 172.16.133.22: icmp_seq=2 ttl=124 time=2.58 ms
+64 bytes from 172.16.133.22: icmp_seq=3 ttl=124 time=6.10 ms
+64 bytes from 172.16.133.22: icmp_seq=4 ttl=124 time=2.61 ms
+
+--- 172.16.133.22 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.583/3.872/6.098/1.443 ms
+ 
+*** SccpDr ***
+PING 172.16.133.28 (172.16.133.28) 56(84) bytes of data.
+64 bytes from 172.16.133.28: icmp_seq=1 ttl=60 time=4.35 ms
+64 bytes from 172.16.133.28: icmp_seq=2 ttl=60 time=3.41 ms
+64 bytes from 172.16.133.28: icmp_seq=3 ttl=60 time=5.28 ms
+64 bytes from 172.16.133.28: icmp_seq=4 ttl=60 time=3.21 ms
+
+--- 172.16.133.28 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 3.205/4.060/5.280/0.826 ms
+ 
+*** IsoMesseginDb ***
+PING 172.16.133.17 (172.16.133.17) 56(84) bytes of data.
+64 bytes from 172.16.133.17: icmp_seq=1 ttl=60 time=2.49 ms
+64 bytes from 172.16.133.17: icmp_seq=2 ttl=60 time=6.30 ms
+64 bytes from 172.16.133.17: icmp_seq=3 ttl=60 time=1.74 ms
+64 bytes from 172.16.133.17: icmp_seq=4 ttl=60 time=1.59 ms
+
+--- 172.16.133.17 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.587/3.027/6.300/1.919 ms
+ 
+ 
+=====================================================
+NEW_MARKETPAGE_MP3 September 11, 2026 Friday, 01:35:32 PM
+=====================================================
+*** DbServer ***
+PING 172.16.2.122 (172.16.2.122) 56(84) bytes of data.
+64 bytes from 172.16.2.122: icmp_seq=1 ttl=62 time=1.29 ms
+64 bytes from 172.16.2.122: icmp_seq=2 ttl=62 time=0.593 ms
+64 bytes from 172.16.2.122: icmp_seq=3 ttl=62 time=0.728 ms
+64 bytes from 172.16.2.122: icmp_seq=4 ttl=62 time=0.591 ms
+
+--- 172.16.2.122 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3033ms
+rtt min/avg/max/mdev = 0.591/0.800/1.290/0.288 ms
+ 
+*** DbServer0 ***
+PING 172.16.2.71 (172.16.2.71) 56(84) bytes of data.
+64 bytes from 172.16.2.71: icmp_seq=1 ttl=62 time=1.89 ms
+64 bytes from 172.16.2.71: icmp_seq=2 ttl=62 time=8.55 ms
+64 bytes from 172.16.2.71: icmp_seq=3 ttl=62 time=0.617 ms
+64 bytes from 172.16.2.71: icmp_seq=4 ttl=62 time=0.999 ms
+
+--- 172.16.2.71 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3042ms
+rtt min/avg/max/mdev = 0.617/3.013/8.550/3.229 ms
+ 
+*** RedisHarvesterVM ***
+PING 172.16.2.123 (172.16.2.123) 56(84) bytes of data.
+64 bytes from 172.16.2.123: icmp_seq=1 ttl=62 time=1.14 ms
+64 bytes from 172.16.2.123: icmp_seq=2 ttl=62 time=0.707 ms
+64 bytes from 172.16.2.123: icmp_seq=3 ttl=62 time=0.720 ms
+64 bytes from 172.16.2.123: icmp_seq=4 ttl=62 time=0.795 ms
+
+--- 172.16.2.123 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.707/0.840/1.138/0.175 ms
+ 
+*** NewWebAppServer2VM ***
+PING 172.16.7.247 (172.16.7.247) 56(84) bytes of data.
+64 bytes from 172.16.7.247: icmp_seq=1 ttl=63 time=1.10 ms
+64 bytes from 172.16.7.247: icmp_seq=2 ttl=63 time=1.17 ms
+64 bytes from 172.16.7.247: icmp_seq=3 ttl=63 time=0.626 ms
+64 bytes from 172.16.7.247: icmp_seq=4 ttl=63 time=0.512 ms
+
+--- 172.16.7.247 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.512/0.852/1.170/0.286 ms
+ 
+*** DbServerDr ***
+PING 172.16.132.15 (172.16.132.15) 56(84) bytes of data.
+64 bytes from 172.16.132.15: icmp_seq=1 ttl=60 time=3.58 ms
+64 bytes from 172.16.132.15: icmp_seq=2 ttl=60 time=2.68 ms
+64 bytes from 172.16.132.15: icmp_seq=3 ttl=60 time=2.60 ms
+64 bytes from 172.16.132.15: icmp_seq=4 ttl=60 time=2.59 ms
+
+--- 172.16.132.15 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 2.590/2.860/3.580/0.416 ms
+ 
+*** RedisHarvesterDr(VM) ***
+PING 172.16.131.15 (172.16.131.15) 56(84) bytes of data.
+64 bytes from 172.16.131.15: icmp_seq=1 ttl=60 time=2.57 ms
+64 bytes from 172.16.131.15: icmp_seq=2 ttl=60 time=1.73 ms
+64 bytes from 172.16.131.15: icmp_seq=3 ttl=60 time=1.89 ms
+64 bytes from 172.16.131.15: icmp_seq=4 ttl=60 time=1.90 ms
+
+--- 172.16.131.15 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3006ms
+rtt min/avg/max/mdev = 1.725/2.019/2.569/0.324 ms
+ 
+*** NewWebAppMp3ServerDr(VM) ***
+PING 172.16.108.25 (172.16.108.25) 56(84) bytes of data.
+64 bytes from 172.16.108.25: icmp_seq=1 ttl=60 time=4.21 ms
+64 bytes from 172.16.108.25: icmp_seq=2 ttl=60 time=3.55 ms
+64 bytes from 172.16.108.25: icmp_seq=3 ttl=60 time=3.31 ms
+64 bytes from 172.16.108.25: icmp_seq=4 ttl=60 time=3.73 ms
+
+--- 172.16.108.25 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 3.314/3.698/4.207/0.328 ms
+ 
+ 
+=====================================================
+New_PDS_CLEAR September 11, 2026 Friday, 01:35:54 PM
+=====================================================
+*** NewPdsClearDatabase1Prod ***
+PING 172.16.100.2 (172.16.100.2) 56(84) bytes of data.
+64 bytes from 172.16.100.2: icmp_seq=1 ttl=63 time=9.87 ms
+64 bytes from 172.16.100.2: icmp_seq=2 ttl=63 time=0.667 ms
+64 bytes from 172.16.100.2: icmp_seq=3 ttl=63 time=0.583 ms
+64 bytes from 172.16.100.2: icmp_seq=4 ttl=63 time=0.563 ms
+
+--- 172.16.100.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3079ms
+rtt min/avg/max/mdev = 0.563/2.920/9.867/4.011 ms
+ 
+*** NewPdsClearDatabase2Prod ***
+PING 172.16.100.3 (172.16.100.3) 56(84) bytes of data.
+64 bytes from 172.16.100.3: icmp_seq=1 ttl=63 time=1.08 ms
+64 bytes from 172.16.100.3: icmp_seq=2 ttl=63 time=0.715 ms
+64 bytes from 172.16.100.3: icmp_seq=3 ttl=63 time=0.722 ms
+64 bytes from 172.16.100.3: icmp_seq=4 ttl=63 time=0.609 ms
+
+--- 172.16.100.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.609/0.781/1.078/0.177 ms
+ 
+*** NewPdsClearWeb1VM ***
+PING 172.16.7.231 (172.16.7.231) 56(84) bytes of data.
+64 bytes from 172.16.7.231: icmp_seq=1 ttl=63 time=2.00 ms
+64 bytes from 172.16.7.231: icmp_seq=2 ttl=63 time=0.623 ms
+64 bytes from 172.16.7.231: icmp_seq=3 ttl=63 time=0.722 ms
+64 bytes from 172.16.7.231: icmp_seq=4 ttl=63 time=0.542 ms
+
+--- 172.16.7.231 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.542/0.972/2.002/0.597 ms
+ 
+*** NewPdsClearApp1VM ***
+PING 172.16.105.10 (172.16.105.10) 56(84) bytes of data.
+64 bytes from 172.16.105.10: icmp_seq=1 ttl=63 time=1.05 ms
+64 bytes from 172.16.105.10: icmp_seq=2 ttl=63 time=0.575 ms
+64 bytes from 172.16.105.10: icmp_seq=3 ttl=63 time=0.570 ms
+64 bytes from 172.16.105.10: icmp_seq=4 ttl=63 time=0.605 ms
+
+--- 172.16.105.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.570/0.698/1.045/0.200 ms
+ 
+*** NewPdsClearPdsGatewayWebDr(VM) ***
+PING 172.16.108.20 (172.16.108.20) 56(84) bytes of data.
+64 bytes from 172.16.108.20: icmp_seq=1 ttl=60 time=2.42 ms
+64 bytes from 172.16.108.20: icmp_seq=2 ttl=60 time=1.71 ms
+64 bytes from 172.16.108.20: icmp_seq=3 ttl=60 time=7.14 ms
+64 bytes from 172.16.108.20: icmp_seq=4 ttl=60 time=1.96 ms
+
+--- 172.16.108.20 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.712/3.309/7.143/2.228 ms
+ 
+*** NewPdsClearPdsGatewayApplicationsDr(VM) ***
+PING 172.16.107.10 (172.16.107.10) 56(84) bytes of data.
+64 bytes from 172.16.107.10: icmp_seq=1 ttl=60 time=4.48 ms
+64 bytes from 172.16.107.10: icmp_seq=2 ttl=60 time=4.50 ms
+64 bytes from 172.16.107.10: icmp_seq=3 ttl=60 time=3.45 ms
+64 bytes from 172.16.107.10: icmp_seq=4 ttl=60 time=3.31 ms
+
+--- 172.16.107.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 3.314/3.935/4.499/0.555 ms
+ 
+ 
+=====================================================
+PDS_WEBSITE September 11, 2026 Friday, 01:36:13 PM
+=====================================================
+*** PdsWebsiteDbProd1VM ***
+PING 172.16.122.21 (172.16.122.21) 56(84) bytes of data.
+64 bytes from 172.16.122.21: icmp_seq=1 ttl=63 time=1.09 ms
+64 bytes from 172.16.122.21: icmp_seq=2 ttl=63 time=0.538 ms
+64 bytes from 172.16.122.21: icmp_seq=3 ttl=63 time=0.526 ms
+64 bytes from 172.16.122.21: icmp_seq=4 ttl=63 time=0.564 ms
+
+--- 172.16.122.21 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3027ms
+rtt min/avg/max/mdev = 0.526/0.679/1.090/0.237 ms
+ 
+*** PdsWebsiteDbProd2VM ***
+PING 172.16.122.22 (172.16.122.22) 56(84) bytes of data.
+64 bytes from 172.16.122.22: icmp_seq=1 ttl=63 time=0.954 ms
+64 bytes from 172.16.122.22: icmp_seq=2 ttl=63 time=0.674 ms
+64 bytes from 172.16.122.22: icmp_seq=3 ttl=63 time=0.569 ms
+64 bytes from 172.16.122.22: icmp_seq=4 ttl=63 time=0.559 ms
+
+--- 172.16.122.22 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3051ms
+rtt min/avg/max/mdev = 0.559/0.689/0.954/0.159 ms
+ 
+*** PdsWebsiteProd1VM ***
+PING 172.16.7.241 (172.16.7.241) 56(84) bytes of data.
+64 bytes from 172.16.7.241: icmp_seq=1 ttl=63 time=1.15 ms
+64 bytes from 172.16.7.241: icmp_seq=2 ttl=63 time=0.504 ms
+64 bytes from 172.16.7.241: icmp_seq=3 ttl=63 time=0.600 ms
+64 bytes from 172.16.7.241: icmp_seq=4 ttl=63 time=0.769 ms
+
+--- 172.16.7.241 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.504/0.755/1.147/0.245 ms
+ 
+*** PdsWebsiteAppProd1VM ***
+PING 172.16.121.11 (172.16.121.11) 56(84) bytes of data.
+64 bytes from 172.16.121.11: icmp_seq=1 ttl=63 time=1.05 ms
+64 bytes from 172.16.121.11: icmp_seq=2 ttl=63 time=0.587 ms
+64 bytes from 172.16.121.11: icmp_seq=3 ttl=63 time=0.596 ms
+64 bytes from 172.16.121.11: icmp_seq=4 ttl=63 time=0.495 ms
+
+--- 172.16.121.11 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3051ms
+rtt min/avg/max/mdev = 0.495/0.682/1.052/0.216 ms
+ 
+*** TradingIntegrationSystemProd1 ***
+PING 172.16.7.214 (172.16.7.214) 56(84) bytes of data.
+64 bytes from 172.16.7.214: icmp_seq=1 ttl=63 time=1.50 ms
+64 bytes from 172.16.7.214: icmp_seq=2 ttl=63 time=0.510 ms
+64 bytes from 172.16.7.214: icmp_seq=3 ttl=63 time=0.595 ms
+64 bytes from 172.16.7.214: icmp_seq=4 ttl=63 time=0.616 ms
+
+--- 172.16.7.214 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.510/0.804/1.495/0.400 ms
+ 
+*** TradingIntegrationSystemProd2 ***
+PING 172.16.7.215 (172.16.7.215) 56(84) bytes of data.
+64 bytes from 172.16.7.215: icmp_seq=1 ttl=63 time=0.862 ms
+64 bytes from 172.16.7.215: icmp_seq=2 ttl=63 time=0.476 ms
+64 bytes from 172.16.7.215: icmp_seq=3 ttl=63 time=0.449 ms
+64 bytes from 172.16.7.215: icmp_seq=4 ttl=63 time=0.583 ms
+
+--- 172.16.7.215 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.449/0.592/0.862/0.163 ms
+ 
+*** PdsWebsiteDrWeb ***
+PING 172.16.108.10 (172.16.108.10) 56(84) bytes of data.
+64 bytes from 172.16.108.10: icmp_seq=1 ttl=60 time=54.1 ms
+64 bytes from 172.16.108.10: icmp_seq=2 ttl=60 time=24.3 ms
+64 bytes from 172.16.108.10: icmp_seq=3 ttl=60 time=2.66 ms
+64 bytes from 172.16.108.10: icmp_seq=4 ttl=60 time=43.3 ms
+
+--- 172.16.108.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.657/31.063/54.062/19.560 ms
+ 
+*** PdsWebsiteDrApp ***
+PING 172.16.131.12 (172.16.131.12) 56(84) bytes of data.
+64 bytes from 172.16.131.12: icmp_seq=1 ttl=60 time=24.0 ms
+64 bytes from 172.16.131.12: icmp_seq=2 ttl=60 time=3.52 ms
+64 bytes from 172.16.131.12: icmp_seq=3 ttl=60 time=3.22 ms
+64 bytes from 172.16.131.12: icmp_seq=4 ttl=60 time=3.32 ms
+
+--- 172.16.131.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 3.223/8.527/24.040/8.956 ms
+ 
+*** PdsWebsiteDrDb ***
+PING 172.16.132.12 (172.16.132.12) 56(84) bytes of data.
+64 bytes from 172.16.132.12: icmp_seq=1 ttl=60 time=3.28 ms
+64 bytes from 172.16.132.12: icmp_seq=2 ttl=60 time=2.62 ms
+64 bytes from 172.16.132.12: icmp_seq=3 ttl=60 time=2.44 ms
+64 bytes from 172.16.132.12: icmp_seq=4 ttl=60 time=2.50 ms
+
+--- 172.16.132.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 2.441/2.712/3.283/0.336 ms
+ 
+*** TradingIntegrationDr ***
+PING 172.16.106.10 (172.16.106.10) 56(84) bytes of data.
+64 bytes from 172.16.106.10: icmp_seq=1 ttl=60 time=2.77 ms
+64 bytes from 172.16.106.10: icmp_seq=2 ttl=60 time=1.67 ms
+64 bytes from 172.16.106.10: icmp_seq=3 ttl=60 time=12.1 ms
+64 bytes from 172.16.106.10: icmp_seq=4 ttl=60 time=1.93 ms
+
+--- 172.16.106.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.666/4.614/12.089/4.334 ms
+ 
+ 
+=====================================================
+BANCS_V6 September 11, 2026 Friday, 01:36:44 PM
+=====================================================
+*** BancsDatabaseNew1 ***
+PING 172.16.88.8 (172.16.88.8) 56(84) bytes of data.
+64 bytes from 172.16.88.8: icmp_seq=1 ttl=63 time=47.1 ms
+64 bytes from 172.16.88.8: icmp_seq=2 ttl=63 time=41.4 ms
+64 bytes from 172.16.88.8: icmp_seq=3 ttl=63 time=0.801 ms
+64 bytes from 172.16.88.8: icmp_seq=4 ttl=63 time=47.6 ms
+
+--- 172.16.88.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3026ms
+rtt min/avg/max/mdev = 0.801/34.229/47.584/19.451 ms
+ 
+*** BancsDatabaseNew2 ***
+PING 172.16.88.9 (172.16.88.9) 56(84) bytes of data.
+64 bytes from 172.16.88.9: icmp_seq=1 ttl=63 time=1.36 ms
+64 bytes from 172.16.88.9: icmp_seq=2 ttl=63 time=0.694 ms
+64 bytes from 172.16.88.9: icmp_seq=3 ttl=63 time=0.530 ms
+64 bytes from 172.16.88.9: icmp_seq=4 ttl=63 time=0.680 ms
+
+--- 172.16.88.9 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3069ms
+rtt min/avg/max/mdev = 0.530/0.815/1.357/0.319 ms
+ 
+*** BancsWeb1 ***
+PING 172.16.9.4 (172.16.9.4) 56(84) bytes of data.
+64 bytes from 172.16.9.4: icmp_seq=1 ttl=63 time=1.12 ms
+64 bytes from 172.16.9.4: icmp_seq=2 ttl=63 time=0.580 ms
+64 bytes from 172.16.9.4: icmp_seq=3 ttl=63 time=0.635 ms
+64 bytes from 172.16.9.4: icmp_seq=4 ttl=63 time=0.567 ms
+
+--- 172.16.9.4 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.567/0.724/1.115/0.227 ms
+ 
+*** BancsWeb2 ***
+PING 172.16.9.5 (172.16.9.5) 56(84) bytes of data.
+64 bytes from 172.16.9.5: icmp_seq=1 ttl=63 time=1.24 ms
+64 bytes from 172.16.9.5: icmp_seq=2 ttl=63 time=1.07 ms
+64 bytes from 172.16.9.5: icmp_seq=3 ttl=63 time=0.544 ms
+64 bytes from 172.16.9.5: icmp_seq=4 ttl=63 time=0.679 ms
+
+--- 172.16.9.5 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.544/0.884/1.239/0.282 ms
+ 
+*** BancsApp1 ***
+PING 172.16.86.2 (172.16.86.2) 56(84) bytes of data.
+64 bytes from 172.16.86.2: icmp_seq=1 ttl=63 time=57.8 ms
+64 bytes from 172.16.86.2: icmp_seq=2 ttl=63 time=12.0 ms
+64 bytes from 172.16.86.2: icmp_seq=3 ttl=63 time=34.4 ms
+64 bytes from 172.16.86.2: icmp_seq=4 ttl=63 time=9.63 ms
+
+--- 172.16.86.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3002ms
+rtt min/avg/max/mdev = 9.628/28.445/57.757/19.492 ms
+ 
+*** BancsApp2 ***
+PING 172.16.86.3 (172.16.86.3) 56(84) bytes of data.
+64 bytes from 172.16.86.3: icmp_seq=1 ttl=63 time=12.6 ms
+64 bytes from 172.16.86.3: icmp_seq=2 ttl=63 time=0.935 ms
+64 bytes from 172.16.86.3: icmp_seq=3 ttl=63 time=17.6 ms
+64 bytes from 172.16.86.3: icmp_seq=4 ttl=63 time=3.83 ms
+
+--- 172.16.86.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 0.935/8.738/17.626/6.681 ms
+ 
+*** BancsComsAndReport1 ***
+PING 172.16.87.4 (172.16.87.4) 56(84) bytes of data.
+64 bytes from 172.16.87.4: icmp_seq=1 ttl=63 time=1.02 ms
+64 bytes from 172.16.87.4: icmp_seq=2 ttl=63 time=0.634 ms
+64 bytes from 172.16.87.4: icmp_seq=3 ttl=63 time=0.560 ms
+64 bytes from 172.16.87.4: icmp_seq=4 ttl=63 time=0.596 ms
+
+--- 172.16.87.4 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3075ms
+rtt min/avg/max/mdev = 0.560/0.703/1.024/0.186 ms
+ 
+*** BancsComsAndReport2 ***
+PING 172.16.87.5 (172.16.87.5) 56(84) bytes of data.
+64 bytes from 172.16.87.5: icmp_seq=1 ttl=63 time=1.03 ms
+64 bytes from 172.16.87.5: icmp_seq=2 ttl=63 time=0.665 ms
+64 bytes from 172.16.87.5: icmp_seq=3 ttl=63 time=0.496 ms
+64 bytes from 172.16.87.5: icmp_seq=4 ttl=63 time=0.443 ms
+
+--- 172.16.87.5 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.443/0.657/1.025/0.227 ms
+ 
+*** SettlementIntegrationSystemProd1 ***
+PING 172.16.7.211 (172.16.7.211) 56(84) bytes of data.
+64 bytes from 172.16.7.211: icmp_seq=1 ttl=63 time=3.86 ms
+64 bytes from 172.16.7.211: icmp_seq=2 ttl=63 time=0.451 ms
+64 bytes from 172.16.7.211: icmp_seq=3 ttl=63 time=0.566 ms
+64 bytes from 172.16.7.211: icmp_seq=4 ttl=63 time=0.610 ms
+
+--- 172.16.7.211 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.451/1.371/3.860/1.437 ms
+ 
+*** SettlementIntegrationSystemProd2 ***
+PING 172.16.7.212 (172.16.7.212) 56(84) bytes of data.
+64 bytes from 172.16.7.212: icmp_seq=1 ttl=63 time=2.23 ms
+64 bytes from 172.16.7.212: icmp_seq=2 ttl=63 time=5.25 ms
+64 bytes from 172.16.7.212: icmp_seq=3 ttl=63 time=0.479 ms
+64 bytes from 172.16.7.212: icmp_seq=4 ttl=63 time=0.576 ms
+
+--- 172.16.7.212 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.479/2.133/5.250/1.929 ms
+ 
+*** NewReportsServer1 ***
+PING 172.16.87.11 (172.16.87.11) 56(84) bytes of data.
+64 bytes from 172.16.87.11: icmp_seq=1 ttl=63 time=1.05 ms
+64 bytes from 172.16.87.11: icmp_seq=2 ttl=63 time=0.593 ms
+64 bytes from 172.16.87.11: icmp_seq=3 ttl=63 time=0.572 ms
+64 bytes from 172.16.87.11: icmp_seq=4 ttl=63 time=0.585 ms
+
+--- 172.16.87.11 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.572/0.699/1.048/0.201 ms
+ 
+*** NewReportsServer2 ***
+PING 172.16.87.12 (172.16.87.12) 56(84) bytes of data.
+64 bytes from 172.16.87.12: icmp_seq=1 ttl=63 time=1.17 ms
+64 bytes from 172.16.87.12: icmp_seq=2 ttl=63 time=0.771 ms
+64 bytes from 172.16.87.12: icmp_seq=3 ttl=63 time=0.597 ms
+64 bytes from 172.16.87.12: icmp_seq=4 ttl=63 time=0.584 ms
+
+--- 172.16.87.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.584/0.779/1.167/0.235 ms
+ 
+*** BancsDatabaseDr ***
+PING 172.16.98.2 (172.16.98.2) 56(84) bytes of data.
+64 bytes from 172.16.98.2: icmp_seq=1 ttl=60 time=8.64 ms
+64 bytes from 172.16.98.2: icmp_seq=2 ttl=60 time=10.0 ms
+64 bytes from 172.16.98.2: icmp_seq=3 ttl=60 time=6.64 ms
+64 bytes from 172.16.98.2: icmp_seq=4 ttl=60 time=1.75 ms
+
+--- 172.16.98.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.749/6.764/10.023/3.135 ms
+ 
+*** BancsWebDr ***
+PING 172.16.9.165 (172.16.9.165) 56(84) bytes of data.
+64 bytes from 172.16.9.165: icmp_seq=1 ttl=60 time=2.44 ms
+64 bytes from 172.16.9.165: icmp_seq=2 ttl=60 time=1.56 ms
+64 bytes from 172.16.9.165: icmp_seq=3 ttl=60 time=1.46 ms
+64 bytes from 172.16.9.165: icmp_seq=4 ttl=60 time=1.65 ms
+
+--- 172.16.9.165 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.458/1.774/2.436/0.387 ms
+ 
+*** BancApplicationDr ***
+PING 172.16.96.2 (172.16.96.2) 56(84) bytes of data.
+64 bytes from 172.16.96.2: icmp_seq=1 ttl=60 time=3.37 ms
+64 bytes from 172.16.96.2: icmp_seq=2 ttl=60 time=2.51 ms
+64 bytes from 172.16.96.2: icmp_seq=3 ttl=60 time=2.56 ms
+64 bytes from 172.16.96.2: icmp_seq=4 ttl=60 time=2.58 ms
+
+--- 172.16.96.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 2.513/2.756/3.368/0.354 ms
+ 
+*** BancsCommunicationAndReportsDr ***
+PING 172.16.97.2 (172.16.97.2) 56(84) bytes of data.
+64 bytes from 172.16.97.2: icmp_seq=1 ttl=60 time=3.32 ms
+64 bytes from 172.16.97.2: icmp_seq=2 ttl=60 time=2.40 ms
+64 bytes from 172.16.97.2: icmp_seq=3 ttl=60 time=2.36 ms
+64 bytes from 172.16.97.2: icmp_seq=4 ttl=60 time=2.61 ms
+
+--- 172.16.97.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.363/2.671/3.315/0.383 ms
+ 
+*** SettlementIntegrationDr ***
+PING 172.16.106.7 (172.16.106.7) 56(84) bytes of data.
+64 bytes from 172.16.106.7: icmp_seq=1 ttl=60 time=53.9 ms
+64 bytes from 172.16.106.7: icmp_seq=2 ttl=60 time=4.17 ms
+64 bytes from 172.16.106.7: icmp_seq=3 ttl=60 time=45.5 ms
+64 bytes from 172.16.106.7: icmp_seq=4 ttl=60 time=3.29 ms
+
+--- 172.16.106.7 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 3.286/26.699/53.884/23.165 ms
+ 
+*** BancsSvcDr ***
+PING 192.168.67.21 (192.168.67.21) 56(84) bytes of data.
+64 bytes from 192.168.67.21: icmp_seq=1 ttl=60 time=7.21 ms
+64 bytes from 192.168.67.21: icmp_seq=3 ttl=60 time=7.63 ms
+64 bytes from 192.168.67.21: icmp_seq=4 ttl=60 time=1.64 ms
+
+--- 192.168.67.21 ping statistics ---
+4 packets transmitted, 3 received, 25% packet loss, time 3066ms
+rtt min/avg/max/mdev = 1.639/5.490/7.627/2.728 ms
+ 
+*** BancsNewReportsDr ***
+PING 172.16.97.3 (172.16.97.3) 56(84) bytes of data.
+64 bytes from 172.16.97.3: icmp_seq=1 ttl=60 time=2.45 ms
+64 bytes from 172.16.97.3: icmp_seq=2 ttl=60 time=2.18 ms
+64 bytes from 172.16.97.3: icmp_seq=3 ttl=60 time=1.73 ms
+64 bytes from 172.16.97.3: icmp_seq=4 ttl=60 time=24.4 ms
+
+--- 172.16.97.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.733/7.682/24.368/9.636 ms
+ 
+*** BancsDatabaseDr ***
+PING 172.16.98.13 (172.16.98.13) 56(84) bytes of data.
+64 bytes from 172.16.98.13: icmp_seq=1 ttl=60 time=4.45 ms
+64 bytes from 172.16.98.13: icmp_seq=2 ttl=60 time=10.4 ms
+64 bytes from 172.16.98.13: icmp_seq=3 ttl=60 time=12.1 ms
+64 bytes from 172.16.98.13: icmp_seq=4 ttl=60 time=3.39 ms
+
+--- 172.16.98.13 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 3.390/7.589/12.143/3.742 ms
+ 
+ 
+=====================================================
+NTP_SERVER September 11, 2026 Friday, 01:37:46 PM
+=====================================================
+*** NtpServer ***
+PING 172.16.48.2 (172.16.48.2) 56(84) bytes of data.
+64 bytes from 172.16.48.2: icmp_seq=1 ttl=63 time=22.0 ms
+64 bytes from 172.16.48.2: icmp_seq=2 ttl=63 time=1.34 ms
+64 bytes from 172.16.48.2: icmp_seq=3 ttl=63 time=0.823 ms
+64 bytes from 172.16.48.2: icmp_seq=4 ttl=63 time=0.965 ms
+
+--- 172.16.48.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3064ms
+rtt min/avg/max/mdev = 0.823/6.281/21.994/9.073 ms
+ 
+ 
+=====================================================
+DATA_ACCESS_POINT September 11, 2026 Friday, 01:37:50 PM
+=====================================================
+*** DataAccessPointProd1 ***
+PING 172.16.186.10 (172.16.186.10) 56(84) bytes of data.
+64 bytes from 172.16.186.10: icmp_seq=1 ttl=63 time=1.02 ms
+64 bytes from 172.16.186.10: icmp_seq=2 ttl=63 time=0.449 ms
+64 bytes from 172.16.186.10: icmp_seq=3 ttl=63 time=0.733 ms
+64 bytes from 172.16.186.10: icmp_seq=4 ttl=63 time=0.637 ms
+
+--- 172.16.186.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3064ms
+rtt min/avg/max/mdev = 0.449/0.710/1.024/0.207 ms
+ 
+*** DataAccessPointDr ***
+PING 172.16.216.10 (172.16.216.10) 56(84) bytes of data.
+64 bytes from 172.16.216.10: icmp_seq=1 ttl=60 time=59.7 ms
+64 bytes from 172.16.216.10: icmp_seq=2 ttl=60 time=36.0 ms
+64 bytes from 172.16.216.10: icmp_seq=3 ttl=60 time=58.8 ms
+64 bytes from 172.16.216.10: icmp_seq=4 ttl=60 time=16.7 ms
+
+--- 172.16.216.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 16.730/42.798/59.704/17.805 ms
+ 
+ 
+=====================================================
+BSP_DATASCOPE_SELECT_PROXY September 11, 2026 Friday, 01:37:56 PM
+=====================================================
+*** DataAccessPointProd2 ***
+PING 172.16.89.3 (172.16.89.3) 56(84) bytes of data.
+64 bytes from 172.16.89.3: icmp_seq=1 ttl=63 time=1.09 ms
+64 bytes from 172.16.89.3: icmp_seq=2 ttl=63 time=0.661 ms
+64 bytes from 172.16.89.3: icmp_seq=3 ttl=63 time=12.0 ms
+64 bytes from 172.16.89.3: icmp_seq=4 ttl=63 time=0.541 ms
+
+--- 172.16.89.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3016ms
+rtt min/avg/max/mdev = 0.541/3.568/11.978/4.859 ms
+ 
+*** BspDatascopeSelectProxyDr ***
+PING 172.16.14.115 (172.16.14.115) 56(84) bytes of data.
+64 bytes from 172.16.14.115: icmp_seq=1 ttl=61 time=1.73 ms
+64 bytes from 172.16.14.115: icmp_seq=2 ttl=61 time=1.32 ms
+64 bytes from 172.16.14.115: icmp_seq=3 ttl=61 time=8.52 ms
+64 bytes from 172.16.14.115: icmp_seq=4 ttl=61 time=1.43 ms
+
+--- 172.16.14.115 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.318/3.249/8.519/3.046 ms
+ 
+ 
+=====================================================
+REPORTS_PORTAL September 11, 2026 Friday, 01:38:03 PM
+=====================================================
+*** ReportsPortalWebAppProd ***
+PING 172.16.12.122 (172.16.12.122) 56(84) bytes of data.
+64 bytes from 172.16.12.122: icmp_seq=1 ttl=62 time=1.06 ms
+64 bytes from 172.16.12.122: icmp_seq=2 ttl=62 time=2.17 ms
+64 bytes from 172.16.12.122: icmp_seq=3 ttl=62 time=0.517 ms
+64 bytes from 172.16.12.122: icmp_seq=4 ttl=62 time=0.538 ms
+
+--- 172.16.12.122 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3012ms
+rtt min/avg/max/mdev = 0.517/1.071/2.166/0.668 ms
+ 
+ 
+=====================================================
+ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS September 11, 2026 Friday, 01:38:06 PM
+=====================================================
+*** AdProd1 ***
+PING 172.18.145.13 (172.18.145.13) 56(84) bytes of data.
+64 bytes from 172.18.145.13: icmp_seq=1 ttl=127 time=1.12 ms
+64 bytes from 172.18.145.13: icmp_seq=2 ttl=127 time=0.613 ms
+64 bytes from 172.18.145.13: icmp_seq=3 ttl=127 time=0.662 ms
+64 bytes from 172.18.145.13: icmp_seq=4 ttl=127 time=7.16 ms
+
+--- 172.18.145.13 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3076ms
+rtt min/avg/max/mdev = 0.613/2.387/7.156/2.760 ms
+ 
+*** AdProd2 ***
+PING 172.18.145.14 (172.18.145.14) 56(84) bytes of data.
+64 bytes from 172.18.145.14: icmp_seq=1 ttl=127 time=19.0 ms
+64 bytes from 172.18.145.14: icmp_seq=2 ttl=127 time=0.754 ms
+64 bytes from 172.18.145.14: icmp_seq=3 ttl=127 time=11.8 ms
+64 bytes from 172.18.145.14: icmp_seq=4 ttl=127 time=0.852 ms
+
+--- 172.18.145.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3023ms
+rtt min/avg/max/mdev = 0.754/8.108/19.013/7.736 ms
+ 
+*** AzureADConnectProd1 ***
+PING 172.16.17.2 (172.16.17.2) 56(84) bytes of data.
+64 bytes from 172.16.17.2: icmp_seq=1 ttl=127 time=15.9 ms
+64 bytes from 172.16.17.2: icmp_seq=2 ttl=127 time=0.814 ms
+64 bytes from 172.16.17.2: icmp_seq=3 ttl=127 time=17.0 ms
+64 bytes from 172.16.17.2: icmp_seq=4 ttl=127 time=1.91 ms
+
+--- 172.16.17.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3051ms
+rtt min/avg/max/mdev = 0.814/8.896/16.950/7.552 ms
+ 
+*** AdTest ***
+PING 192.168.168.91 (192.168.168.91) 56(84) bytes of data.
+64 bytes from 192.168.168.91: icmp_seq=1 ttl=127 time=2.50 ms
+64 bytes from 192.168.168.91: icmp_seq=2 ttl=127 time=0.840 ms
+64 bytes from 192.168.168.91: icmp_seq=3 ttl=127 time=1.01 ms
+64 bytes from 192.168.168.91: icmp_seq=4 ttl=127 time=0.793 ms
+
+--- 192.168.168.91 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.793/1.285/2.500/0.705 ms
+ 
+*** AdDr ***
+PING 172.16.92.150 (172.16.92.150) 56(84) bytes of data.
+64 bytes from 172.16.92.150: icmp_seq=1 ttl=124 time=3.38 ms
+64 bytes from 172.16.92.150: icmp_seq=2 ttl=124 time=2.52 ms
+64 bytes from 172.16.92.150: icmp_seq=3 ttl=124 time=2.92 ms
+64 bytes from 172.16.92.150: icmp_seq=4 ttl=124 time=2.68 ms
+
+--- 172.16.92.150 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.523/2.873/3.375/0.321 ms
+ 
+ 
+=====================================================
+NEW_SFTP_SERVER September 11, 2026 Friday, 01:38:22 PM
+=====================================================
+*** NewSftpServer ***
+PING 172.16.9.8 (172.16.9.8) 56(84) bytes of data.
+64 bytes from 172.16.9.8: icmp_seq=1 ttl=127 time=0.979 ms
+64 bytes from 172.16.9.8: icmp_seq=2 ttl=127 time=0.567 ms
+64 bytes from 172.16.9.8: icmp_seq=3 ttl=127 time=0.632 ms
+64 bytes from 172.16.9.8: icmp_seq=4 ttl=127 time=0.563 ms
+
+--- 172.16.9.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3077ms
+rtt min/avg/max/mdev = 0.563/0.685/0.979/0.171 ms
+ 
+*** NewSftpDrServer ***
+PING 172.16.9.164 (172.16.9.164) 56(84) bytes of data.
+64 bytes from 172.16.9.164: icmp_seq=1 ttl=124 time=49.4 ms
+64 bytes from 172.16.9.164: icmp_seq=2 ttl=124 time=4.84 ms
+64 bytes from 172.16.9.164: icmp_seq=3 ttl=124 time=25.7 ms
+64 bytes from 172.16.9.164: icmp_seq=4 ttl=124 time=3.17 ms
+
+--- 172.16.9.164 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 3.165/20.789/49.432/18.773 ms
+ 
+ 
+=====================================================
+NROSS_PROD September 11, 2026 Friday, 01:38:28 PM
+=====================================================
+*** NrossProd2 ***
+PING 172.16.195.12 (172.16.195.12) 56(84) bytes of data.
+64 bytes from 172.16.195.12: icmp_seq=1 ttl=63 time=1.03 ms
+64 bytes from 172.16.195.12: icmp_seq=2 ttl=63 time=1.09 ms
+64 bytes from 172.16.195.12: icmp_seq=3 ttl=63 time=0.631 ms
+64 bytes from 172.16.195.12: icmp_seq=4 ttl=63 time=1.12 ms
+
+--- 172.16.195.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3050ms
+rtt min/avg/max/mdev = 0.631/0.967/1.116/0.196 ms
+ 
+ 
+=====================================================
+IBM_STORAGE September 11, 2026 Friday, 01:38:32 PM
+=====================================================
+*** PdsSvcLocalDr ***
+PING 192.168.167.22 (192.168.167.22) 56(84) bytes of data.
+64 bytes from 192.168.167.22: icmp_seq=1 ttl=63 time=1.06 ms
+64 bytes from 192.168.167.22: icmp_seq=2 ttl=63 time=0.529 ms
+64 bytes from 192.168.167.22: icmp_seq=3 ttl=63 time=0.522 ms
+64 bytes from 192.168.167.22: icmp_seq=4 ttl=63 time=0.551 ms
+
+--- 192.168.167.22 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3069ms
+rtt min/avg/max/mdev = 0.522/0.664/1.056/0.226 ms
+ 
+*** PdsProdVmV7000 ***
+PING 192.168.167.110 (192.168.167.110) 56(84) bytes of data.
+64 bytes from 192.168.167.110: icmp_seq=1 ttl=63 time=1.23 ms
+64 bytes from 192.168.167.110: icmp_seq=2 ttl=63 time=0.795 ms
+64 bytes from 192.168.167.110: icmp_seq=3 ttl=63 time=0.527 ms
+64 bytes from 192.168.167.110: icmp_seq=4 ttl=63 time=0.555 ms
+
+--- 192.168.167.110 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3033ms
+rtt min/avg/max/mdev = 0.527/0.776/1.227/0.280 ms
+ 
+*** PdsDrVmV7000 ***
+PING 192.168.67.12 (192.168.67.12) 56(84) bytes of data.
+64 bytes from 192.168.67.12: icmp_seq=1 ttl=60 time=10.9 ms
+64 bytes from 192.168.67.12: icmp_seq=2 ttl=60 time=3.60 ms
+64 bytes from 192.168.67.12: icmp_seq=3 ttl=60 time=3.15 ms
+64 bytes from 192.168.67.12: icmp_seq=4 ttl=60 time=3.38 ms
+
+--- 192.168.67.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 3.153/5.259/10.910/3.266 ms
+ 
+ 
+=====================================================
+V6_NEW_STORAGE September 11, 2026 Friday, 01:41:07 PM
+=====================================================
+*** NFS_Server_PROD ***
+PING 172.16.88.29 (172.16.88.29) 56(84) bytes of data.
+64 bytes from 172.16.88.29: icmp_seq=1 ttl=63 time=1.42 ms
+64 bytes from 172.16.88.29: icmp_seq=2 ttl=63 time=0.922 ms
+64 bytes from 172.16.88.29: icmp_seq=3 ttl=63 time=0.868 ms
+64 bytes from 172.16.88.29: icmp_seq=4 ttl=63 time=0.547 ms
+
+--- 172.16.88.29 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3007ms
+rtt min/avg/max/mdev = 0.547/0.939/1.421/0.312 ms
+ 
+*** NFS_Server_PROD_MGMT ***
+PING 172.16.88.29 (172.16.88.29) 56(84) bytes of data.
+64 bytes from 172.16.88.29: icmp_seq=1 ttl=63 time=0.881 ms
+64 bytes from 172.16.88.29: icmp_seq=2 ttl=63 time=0.908 ms
+64 bytes from 172.16.88.29: icmp_seq=3 ttl=63 time=0.497 ms
+64 bytes from 172.16.88.29: icmp_seq=4 ttl=63 time=0.442 ms
+
+--- 172.16.88.29 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.442/0.682/0.908/0.213 ms
+ 
+*** NFS_Server_DR ***
+PING 172.19.160.11 (172.19.160.11) 56(84) bytes of data.
+64 bytes from 172.19.160.11: icmp_seq=1 ttl=61 time=2.73 ms
+64 bytes from 172.19.160.11: icmp_seq=2 ttl=61 time=2.16 ms
+64 bytes from 172.19.160.11: icmp_seq=3 ttl=61 time=2.22 ms
+64 bytes from 172.19.160.11: icmp_seq=4 ttl=61 time=2.20 ms
+
+--- 172.19.160.11 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.157/2.326/2.728/0.232 ms
+ 
+*** NFS_Server_DR_MGMT ***
+PING 192.168.66.40 (192.168.66.40) 56(84) bytes of data.
+64 bytes from 192.168.66.40: icmp_seq=1 ttl=60 time=5.32 ms
+64 bytes from 192.168.66.40: icmp_seq=2 ttl=60 time=3.08 ms
+64 bytes from 192.168.66.40: icmp_seq=3 ttl=60 time=3.25 ms
+64 bytes from 192.168.66.40: icmp_seq=4 ttl=60 time=3.22 ms
+
+--- 192.168.66.40 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 3.076/3.717/5.323/0.929 ms
+ 
+*** NFS_Storage_PROD ***
+PING 192.168.166.41 (192.168.166.41) 56(84) bytes of data.
+64 bytes from 192.168.166.41: icmp_seq=1 ttl=63 time=1.29 ms
+64 bytes from 192.168.166.41: icmp_seq=2 ttl=63 time=0.608 ms
+64 bytes from 192.168.166.41: icmp_seq=3 ttl=63 time=0.871 ms
+64 bytes from 192.168.166.41: icmp_seq=4 ttl=63 time=0.512 ms
+
+--- 192.168.166.41 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3082ms
+rtt min/avg/max/mdev = 0.512/0.821/1.294/0.302 ms
+ 
+*** NFS_Storage_REPLICATION_IP ***
+PING 172.18.161.11 (172.18.161.11) 56(84) bytes of data.
+64 bytes from 172.18.161.11: icmp_seq=1 ttl=62 time=0.952 ms
+64 bytes from 172.18.161.11: icmp_seq=2 ttl=62 time=0.611 ms
+64 bytes from 172.18.161.11: icmp_seq=3 ttl=62 time=0.596 ms
+64 bytes from 172.18.161.11: icmp_seq=4 ttl=62 time=0.486 ms
+
+--- 172.18.161.11 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.486/0.661/0.952/0.174 ms
+ 
+*** NFS_Storage_REPLICATION_IP ***
+PING 172.18.161.12 (172.18.161.12) 56(84) bytes of data.
+64 bytes from 172.18.161.12: icmp_seq=1 ttl=62 time=1.30 ms
+64 bytes from 172.18.161.12: icmp_seq=2 ttl=62 time=0.606 ms
+64 bytes from 172.18.161.12: icmp_seq=3 ttl=62 time=0.646 ms
+64 bytes from 172.18.161.12: icmp_seq=4 ttl=62 time=0.588 ms
+
+--- 172.18.161.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.588/0.785/1.301/0.298 ms
+ 
+*** NFS_Storage_DR ***
+PING 192.168.66.41 (192.168.66.41) 56(84) bytes of data.
+64 bytes from 192.168.66.41: icmp_seq=1 ttl=60 time=3.27 ms
+64 bytes from 192.168.66.41: icmp_seq=2 ttl=60 time=2.39 ms
+64 bytes from 192.168.66.41: icmp_seq=3 ttl=60 time=2.60 ms
+64 bytes from 192.168.66.41: icmp_seq=4 ttl=60 time=4.79 ms
+
+--- 192.168.66.41 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 2.390/3.264/4.790/0.939 ms
+ 
+*** NFS_Storage_DR_REPLICATION_IP ***
+PING 172.19.161.11 (172.19.161.11) 56(84) bytes of data.
+64 bytes from 172.19.161.11: icmp_seq=1 ttl=61 time=7.57 ms
+64 bytes from 172.19.161.11: icmp_seq=2 ttl=61 time=2.13 ms
+64 bytes from 172.19.161.11: icmp_seq=3 ttl=61 time=2.40 ms
+64 bytes from 172.19.161.11: icmp_seq=4 ttl=61 time=2.20 ms
+
+--- 172.19.161.11 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 2.132/3.576/7.568/2.306 ms
+ 
+*** NFS_Storage_DR_REPLICATION_IP ***
+PING 172.19.161.12 (172.19.161.12) 56(84) bytes of data.
+64 bytes from 172.19.161.12: icmp_seq=1 ttl=61 time=1.77 ms
+64 bytes from 172.19.161.12: icmp_seq=2 ttl=61 time=1.24 ms
+64 bytes from 172.19.161.12: icmp_seq=3 ttl=61 time=1.45 ms
+64 bytes from 172.19.161.12: icmp_seq=4 ttl=61 time=1.49 ms
+
+--- 172.19.161.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 1.241/1.487/1.771/0.188 ms
+ 
+ 
+=====================================================
+VM_HOST_PROD September 11, 2026 Friday, 01:41:38 PM
+=====================================================
+*** OldVmHostProd2 ***
+PING 192.168.167.102 (192.168.167.102) 56(84) bytes of data.
+64 bytes from 192.168.167.102: icmp_seq=1 ttl=63 time=1.11 ms
+64 bytes from 192.168.167.102: icmp_seq=2 ttl=63 time=0.673 ms
+64 bytes from 192.168.167.102: icmp_seq=3 ttl=63 time=0.746 ms
+64 bytes from 192.168.167.102: icmp_seq=4 ttl=63 time=0.806 ms
+
+--- 192.168.167.102 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3085ms
+rtt min/avg/max/mdev = 0.673/0.832/1.106/0.164 ms
+ 
+*** VmHostProd1 ***
+PING 192.168.167.70 (192.168.167.70) 56(84) bytes of data.
+64 bytes from 192.168.167.70: icmp_seq=1 ttl=63 time=1.65 ms
+64 bytes from 192.168.167.70: icmp_seq=2 ttl=63 time=0.542 ms
+64 bytes from 192.168.167.70: icmp_seq=3 ttl=63 time=0.599 ms
+64 bytes from 192.168.167.70: icmp_seq=4 ttl=63 time=2.52 ms
+
+--- 192.168.167.70 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.542/1.328/2.524/0.818 ms
+ 
+*** VmHostProd2 ***
+PING 192.168.167.71 (192.168.167.71) 56(84) bytes of data.
+64 bytes from 192.168.167.71: icmp_seq=1 ttl=63 time=0.883 ms
+64 bytes from 192.168.167.71: icmp_seq=2 ttl=63 time=0.475 ms
+64 bytes from 192.168.167.71: icmp_seq=3 ttl=63 time=0.510 ms
+64 bytes from 192.168.167.71: icmp_seq=4 ttl=63 time=0.434 ms
+
+--- 192.168.167.71 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3113ms
+rtt min/avg/max/mdev = 0.434/0.575/0.883/0.179 ms
+ 
+*** Vcenter ***
+PING 192.168.167.74 (192.168.167.74) 56(84) bytes of data.
+64 bytes from 192.168.167.74: icmp_seq=1 ttl=63 time=1.01 ms
+64 bytes from 192.168.167.74: icmp_seq=2 ttl=63 time=0.642 ms
+64 bytes from 192.168.167.74: icmp_seq=3 ttl=63 time=0.811 ms
+64 bytes from 192.168.167.74: icmp_seq=4 ttl=63 time=0.603 ms
+
+--- 192.168.167.74 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.603/0.766/1.011/0.161 ms
+ 
+*** DellStorage ***
+PING 192.168.167.15 (192.168.167.15) 56(84) bytes of data.
+64 bytes from 192.168.167.15: icmp_seq=1 ttl=63 time=1.92 ms
+64 bytes from 192.168.167.15: icmp_seq=2 ttl=63 time=0.842 ms
+64 bytes from 192.168.167.15: icmp_seq=3 ttl=63 time=0.584 ms
+64 bytes from 192.168.167.15: icmp_seq=4 ttl=63 time=0.678 ms
+
+--- 192.168.167.15 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.584/1.005/1.918/0.534 ms
+ 
+*** TOR1 ***
+PING 192.168.166.11 (192.168.166.11) 56(84) bytes of data.
+
+--- 192.168.166.11 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3050ms
+
+ 
+*** TOR2 ***
+PING 192.168.166.12 (192.168.166.12) 56(84) bytes of data.
+64 bytes from 192.168.166.12: icmp_seq=1 ttl=63 time=1.09 ms
+64 bytes from 192.168.166.12: icmp_seq=2 ttl=63 time=0.749 ms
+64 bytes from 192.168.166.12: icmp_seq=3 ttl=63 time=0.605 ms
+64 bytes from 192.168.166.12: icmp_seq=4 ttl=63 time=0.726 ms
+
+--- 192.168.166.12 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3089ms
+rtt min/avg/max/mdev = 0.605/0.793/1.093/0.181 ms
+ 
+*** SANSw1 ***
+PING 192.168.166.13 (192.168.166.13) 56(84) bytes of data.
+64 bytes from 192.168.166.13: icmp_seq=1 ttl=63 time=1.44 ms
+64 bytes from 192.168.166.13: icmp_seq=2 ttl=63 time=0.684 ms
+64 bytes from 192.168.166.13: icmp_seq=3 ttl=63 time=0.682 ms
+64 bytes from 192.168.166.13: icmp_seq=4 ttl=63 time=0.873 ms
+
+--- 192.168.166.13 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.682/0.919/1.439/0.309 ms
+ 
+*** SANSw2 ***
+PING 192.168.166.14 (192.168.166.14) 56(84) bytes of data.
+64 bytes from 192.168.166.14: icmp_seq=1 ttl=63 time=1.46 ms
+64 bytes from 192.168.166.14: icmp_seq=2 ttl=63 time=0.883 ms
+64 bytes from 192.168.166.14: icmp_seq=3 ttl=63 time=17.2 ms
+64 bytes from 192.168.166.14: icmp_seq=4 ttl=63 time=0.595 ms
+
+--- 192.168.166.14 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3029ms
+rtt min/avg/max/mdev = 0.595/5.031/17.189/7.026 ms
+ 
+ 
+=====================================================
+SAP_SERVER September 11, 2026 Friday, 01:42:07 PM
+=====================================================
+*** SapDbDR ***
+PING 172.19.143.13 (172.19.143.13) 56(84) bytes of data.
+
+--- 172.19.143.13 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3101ms
+
+ 
+*** SapLicMan ***
+PING 172.16.82.100 (172.16.82.100) 56(84) bytes of data.
+
+--- 172.16.82.100 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3086ms
+
+ 
+ 
+=====================================================
+ORACLE_DB_19C September 11, 2026 Friday, 01:42:17 PM
+=====================================================
+*** SANSwitch1 ***
+PING 192.168.166.7 (192.168.166.7) 56(84) bytes of data.
+64 bytes from 192.168.166.7: icmp_seq=1 ttl=63 time=0.897 ms
+64 bytes from 192.168.166.7: icmp_seq=2 ttl=63 time=0.653 ms
+64 bytes from 192.168.166.7: icmp_seq=3 ttl=63 time=0.692 ms
+64 bytes from 192.168.166.7: icmp_seq=4 ttl=63 time=0.575 ms
+
+--- 192.168.166.7 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3110ms
+rtt min/avg/max/mdev = 0.575/0.704/0.897/0.118 ms
+ 
+*** SANSwitch2 ***
+PING 192.168.166.8 (192.168.166.8) 56(84) bytes of data.
+64 bytes from 192.168.166.8: icmp_seq=1 ttl=63 time=0.950 ms
+64 bytes from 192.168.166.8: icmp_seq=2 ttl=63 time=0.617 ms
+64 bytes from 192.168.166.8: icmp_seq=3 ttl=63 time=0.516 ms
+64 bytes from 192.168.166.8: icmp_seq=4 ttl=63 time=0.713 ms
+
+--- 192.168.166.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3053ms
+rtt min/avg/max/mdev = 0.516/0.699/0.950/0.160 ms
+ 
+*** FlashSystem5200Node1 ***
+PING 192.168.166.9 (192.168.166.9) 56(84) bytes of data.
+64 bytes from 192.168.166.9: icmp_seq=1 ttl=63 time=0.971 ms
+64 bytes from 192.168.166.9: icmp_seq=2 ttl=63 time=0.582 ms
+64 bytes from 192.168.166.9: icmp_seq=3 ttl=63 time=0.586 ms
+64 bytes from 192.168.166.9: icmp_seq=4 ttl=63 time=0.596 ms
+
+--- 192.168.166.9 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3052ms
+rtt min/avg/max/mdev = 0.582/0.683/0.971/0.165 ms
+ 
+*** FlashSystem5200Node2 ***
+PING 192.168.166.10 (192.168.166.10) 56(84) bytes of data.
+64 bytes from 192.168.166.10: icmp_seq=1 ttl=63 time=2.01 ms
+64 bytes from 192.168.166.10: icmp_seq=2 ttl=63 time=0.572 ms
+64 bytes from 192.168.166.10: icmp_seq=3 ttl=63 time=2.02 ms
+64 bytes from 192.168.166.10: icmp_seq=4 ttl=63 time=0.668 ms
+
+--- 192.168.166.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3030ms
+rtt min/avg/max/mdev = 0.572/1.315/2.016/0.696 ms
+ 
+ 
+=====================================================
+UTILITIES_SERVER September 11, 2026 Friday, 01:42:30 PM
+=====================================================
+*** BiometricSystem ***
+PING 192.168.167.220 (192.168.167.220) 56(84) bytes of data.
+64 bytes from 192.168.167.220: icmp_seq=1 ttl=127 time=0.915 ms
+64 bytes from 192.168.167.220: icmp_seq=2 ttl=127 time=0.667 ms
+64 bytes from 192.168.167.220: icmp_seq=3 ttl=127 time=0.569 ms
+64 bytes from 192.168.167.220: icmp_seq=4 ttl=127 time=0.710 ms
+
+--- 192.168.167.220 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3078ms
+rtt min/avg/max/mdev = 0.569/0.715/0.915/0.126 ms
+ 
+*** CctvServerNg ***
+PING 172.16.1.2 (172.16.1.2) 56(84) bytes of data.
+64 bytes from 172.16.1.2: icmp_seq=1 ttl=127 time=27.5 ms
+64 bytes from 172.16.1.2: icmp_seq=2 ttl=127 time=41.7 ms
+64 bytes from 172.16.1.2: icmp_seq=3 ttl=127 time=14.1 ms
+64 bytes from 172.16.1.2: icmp_seq=4 ttl=127 time=62.2 ms
+
+--- 172.16.1.2 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 14.128/36.369/62.219/17.818 ms
+ 
+*** ElidServerNg ***
+PING 172.16.0.25 (172.16.0.25) 56(84) bytes of data.
+64 bytes from 172.16.0.25: icmp_seq=1 ttl=126 time=1.62 ms
+64 bytes from 172.16.0.25: icmp_seq=2 ttl=126 time=0.790 ms
+64 bytes from 172.16.0.25: icmp_seq=3 ttl=126 time=0.726 ms
+64 bytes from 172.16.0.25: icmp_seq=4 ttl=126 time=0.870 ms
+
+--- 172.16.0.25 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3037ms
+rtt min/avg/max/mdev = 0.726/1.001/1.618/0.359 ms
+ 
+*** DmsServer ***
+PING 172.16.0.8 (172.16.0.8) 56(84) bytes of data.
+
+--- 172.16.0.8 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3049ms
+
+ 
+*** FileServer ***
+PING 172.16.6.190 (172.16.6.190) 56(84) bytes of data.
+
+--- 172.16.6.190 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3088ms
+
+ 
+*** BancsManagementServer ***
+PING 192.168.167.15 (192.168.167.15) 56(84) bytes of data.
+64 bytes from 192.168.167.15: icmp_seq=1 ttl=63 time=0.888 ms
+64 bytes from 192.168.167.15: icmp_seq=2 ttl=63 time=0.512 ms
+64 bytes from 192.168.167.15: icmp_seq=3 ttl=63 time=0.764 ms
+64 bytes from 192.168.167.15: icmp_seq=4 ttl=63 time=0.554 ms
+
+--- 192.168.167.15 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3089ms
+rtt min/avg/max/mdev = 0.512/0.679/0.888/0.153 ms
+ 
+*** VirtualServerManagementProd ***
+PING 192.168.167.100 (192.168.167.100) 56(84) bytes of data.
+
+--- 192.168.167.100 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3053ms
+
+ 
+*** VirtualServerManagementDr ***
+PING 192.168.67.100 (192.168.67.100) 56(84) bytes of data.
+
+--- 192.168.67.100 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3088ms
+
+ 
+*** NewPdsSmtp ***
+PING 172.16.17.3 (172.16.17.3) 56(84) bytes of data.
+64 bytes from 172.16.17.3: icmp_seq=1 ttl=127 time=1.25 ms
+64 bytes from 172.16.17.3: icmp_seq=2 ttl=127 time=0.439 ms
+64 bytes from 172.16.17.3: icmp_seq=3 ttl=127 time=0.642 ms
+64 bytes from 172.16.17.3: icmp_seq=4 ttl=127 time=0.639 ms
+
+--- 172.16.17.3 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3089ms
+rtt min/avg/max/mdev = 0.439/0.742/1.250/0.304 ms
+ 
+ 

@@ -4,8 +4,8 @@
 source object.sh
 
 # Csv File
-file="$HOME/Script/UsrMgmt/usrs/adduser.csv"
-sandbox="/media/sf_Linux/sandbox/adduser.csv"
+file="file/adduser.csv"
+sandbox="file/sandbox/adduser.csv"
 
 if [[ ! -f "$file" ]]; then
 	echo "CSV File not found!!!"
