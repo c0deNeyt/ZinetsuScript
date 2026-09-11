@@ -469,31 +469,9 @@
 			]
 		},
 		{
-			"IBM_STORAGE": [
-				{
-					"index": 72
-				},
-				{
-					"alias": "PdsSvcLocalDr",
-					"serverip": "192.168.167.22",
-					"classification": "DR"
-				},
-				{
-					"alias": "PdsProdVmV7000",
-					"serverip": "192.168.167.110",
-					"classification": "Critical"
-				},
-				{
-					"alias": "PdsDrVmV7000",
-					"serverip": "192.168.67.12",
-					"classification": "DR"
-				}
-			]
-		},
-		{
 			"V6_NEW_STORAGE": [
 				{
-					"index": 0
+					"index": 72
 				},
 				{
 					"alias": "NFS_Server_PROD",
@@ -544,6 +522,28 @@
 					"alias": "NFS_Storage_DR_REPLICATION_IP",
 					"serverip": "172.19.161.12",
 					"classification": "Critical"
+				}
+			]
+		},
+		{
+			"IBM_STORAGE": [
+				{
+					"index": 0 
+				},
+				{
+					"alias": "PdsSvcLocalDr",
+					"serverip": "192.168.167.22",
+					"classification": "DR"
+				},
+				{
+					"alias": "PdsProdVmV7000",
+					"serverip": "192.168.167.110",
+					"classification": "Critical"
+				},
+				{
+					"alias": "PdsDrVmV7000",
+					"serverip": "192.168.67.12",
+					"classification": "DR"
 				}
 			]
 		},
