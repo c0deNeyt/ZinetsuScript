@@ -579,8 +579,9 @@
 				},
 				{
 					"alias": "TOR1",
-					"serverip": "192.168.166.11",
-					"classification": "Critical"
+					"serverip": "172.16.86.2",
+					"classification": "Critical",
+					"note": "192.168.166.11 - this should be the IP"
 				},
 				{
 					"alias": "TOR2",
@@ -606,13 +607,9 @@
 				},
 				{
 					"alias": "SapDbDR",
-					"serverip": "172.19.143.13",
-					"classification": "Non_Critical"
-				},
-				{
-					"alias": "SapLicMan",
-					"serverip": "172.16.82.100",
-					"classification": "Non_Critical"
+					"serverip": "172.16.86.2",
+					"classification": "Non_Critical",
+					"note": "172.19.140.13 - this should be the IP"
 				}
 			]
 		},
@@ -664,28 +661,8 @@
 					"classification": "Non_Critical"
 				},
 				{
-					"alias": "DmsServer",
-					"serverip": "172.16.0.8",
-					"classification": "Non_Critical"
-				},
-				{
-					"alias": "FileServer",
-					"serverip": "172.16.6.190",
-					"classification": "Non_Critical"
-				},
-				{
 					"alias": "BancsManagementServer",
 					"serverip": "192.168.167.15",
-					"classification": "Non_Critical"
-				},
-				{
-					"alias": "VirtualServerManagementProd",
-					"serverip": "192.168.167.100",
-					"classification": "Non_Critical"
-				},
-				{
-					"alias": "VirtualServerManagementDr",
-					"serverip": "192.168.67.100",
 					"classification": "Non_Critical"
 				},
 				{
