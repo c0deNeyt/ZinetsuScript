@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Added to make sure that crontab execution 
-# can find the necessary files 
-cd "$(dirname "$0")" || exit 1
-
 #error checking
 if [ -z "$1" ]; then
 	echo " "
@@ -19,9 +15,9 @@ date
 echo "Generating Report..."
 source $HOME/Downloads/git/Scripts/Function.sh
 srvAdm="$1"
-defaultDir="$HOME/Downloads/git/Scripts/SysMonitoring"
-mountedDir="$defaultDir/SOD_EOD/"
-varData=$defaultDir/data.json
+defaultDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+mountedDir="${defaultDir}/SOD_EOD/"
+varData=${defaultDir}/data.json
 varGStatus="NO ISSUE FOUND!"
 varEmailStatus="Passed" 
 
@@ -59,7 +55,7 @@ function gdate(){
 
 #Function for IBM Storage Checking
 function runScript(){
-	$defaultDir/storage.sh $1 $2 >> storageStatus
+	${defaultDir}/storage.sh $1 $2 >> storageStatus
 }
 
 #Function notification incase Issue is found.
@@ -74,9 +70,9 @@ checkStatus(){
 	if [[ "$1" -ne 0 ]] && [[ "$6" == "NO ISSUE FOUND!" ]]
 	then
 		#this will edit the csv file
-		$defaultDir/edit_Csv_File.sh "$2" "$3" "$4" "$5"
+		${defaultDir}/edit_Csv_File.sh "$2" "$3" "$4" "$5"
 	else
-		$defaultDir/edit_Csv_File.sh "$2" "$3" "$6" "$5"
+		${defaultDir}/edit_Csv_File.sh "$2" "$3" "$6" "$5"
 	fi
 }
 
@@ -91,7 +87,7 @@ checkCritical(){
 }
 
 #creating a file to store results
-varDataStorage="$defaultDir/Monitoring_Results.txt" #filename
+varDataStorage="${defaultDir}/Monitoring_Results.txt" #filename
 touch "$varDataStorage" #create
 srvCount=0
 # this will iterate to the server groups e.g CAAC
@@ -186,15 +182,15 @@ done
 # This will echo out the final status of the file
 echo -e "\nMonitoring Status: $varGStatus"
 echo -e "Running CSV to HTML... \n"
-/usr/bin/python3 "$defaultDir"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varEmailStatus"
+/usr/bin/python3 "${defaultDir}"/tohtml.py "$(date +"%A, %B %d, %Y")" "$varEmailStatus"
 echo -e "Starting to transfer the files... \n"
 
 #this will update the file SOD_EOD dir
 rm "$mountedDir"/*.txt >> /dev/null 2>&1
-mv $defaultDir/*.txt  "$mountedDir"
+mv ${defaultDir}/*.txt  "$mountedDir"
 
 #this will update the Excel file based on the csv data
-/usr/bin/python3 "$defaultDir"/toExcel.py
+/usr/bin/python3 "${defaultDir}"/toExcel.py
 #rm "$mountedDir"*.xlsx
 cp "$mountedDir"SystemMonitoring.xlsx "$mountedDir"$(gdate xlsxName).xlsx
 
@@ -216,8 +212,8 @@ excelFname="$(awk 'NR == 3' timeAmOrPm)"
 
 TO_ADDRESS="it.infrastructure@pds.com.ph"
 # TO_ADDRESS="christian.arana@pds.com.ph"
-FILE1="$defaultDir/SOD_EOD/$excelFname"
-FILE2="$defaultDir/SOD_EOD/Monitoring_Results.txt"
+FILE1="${defaultDir}/SOD_EOD/$excelFname"
+FILE2="${defaultDir}/SOD_EOD/Monitoring_Results.txt"
 
 #Check the files
 if [[ ! -f "$FILE1" ]] || [[ ! -f "$FILE2" ]]; then
