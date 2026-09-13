@@ -210,8 +210,8 @@ excelFname="$(awk 'NR == 3' timeAmOrPm)"
 # Mailing config #
 ##################
 
-TO_ADDRESS="it.infrastructure@pds.com.ph"
-# TO_ADDRESS="christian.arana@pds.com.ph"
+#TO_ADDRESS="it.infrastructure@pds.com.ph"
+TO_ADDRESS="christian.arana@pds.com.ph"
 FILE1="${defaultDir}/SOD_EOD/$excelFname"
 FILE2="${defaultDir}/SOD_EOD/Monitoring_Results.txt"
 
@@ -231,7 +231,7 @@ else
 fi
 
 #Send the email using mutt
-mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < SOD_EOD/ebody.html
+mutt -e "set content_type=text/html" -s "$SUBJECT" -a "$FILE1" -a "$FILE2" -- "$TO_ADDRESS" < ${defaultDir}/SOD_EOD/ebody.html
 
 #check if the email wast sent successfully
 if [ $? -eq 0 ]; then
