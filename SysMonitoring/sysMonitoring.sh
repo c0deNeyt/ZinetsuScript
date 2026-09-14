@@ -210,8 +210,8 @@ excelFname="$(awk 'NR == 3' timeAmOrPm)"
 # Mailing config #
 ##################
 
-#TO_ADDRESS="it.infrastructure@pds.com.ph"
-TO_ADDRESS="christian.arana@pds.com.ph"
+TO_ADDRESS="it.infrastructure@pds.com.ph"
+#TO_ADDRESS="christian.arana@pds.com.ph"
 FILE1="${defaultDir}/SOD_EOD/$excelFname"
 FILE2="${defaultDir}/SOD_EOD/Monitoring_Results.txt"
 
