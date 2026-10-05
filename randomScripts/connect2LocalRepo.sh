@@ -41,7 +41,7 @@ fi
 printf '%s\n' "$repo_output"
 
 ssh "$ip" "bash -s" << 'EOF'
-echo $HOME
+hostname -I 
 
 EOF
 
