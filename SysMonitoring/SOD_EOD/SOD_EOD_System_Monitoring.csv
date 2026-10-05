@@ -56,21 +56,21 @@ Telecoms,Checking IP Office 500 Primary,,,
 ,Test PDS.COM.PH,,,
 ,Enterprise Communications Backup,,,
 ,Check Enterprise Communications Backup,,,
-Server,CAAC,,,
-Server,API_BSP_ISO,,,
-Server,NEW_SCCP_INTERFACE,,,
-Server,NEW_MARKETPAGE_MP3,,,
-Server,New_PDS_CLEAR,,,
-Server,PDS_WEBSITE,,,
-Server,BANCS_V6,,,
-Server,NTP_SERVER,,,
-Server,DATA_ACCESS_POINT,,,
-Server,BSP_DATASCOPE_SELECT_PROXY,,,
-Server,REPORTS_PORTAL,,,
-Server,ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS,,,
-Server,NEW_SFTP_SERVER,,,
-Server,NROSS_PROD,,,
-Storage,V6_NEW_STORAGE,,,
+Server,CAAC,06:00,carana,UP
+Server,API_BSP_ISO,06:00,carana,UP
+Server,NEW_SCCP_INTERFACE,06:00,carana,UP
+Server,NEW_MARKETPAGE_MP3,06:01,carana,UP
+Server,New_PDS_CLEAR,06:01,carana,UP
+Server,PDS_WEBSITE,06:02,carana,UP
+Server,BANCS_V6,06:03,carana,UP
+Server,NTP_SERVER,06:03,carana,UP
+Server,DATA_ACCESS_POINT,06:03,carana,UP
+Server,BSP_DATASCOPE_SELECT_PROXY,06:03,carana,UP
+Server,REPORTS_PORTAL,06:03,carana,UP
+Server,ACTIVE_DIRECTORY_DOMAIN_CONTROLLERS_2019_SERVERS,06:03,carana,UP
+Server,NEW_SFTP_SERVER,06:03,carana,UP
+Server,NROSS_PROD,06:03,carana,UP
+Storage,V6_NEW_STORAGE,06:04,carana,UP
 Datacenter Facilities,NG UPS,,,
 ,NG PACU,,,
 ,NG Fire Suppression system,,,
