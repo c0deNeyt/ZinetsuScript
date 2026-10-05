@@ -9,7 +9,7 @@
 source $HOME/Script/Alias.sh
 #List of server IP's
 source $HOME/Script/ssh.sh
-=======
+
 # Reload config (mainly to load keybrd conf)
 source ~/.config/x11/xinitrc
 
